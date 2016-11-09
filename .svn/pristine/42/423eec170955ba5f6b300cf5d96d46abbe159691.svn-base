@@ -1,0 +1,35 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++8401",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++8401" : {
+      "DVTSourceControlWorkingCopyRepositoryPrimaryBranchLocationKey" : "trunk"
+    },
+    "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++7004" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++8401" : 9223372036854775807,
+    "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++7004" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9AAE162C-D1A5-41FE-8FAF-20AB5A1CEFA2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++8401" : "SuEhome\/",
+    "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++7004" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SuEhome",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SuEhome.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/svn.r3soft.com\/svn\/r3soft",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++7004"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/om.suypower.com\/svn\/r3soft",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++8401"
+    }
+  ]
+}

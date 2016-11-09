@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Kmm-QG-ayO" customClass="MeTableList1">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kmm-QG-ayO" id="uVR-pe-HwG">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user.png" translatesAutoresizingMaskIntoConstraints="NO" id="ikZ-ZY-6Sw" customClass="STImageView">
+                        <rect key="frame" x="16" y="12" width="75" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="2Xc-bR-EZG"/>
+                            <constraint firstAttribute="height" constant="75" id="iFv-lb-SC8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录号:1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7v-q5-Qef">
+                        <rect key="frame" x="99" y="58" width="187" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="nn6-25-xuF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小王" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxU-0D-q9x">
+                        <rect key="frame" x="99" y="22" width="187" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="Vvz-ms-Qyu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode.png" translatesAutoresizingMaskIntoConstraints="NO" id="O9L-fY-hJ9">
+                        <rect key="frame" x="320" y="38" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="K15-wh-grm"/>
+                            <constraint firstAttribute="width" constant="22" id="RH6-z5-kgP"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="n7v-q5-Qef" firstAttribute="leading" secondItem="ikZ-ZY-6Sw" secondAttribute="trailing" constant="8" id="3cF-qO-dm6"/>
+                    <constraint firstItem="yxU-0D-q9x" firstAttribute="top" secondItem="uVR-pe-HwG" secondAttribute="top" constant="22" id="Ac6-ED-cQ3"/>
+                    <constraint firstItem="O9L-fY-hJ9" firstAttribute="top" secondItem="uVR-pe-HwG" secondAttribute="top" constant="38" id="BmL-b6-BYt"/>
+                    <constraint firstItem="yxU-0D-q9x" firstAttribute="leading" secondItem="ikZ-ZY-6Sw" secondAttribute="trailing" constant="8" id="CfC-sR-FGh"/>
+                    <constraint firstItem="ikZ-ZY-6Sw" firstAttribute="leading" secondItem="uVR-pe-HwG" secondAttribute="leading" constant="16" id="cVH-cs-oTd"/>
+                    <constraint firstItem="O9L-fY-hJ9" firstAttribute="leading" secondItem="yxU-0D-q9x" secondAttribute="trailing" constant="34" id="eFu-aW-Inn"/>
+                    <constraint firstAttribute="trailing" secondItem="O9L-fY-hJ9" secondAttribute="trailing" id="f2h-bz-vnb"/>
+                    <constraint firstItem="n7v-q5-Qef" firstAttribute="top" secondItem="yxU-0D-q9x" secondAttribute="bottom" constant="14" id="nEG-Um-iSG"/>
+                    <constraint firstItem="O9L-fY-hJ9" firstAttribute="leading" secondItem="n7v-q5-Qef" secondAttribute="trailing" constant="34" id="xKy-Pl-U6b"/>
+                    <constraint firstItem="ikZ-ZY-6Sw" firstAttribute="top" secondItem="uVR-pe-HwG" secondAttribute="top" constant="12" id="xwu-Il-y2A"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="loginname" destination="n7v-q5-Qef" id="Ny9-ha-kWn"/>
+                <outlet property="name" destination="yxU-0D-q9x" id="NHh-Ke-yep"/>
+                <outlet property="nickimg" destination="ikZ-ZY-6Sw" id="wjl-bN-bVn"/>
+                <outlet property="qrcodeimg" destination="O9L-fY-hJ9" id="MRl-WS-aJE"/>
+            </connections>
+            <point key="canvasLocation" x="115.5" y="157"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="default_user.png" width="100" height="100"/>
+        <image name="qrcode.png" width="100" height="100"/>
+    </resources>
+</document>

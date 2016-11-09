@@ -1,0 +1,125 @@
+//
+//  AboutViewController.m
+//  OldHome
+//
+//  Created by Stereo on 2016/11/2.
+//  Copyright © 2016年 Suypower. All rights reserved.
+//
+
+#import "AboutViewController.h"
+#import <Common/PublicCommon.h>
+#import "CommonCellNoImg.h"
+
+@interface AboutViewController ()
+
+@end
+
+@implementation AboutViewController
+@synthesize img,table;
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    img.layer.cornerRadius=40;
+    img.layer.masksToBounds = YES;
+    
+    labver = [[UILabel alloc] init];
+    NSString *verstr = [NSString stringWithFormat:@"苏电新桥 版本号:V%@",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
+    
+    CGSize size = [verstr sizeWithAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:12]}];
+    
+    labver.font = [UIFont systemFontOfSize:12];
+    
+    labver.frame = CGRectMake([PublicCommon GetScreen].size.width /2  - size.width /2 - 10, img.frame.origin.y + img.frame.size.height + 15, size.width+20, size.height+10);
+    labver.text = verstr;
+    labver.textColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
+    labver.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.2];
+    labver.layer.cornerRadius = 8;
+    labver.layer.masksToBounds=YES;
+    labver.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:labver];
+    
+    
+    
+    UINib *nib = [UINib nibWithNibName:@"commoncellnoimg" bundle:nil];
+    [table registerNib:nib forCellReuseIdentifier:@"cell"];
+    
+    table.backgroundColor = [UIColor clearColor];
+    table.delegate = self;
+    table.dataSource = self;
+    
+    
+    // Do any additional setup after loading the view.
+}
+
+
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 2;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *v = [[UIView alloc] init];
+    v.backgroundColor = [UIColor clearColor];
+    return v;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 1;
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CommonCellNoImg *cell = [table dequeueReusableCellWithIdentifier:@"cell"];
+    
+    
+    switch (indexPath.row) {
+     
+        case 0:
+            [cell setListMode:INDICATOR];
+            cell.listtitle.text = @"意见反馈";
+            break;
+        case 1:
+            [cell setListMode:INDICATOR];
+            cell.listtitle.text = @"分享";
+            break;
+    }
+
+    
+    return cell;
+}
+
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

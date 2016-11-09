@@ -1,0 +1,44 @@
+//
+//  AppInfo.m
+//  OldHome
+//
+//  Created by Stereo on 2016/11/4.
+//  Copyright © 2016年 Suypower. All rights reserved.
+//
+
+#import "AppInfo.h"
+
+@implementation AppInfo
+@synthesize appRunInfo;
+
+
+static AppInfo *_self;
+
+-(instancetype)init
+{
+    appRunInfo.CLIENTID = [[[UIDevice currentDevice].identifierForVendor UUIDString] UTF8String];
+    appRunInfo.deviceType = 1;
+    printf("客户端ID %s",appRunInfo.CLIENTID);
+    _userinfo = [[UserInfo alloc] init];
+
+    self = [super init];
+    return self;
+}
+
+-(UserInfo *)getUserInfo
+{
+    return _userinfo;
+}
+
+
++(instancetype)getInstance
+{
+    if (!_self)
+        _self = [[AppInfo alloc] init];
+    return _self;
+}
+
+
+
+
+@end

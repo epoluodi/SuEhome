@@ -1,0 +1,13 @@
+//
+//  BaseHttp.h
+//  SuEhome
+//
+//  Created by Stereo on 2016/11/4.
+//  Copyright © 2016年 Suypower. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface BaseHttp : NSObject
+
+@end

@@ -1,0 +1,13 @@
+//
+//  BaseHttp.m
+//  SuEhome
+//
+//  Created by Stereo on 2016/11/4.
+//  Copyright © 2016年 Suypower. All rights reserved.
+//
+
+#import "BaseHttp.h"
+
+@implementation BaseHttp
+
+@end

@@ -1,0 +1,176 @@
+//
+//  SelfInfoViewController.m
+//  OldHome
+//
+//  Created by Stereo on 2016/11/3.
+//  Copyright © 2016年 Suypower. All rights reserved.
+//
+
+#import "SelfInfoViewController.h"
+#import "UserInfoNickImgCell.h"
+#import "CommonCellNoImg.h"
+@interface SelfInfoViewController ()
+
+@end
+
+@implementation SelfInfoViewController
+@synthesize table;
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    
+    
+    UINib *nib = [UINib nibWithNibName:@"commoncellnoimg" bundle:nil];
+    [table registerNib:nib forCellReuseIdentifier:@"cell2"];
+    
+    nib = [UINib nibWithNibName:@"userinfo_nickimg" bundle:nil];
+    [table registerNib:nib forCellReuseIdentifier:@"cell1"];
+    table.backgroundColor = [UIColor clearColor];
+    
+    table.separatorInset = UIEdgeInsetsMake(0, 16, 0, 0);
+    table.delegate= self;
+    table.dataSource=self;
+    // Do any additional setup after loading the vi/ew.
+}
+
+
+
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    switch (section) {
+        case 0:
+            return 3;
+        case 1:
+            return 5;
+    }
+    return 0;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 10;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *v = [[UIView alloc] init];
+    return v;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *v = [[UIView alloc] init];
+    return v;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 1;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section==0 && indexPath.row==0)
+        return 80;
+    return 60;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UserInfoNickImgCell *nickimgcell ;
+    CommonCellNoImg *commoncell;
+    switch (indexPath.section) {
+        case 0:
+            if (indexPath.row==0){
+                nickimgcell = [table dequeueReusableCellWithIdentifier:@"cell1"];
+                return nickimgcell;
+            }else if (indexPath.row==1)
+            {
+                commoncell = [table dequeueReusableCellWithIdentifier:@"cell2"];
+                [commoncell setListMode:NOINDICATOR];
+                [commoncell setListMemo:@"哈哈哈"];
+                commoncell.listtitle.text = @"姓名";
+                return commoncell;
+            }else if (indexPath.row==2)
+            {
+                commoncell = [table dequeueReusableCellWithIdentifier:@"cell2"];
+                [commoncell setListMode:IMAGE];
+                commoncell.listtitle.text = @"我的二维码";
+                [commoncell setRightSmallImgage:[UIImage imageNamed:@"qrcode"]];
+                return commoncell;
+            }
+            break;
+        case 1:
+            if (indexPath.row==0)
+            {
+                commoncell = [table dequeueReusableCellWithIdentifier:@"cell2"];
+                [commoncell setListMode:NOINDICATOR];
+                [commoncell setListMemo:@"哈哈哈"];
+                commoncell.listtitle.text = @"单位";
+                [commoncell setCellSelectState:NO];
+                return commoncell;
+            }else if (indexPath.row==1)
+            {
+                commoncell = [table dequeueReusableCellWithIdentifier:@"cell2"];
+                [commoncell setListMode:NOINDICATOR];
+                [commoncell setListMemo:@"哈哈哈"];
+                commoncell.listtitle.text = @"部门";
+                [commoncell setCellSelectState:NO];
+                return commoncell;
+            }else if (indexPath.row==2)
+            {
+                commoncell = [table dequeueReusableCellWithIdentifier:@"cell2"];
+                [commoncell setListMode:INDICATOR];
+                [commoncell setListMemo:@"哈哈哈"];
+                commoncell.listtitle.text = @"详细地址";
+                return commoncell;
+            }else if (indexPath.row==3)
+            {
+                commoncell = [table dequeueReusableCellWithIdentifier:@"cell2"];
+                [commoncell setListMode:INDICATOR];
+                [commoncell setListMemo:@"哈13584001234"];
+                commoncell.listtitle.text = @"手机号";
+                return commoncell;
+            }else if (indexPath.row==4)
+            {
+                commoncell = [table dequeueReusableCellWithIdentifier:@"cell2"];
+                [commoncell setListMode:INDICATOR];
+                [commoncell setListMemo:@"asdhj@163hasd.com"];
+                commoncell.listtitle.text = @"邮箱";
+                return commoncell;
+            }
+            break;
+            
+   
+    }
+    
+
+    
+    return nil;
+}
+
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end
