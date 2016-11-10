@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CDV.h"
-#import "AppCommon.h"
+
 
 //基类view 模式
 typedef enum : NSUInteger {
@@ -19,26 +19,18 @@ typedef enum : NSUInteger {
 
 @interface CordovaWebViewController : CDVViewController
 {
-    @private
-    BOOL isHideNavBar;
-    NSString  * _webtitle;
     
     
     
-    
-    @public
+@public
     VIEWMODE _viewmode;
     
     
-    
 }
-@property (assign) BOOL IsUserWebTitle;
-@property (assign)BOOL IsHideNavBar;
-@property (copy,nonatomic) NSString *webTitle;
 
 
-//设置url
--(void)setLoadUrl:(NSString *)url;
+
+
 
 
 @end

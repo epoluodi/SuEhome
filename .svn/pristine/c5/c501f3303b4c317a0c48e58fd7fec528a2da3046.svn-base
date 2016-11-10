@@ -1,38 +1,42 @@
 //
-//  GroupViewController.m
+//  SingleWebViewController.m
 //  SuEhome
 //
-//  Created by Stereo on 2016/11/9.
+//  Created by Stereo on 2016/11/10.
 //  Copyright © 2016年 Suypower. All rights reserved.
 //
 
-#import "GroupViewController.h"
+#import "SingleWebViewController.h"
 
-@interface GroupViewController ()
+@interface SingleWebViewController ()
 
 @end
 
-@implementation GroupViewController
+@implementation SingleWebViewController
+@synthesize loadUrl;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _viewmode = TABVIEWCONTROLLERMODE;
+    _viewmode= VIEWCONTROLLERMODE;
+    mainviewcontroller = (MainRootViewController*)self.navigationController;
+    [self.view setBackgroundColor:UIColorFromRGB(0xEAEAEA)];
     
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:loadUrl ]]];
     
-    
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.taobao.com" ]]];
-    
+
     // Do any additional setup after loading the view.
 }
+
 
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self setNavTitleHide:NO];
-    [self setNavTitle:@"圈子"];
+    
+    mainviewcontroller.labtitle.hidden = YES;
 }
+
 
 
 - (void)didReceiveMemoryWarning {

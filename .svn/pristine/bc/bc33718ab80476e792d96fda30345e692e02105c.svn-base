@@ -210,7 +210,7 @@
        stereo.system.title({"title":"测试显示标题"});
         //alert("enter deleteFavorite");
       //  StereoBridge.deleteFavorite("111","deleteFavoritecallback");
-     /* try
+      try
       {
            stereo.FavoriteRequest.deleteFavorite({"favId":"2324"},deleteFavoritecallback,failCallback);
       }
@@ -218,7 +218,7 @@
       {
          alert(e.message)
       }
-      */
+
     }
    function deleteFavoritecallback(data)
     {

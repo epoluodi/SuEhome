@@ -1,44 +1,39 @@
 //
-//  GroupViewController.m
+//  CordovaWebViewController.m
 //  SuEhome
 //
-//  Created by Stereo on 2016/11/9.
+//  Created by Stereo on 2016/11/8.
 //  Copyright © 2016年 Suypower. All rights reserved.
 //
 
-#import "GroupViewController.h"
+#import "CordovaWebViewController.h"
 
-@interface GroupViewController ()
+
+@interface CordovaWebViewController ()
 
 @end
 
-@implementation GroupViewController
+@implementation CordovaWebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _viewmode = TABVIEWCONTROLLERMODE;
-    
-    
-    
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.taobao.com" ]]];
-    
     // Do any additional setup after loading the view.
 }
-
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self setNavTitleHide:NO];
-    [self setNavTitle:@"圈子"];
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+-(void)OnMessage:(NSString *)Action command:(CDVInvokedUrlCommand *)command
+{
+    [super OnMessage:Action command:command];
+    
+    
+}
+
 
 /*
 #pragma mark - Navigation

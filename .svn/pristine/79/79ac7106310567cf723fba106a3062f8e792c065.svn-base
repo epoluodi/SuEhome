@@ -218,10 +218,6 @@
                 UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                 SingleWebViewController *webviewcontroller = [storyboard instantiateViewControllerWithIdentifier:@"SingleWebViewController"];
                 
-                NSString *bundlepath = [[NSBundle mainBundle] pathForResource:@"WWW" ofType:@""];
-                NSString *homeurl = [NSString stringWithFormat:@"file://%@/%@", bundlepath ,@"html/index.html"];
-                webviewcontroller.loadUrl =homeurl;
-                
                 
                 [mainviewcontroller pushViewController:webviewcontroller animated:YES];
                 return;
