@@ -1,30 +1,21 @@
 //
-//  RootViewController.m
-//  OldHome
+//  SetLoginPwdViewController.m
+//  SuEhome
 //
-//  Created by Stereo on 2016/11/1.
+//  Created by Stereo on 2016/11/17.
 //  Copyright © 2016年 Suypower. All rights reserved.
 //
 
-#import "RootViewController.h"
-#import "MainRootViewController.h"
+#import "SetLoginPwdViewController.h"
 
-@interface RootViewController ()
-{
-    MainRootViewController *mainnavviewcontroller;
+@interface SetLoginPwdViewController ()
 
-}
 @end
 
-@implementation RootViewController
-@synthesize meVC;
+@implementation SetLoginPwdViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    mainnavviewcontroller = (MainRootViewController *)self.navigationController;
-    mainnavviewcontroller.rootViewController = self;
-    
-    meVC = self.viewControllers[3];
     // Do any additional setup after loading the view.
 }
 
@@ -33,17 +24,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-
-    switch (self.selectedIndex) {
-        case 0:
-       
-            break;
-            
-        
-    }
-}
 /*
 #pragma mark - Navigation
 

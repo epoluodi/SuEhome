@@ -16,7 +16,6 @@
 		B434031E1DDD8A84005DC86D /* icon_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = B434031C1DDD8A84005DC86D /* icon_cancel.png */; };
 		B434031F1DDD8A84005DC86D /* icon_publish.png in Resources */ = {isa = PBXBuildFile; fileRef = B434031D1DDD8A84005DC86D /* icon_publish.png */; };
 		B43403221DDD8B6B005DC86D /* CommentsInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = B43403211DDD8B6B005DC86D /* CommentsInputView.m */; };
-		B43403251DDDAF12005DC86D /* SetLoginPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43403241DDDAF12005DC86D /* SetLoginPwdViewController.m */; };
 		B442284E1DB8C53800C3E5E4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B442284D1DB8C53800C3E5E4 /* logo.png */; };
 		B46364EC1DCACD2A001DCAFD /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46364EB1DCACD2A001DCAFD /* SettingViewController.m */; };
 		B46364F11DCB2E2A001DCAFD /* SelfInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46364F01DCB2E2A001DCAFD /* SelfInfoViewController.m */; };
@@ -144,8 +143,6 @@
 		B434031D1DDD8A84005DC86D /* icon_publish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_publish.png; sourceTree = "<group>"; };
 		B43403201DDD8B6B005DC86D /* CommentsInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsInputView.h; sourceTree = "<group>"; };
 		B43403211DDD8B6B005DC86D /* CommentsInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsInputView.m; sourceTree = "<group>"; };
-		B43403231DDDAF12005DC86D /* SetLoginPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetLoginPwdViewController.h; sourceTree = "<group>"; };
-		B43403241DDDAF12005DC86D /* SetLoginPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetLoginPwdViewController.m; sourceTree = "<group>"; };
 		B442284D1DB8C53800C3E5E4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		B46364EA1DCACD2A001DCAFD /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		B46364EB1DCACD2A001DCAFD /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
@@ -409,8 +406,6 @@
 				B46364EB1DCACD2A001DCAFD /* SettingViewController.m */,
 				B46364EF1DCB2E2A001DCAFD /* SelfInfoViewController.h */,
 				B46364F01DCB2E2A001DCAFD /* SelfInfoViewController.m */,
-				B43403231DDDAF12005DC86D /* SetLoginPwdViewController.h */,
-				B43403241DDDAF12005DC86D /* SetLoginPwdViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -856,7 +851,6 @@
 				B4A6BE051DCC6A520064EEB4 /* UserInfo.m in Sources */,
 				B4CF48B21DC87CE800EBC0D9 /* MainRootViewController.m in Sources */,
 				B4CF48C61DC88E3D00EBC0D9 /* MeViewController.m in Sources */,
-				B43403251DDDAF12005DC86D /* SetLoginPwdViewController.m in Sources */,
 				B4CF48C91DC88E8000EBC0D9 /* BaseTabViewController.m in Sources */,
 				B46CB4501DC9D0E4001C2FCF /* AboutViewController.m in Sources */,
 				7BED1E3F1DD0BFA10001C370 /* HttpUserInfo.m in Sources */,

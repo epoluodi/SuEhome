@@ -359,10 +359,6 @@
                     
                     
                 } completion:^(BOOL finished) {
-                    if (_commentsintputview)
-                        [_commentsintputview removeFromSuperview];
-                    _commentsintputview = nil;
-                    
                     [_commentsbarview removeFromSuperview];
                     _commentsbarview = nil;
                     _callbackcommentsjs = nil;
