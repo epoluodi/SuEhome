@@ -1,47 +1,74 @@
 //
-//  MessageViewController.m
+//  ContactViewController.m
 //  SuEhome
 //
-//  Created by Stereo on 2016/11/23.
+//  Created by Stereo on 2016/11/24.
 //  Copyright © 2016年 Suypower. All rights reserved.
 //
 
-#import "MessageViewController.h"
-#import <Common/PublicCommon.h>
+#import "ContactViewController.h"
+#import "DBmanger.h"
 
-
-@interface MessageViewController ()
+@interface ContactViewController ()
 
 @end
 
-
-
-
-@implementation MessageViewController
+@implementation ContactViewController
 @synthesize table;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
     table.backgroundColor = [UIColor clearColor];
     table.delegate=self;
     table.dataSource= self;
+    table.sectionIndexBackgroundColor = [UIColor clearColor];
     searchbar= [[UISearchBar alloc] init];
     searchbar.placeholder=@"搜索";
     searchbar.showsCancelButton=NO;
     searchbar.barTintColor = UIColorFromRGB(0xEAEAEA);
-//    searchbar.inputAccessoryView =[PublicCommon getInputToolbar:self sel:@selector(closeInputborad)];
+    //    searchbar.inputAccessoryView =[PublicCommon getInputToolbar:self sel:@selector(closeInputborad)];
     searchbar.delegate=self;
     
     
-    cancelButton = [searchbar valueForKey:@"_cancelButton"];
 
     IsSearchMode = NO;
     [self initSearchBackView];
     
-    [self InitRightBtn];
+    friendlist = [[NSMutableArray alloc] init];
+    [self loadContract];
+    
+
     // Do any additional setup after loading the view.
 }
 
+
+//读取用户数据
+-(void)loadContract
+{
+    PYlist = [[DBmanger getIntance] getFiendlistGroupCoountForPingYing];
+    selectlistpy = [[NSMutableArray alloc] init];
+    for (NSDictionary *fpy in PYlist) {
+        [selectlistpy addObject:[fpy objectForKey:@"fpy" ] ];
+        
+        NSArray *_list = [[DBmanger getIntance] getFiendListAllForPY:[fpy objectForKey:@"fpy" ]];
+        [friendlist addObject:_list];
+    }
+    [table reloadData];
+    
+}
+//初始化搜索view
+-(void)initSearchBackView
+{
+    
+    
+    searchview = [[SearchView alloc] init:self.view];
+    _backview = [searchview getBackView];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeInputborad)];
+    [_backview addGestureRecognizer:tap];
+    
+}
 
 //关闭键盘恢复ui
 -(void)closeInputborad
@@ -52,78 +79,26 @@
 
 
 
-//初始化搜索view
--(void)initSearchBackView
-{
-
-    
-    searchview = [[SearchView alloc] init:self.tabBarController.view];
-    _backview = [searchview getBackView];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeInputborad)];
-    [_backview addGestureRecognizer:tap];
-    
-}
-
-
-
--(void)InitRightBtn
-{
-    if ([[AppInfo getInstance] getUserInfo].userType == OLDMAN)
-    {
-        rightbtn1 = [[UIButton alloc] init];
-        [rightbtn1 setImage:[UIImage imageNamed:@"t3_1"] forState:UIControlStateNormal];
-        rightbtn1.frame = CGRectMake([PublicCommon GetALLScreen].size.width - 16-24, 22 -12, 24, 24);
-        [self.navigationController.navigationBar addSubview:rightbtn1];
-        [rightbtn1  addTarget:self action:@selector(ClickContract) forControlEvents:UIControlEventTouchUpInside];
-        
-    }
-}
-
--(void)ClickContract
-{
-    [self performSegueWithIdentifier:@"showfamilylist" sender:self];
-}
-
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self setNavTitleHide:NO];
-    [self setNavTitle:@"消息"];
-    if (rightbtn1)
-        rightbtn1.hidden=NO;
-    
-}
-
--(void)viewDidDisappear:(BOOL)animated
-{
-    if (rightbtn1)
-        rightbtn1.hidden=YES;
-}
-
-
-
-
 #pragma mark -UISearchBarDelegate
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
-    [self.tabBarController.view addSubview:_backview];
+    [self.view addSubview:_backview];
     __weak __typeof(self) weakself = self;
     [UIView animateWithDuration:0.5 animations:^{
-         table.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+        table.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
         
         //1.
         weakself.navigationController.navigationBar.transform = CGAffineTransformMakeTranslation(0, -viewOffset);
         
-//        searchBar.transform = CGAffineTransformMakeTranslation(0, -viewOffset);
+        //        searchBar.transform = CGAffineTransformMakeTranslation(0, -viewOffset);
         _backview.alpha=0.9;
- 
+        
         [mainviewcontroller setStatusbarMode:UIStatusBarStyleDefault];
         [weakself setNeedsStatusBarAppearanceUpdate];
         searchBar.showsCancelButton = YES;
-        cancelButton.enabled=YES;
+  
         IsSearchMode = YES;
-//        //1.执行动画
-
+        //        //1.执行动画
+        
     }];
 }
 
@@ -149,8 +124,8 @@
         [weakself setNeedsStatusBarAppearanceUpdate];
         
     }];
-
-
+    
+    
 }
 
 
@@ -159,47 +134,69 @@
 
 #pragma mark tabledelegate
 
+
+-(NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+
+
+    if (selectlistpy)
+        return selectlistpy;
+    return nil;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
+    
+    return index;
+}
+
+
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    if (PYlist)
+        return PYlist.count +1;
     return 1;
 }
+
+
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 50;
+    if (section==0)
+        return 50;
+    else
+        return 25;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-
-    return searchbar;
+    if (section == 0)
+        return searchbar;
+    else
+    {
+        UILabel *labpy = [[UILabel alloc] init];
+        labpy.text = [NSString stringWithFormat:@"  %@",selectlistpy[section-1]];
+        labpy.backgroundColor = UIColorFromRGB(0xEAEAEA);
+        return labpy;
+    }
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    if (section==0)
+        return 0;
+    return ((NSArray *)friendlist[section-1]).count;
 }
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.textLabel.text=@"123";
+    
+    NSArray *_arr = friendlist[indexPath.section-1];
+    T_friendlist * tfriend =_arr[indexPath.row];
+    cell.textLabel.text=tfriend.nickname;
     return cell;
-}
-
-#pragma mark -
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
--(UIStatusBarStyle)preferredStatusBarStyle
-{
-    if (IsSearchMode)
-        return UIStatusBarStyleDefault;
-    else
-        return UIStatusBarStyleLightContent;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -213,6 +210,17 @@
     return 1;
 }
 
+
+#pragma mark -
+
+
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 /*
 #pragma mark - Navigation
