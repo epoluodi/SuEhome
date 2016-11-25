@@ -48,7 +48,7 @@
 
 
 //当前APP相关定义
-#define APPCOLOR UIColorFromRGB(0xFF4500)
+#define APPCOLOR UIColorFromRGB(0xFF4500) //主色调标题栏，button
 
 #import "ServerInfo.h"
 #import "MBProgressHUD.h"

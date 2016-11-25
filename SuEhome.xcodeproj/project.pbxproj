@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7BED1E3F1DD0BFA10001C370 /* HttpUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BED1E3E1DD0BFA10001C370 /* HttpUserInfo.m */; };
+		B411DEB01DE81F6F0046ECED /* personcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B411DEAF1DE81F6F0046ECED /* personcell.xib */; };
+		B411DEB31DE81F8F0046ECED /* PersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B411DEB21DE81F8F0046ECED /* PersonCell.m */; };
+		B411DEB61DE8361C0046ECED /* UserInfoSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B411DEB51DE8361C0046ECED /* UserInfoSampleViewController.m */; };
 		B429D7FC1DD0646400096E6D /* HttpLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = B429D7FB1DD0646400096E6D /* HttpLogin.m */; };
 		B429D8001DD0702100096E6D /* MQTTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B429D7FF1DD0702100096E6D /* MQTTConfig.m */; };
 		B429D8031DD0712E00096E6D /* MQTT.m in Sources */ = {isa = PBXBuildFile; fileRef = B429D8021DD0712E00096E6D /* MQTT.m */; };
@@ -148,6 +151,11 @@
 		7BED1E3D1DD0BFA10001C370 /* HttpUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpUserInfo.h; sourceTree = "<group>"; };
 		7BED1E3E1DD0BFA10001C370 /* HttpUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpUserInfo.m; sourceTree = "<group>"; };
 		7BED1E401DD0C2240001C370 /* STHttp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STHttp.h; sourceTree = "<group>"; };
+		B411DEAF1DE81F6F0046ECED /* personcell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = personcell.xib; sourceTree = "<group>"; };
+		B411DEB11DE81F8F0046ECED /* PersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCell.h; sourceTree = "<group>"; };
+		B411DEB21DE81F8F0046ECED /* PersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCell.m; sourceTree = "<group>"; };
+		B411DEB41DE8361C0046ECED /* UserInfoSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoSampleViewController.h; sourceTree = "<group>"; };
+		B411DEB51DE8361C0046ECED /* UserInfoSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoSampleViewController.m; sourceTree = "<group>"; };
 		B429D7FA1DD0646400096E6D /* HttpLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpLogin.h; sourceTree = "<group>"; };
 		B429D7FB1DD0646400096E6D /* HttpLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpLogin.m; sourceTree = "<group>"; };
 		B429D7FE1DD0702100096E6D /* MQTTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTConfig.h; sourceTree = "<group>"; };
@@ -372,6 +380,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B411DEAD1DE81F580046ECED /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B411DEAF1DE81F6F0046ECED /* personcell.xib */,
+				B411DEB11DE81F8F0046ECED /* PersonCell.h */,
+				B411DEB21DE81F8F0046ECED /* PersonCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		B411DEB71DE83BE20046ECED /* CELL */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CELL;
+			sourceTree = "<group>";
+		};
 		B429D7FD1DD06FEB00096E6D /* MQTT */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +561,7 @@
 		B47807BC1D2B96E6004B0392 /* SuEhome */ = {
 			isa = PBXGroup;
 			children = (
+				B411DEB71DE83BE20046ECED /* CELL */,
 				B4808AEC1DD40E370089228B /* Plugins */,
 				B47BF3AA1DD1D47100BAC161 /* config.xml */,
 				B47BF3A81DD1D3F000BAC161 /* WWW */,
@@ -790,8 +816,11 @@
 		B4FB012F1DE53F4A0050AE71 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				B411DEAD1DE81F580046ECED /* cell */,
 				B46450BC1DE6914D0043DA6B /* ContactViewController.h */,
 				B46450BD1DE6914D0043DA6B /* ContactViewController.m */,
+				B411DEB41DE8361C0046ECED /* UserInfoSampleViewController.h */,
+				B411DEB51DE8361C0046ECED /* UserInfoSampleViewController.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -908,6 +937,7 @@
 				B46E26E21DDC4C0D002B87B7 /* icon_fav2.png in Resources */,
 				B47807C81D2B96E6004B0392 /* Main.storyboard in Resources */,
 				B434031F1DDD8A84005DC86D /* icon_publish.png in Resources */,
+				B411DEB01DE81F6F0046ECED /* personcell.xib in Resources */,
 				B4CF48CE1DC897BD00EBC0D9 /* qrcode.png in Resources */,
 				B46E26E11DDC4C0D002B87B7 /* icon_fav1.png in Resources */,
 				B4CF48AC1DC87BA000EBC0D9 /* my_fav.png in Resources */,
@@ -938,6 +968,7 @@
 				B4CB4B1B1DD0872100D6035E /* DBmanger.m in Sources */,
 				B429D8001DD0702100096E6D /* MQTTConfig.m in Sources */,
 				B47BF3AE1DD1D9A500BAC161 /* CordovaWebViewController.m in Sources */,
+				B411DEB61DE8361C0046ECED /* UserInfoSampleViewController.m in Sources */,
 				B46E26DC1DDC06A4002B87B7 /* Plugins.m in Sources */,
 				B47BF36A1DD1AEAF00BAC161 /* HttpFile.m in Sources */,
 				B4A6BE081DCC6DA70064EEB4 /* AppInfo.m in Sources */,
@@ -963,6 +994,7 @@
 				B47807C21D2B96E6004B0392 /* AppDelegate.m in Sources */,
 				B4A6BE011DCC676C0064EEB4 /* MBProgressHUD.m in Sources */,
 				B4A641251DD31805002BF258 /* GroupViewController.m in Sources */,
+				B411DEB31DE81F8F0046ECED /* PersonCell.m in Sources */,
 				B479596A1DD9571A008902D7 /* ScanCodeView.m in Sources */,
 				B4B3C36B1DD5B688008363D6 /* FTPopOverMenu.m in Sources */,
 				B46CB44D1DC992FF001C2FCF /* MeTableList2.m in Sources */,

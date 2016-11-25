@@ -13,5 +13,5 @@
 
 //加载图片
 -(void)setMediaIdLoadImg:(NSString *)mediaid filesize:(NSString *)size;
-
+-(void)setRadius;//设置圆角
 @end

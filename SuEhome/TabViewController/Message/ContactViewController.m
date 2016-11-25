@@ -8,6 +8,7 @@
 
 #import "ContactViewController.h"
 #import "DBmanger.h"
+#import "UserInfoSampleViewController.h"
 
 @interface ContactViewController ()
 
@@ -21,8 +22,6 @@
     
     
     table.backgroundColor = [UIColor clearColor];
-    table.delegate=self;
-    table.dataSource= self;
     table.sectionIndexBackgroundColor = [UIColor clearColor];
     searchbar= [[UISearchBar alloc] init];
     searchbar.placeholder=@"搜索";
@@ -32,7 +31,11 @@
     searchbar.delegate=self;
     
     
-
+    UINib *nib= [UINib nibWithNibName:@"personcell" bundle:nil];
+    [table registerNib:nib forCellReuseIdentifier:@"cell"];
+    
+    table.delegate=self;
+    table.dataSource= self;
     IsSearchMode = NO;
     [self initSearchBackView];
     
@@ -188,14 +191,21 @@
     return ((NSArray *)friendlist[section-1]).count;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
+}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
     
+    PersonCell *cell = [table dequeueReusableCellWithIdentifier:@"cell"];
     NSArray *_arr = friendlist[indexPath.section-1];
     T_friendlist * tfriend =_arr[indexPath.row];
-    cell.textLabel.text=tfriend.nickname;
+    cell.nickname.text =tfriend.nickname;
+    [cell.nickimg setMediaIdLoadImg:tfriend.picid filesize:@"_40"];
+    [cell.nickimg setRadius];
+    
     return cell;
 }
 
@@ -210,6 +220,15 @@
     return 1;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSArray *_arr = friendlist[indexPath.section-1];
+    T_friendlist * tfriend =_arr[indexPath.row];
+    
+    UIStoryboard *storyborad = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UserInfoSampleViewController *_UserInfoSampleViewController =[storyborad instantiateViewControllerWithIdentifier:@"UserInfoSampleViewController"];
+    [self.navigationController pushViewController:_UserInfoSampleViewController animated:YES];
+}
 
 #pragma mark -
 

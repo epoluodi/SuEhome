@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SearchView.h"
 #import "BaseTabViewController.h"
+#import "PersonCell.h"
 
 
 @interface ContactViewController : BaseTabViewController<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>

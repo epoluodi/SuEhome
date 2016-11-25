@@ -20,6 +20,11 @@
 }
 */
 
+-(void)setRadius
+{
+    self.layer.cornerRadius = 6;
+    self.layer.masksToBounds = YES;
+}
 
 -(void)setMediaIdLoadImg:(NSString *)mediaid filesize:(NSString *)size
 {
