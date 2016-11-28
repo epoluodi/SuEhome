@@ -227,7 +227,6 @@
     
     UIStoryboard *storyborad = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UserInfoSampleViewController *_UserInfoSampleViewController =[storyborad instantiateViewControllerWithIdentifier:@"UserInfoSampleViewController"];
-    _UserInfoSampleViewController.T_Friend =tfriend;
     [self.navigationController pushViewController:_UserInfoSampleViewController animated:YES];
 }
 

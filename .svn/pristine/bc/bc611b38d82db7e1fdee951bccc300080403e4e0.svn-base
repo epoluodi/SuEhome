@@ -120,11 +120,6 @@
 		B4CF48D41DC8999D00EBC0D9 /* MeTableList1.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CF48D31DC8999D00EBC0D9 /* MeTableList1.m */; };
 		B4CF48D61DC89B3500EBC0D9 /* me_t2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4CF48D51DC89B3500EBC0D9 /* me_t2.xib */; };
 		B4D2CF9D1DEBC41200A376FE /* libHttpLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D2CF9C1DEBC41200A376FE /* libHttpLib.a */; };
-		B4D2CF9F1DEC222F00A376FE /* userinfoheadcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D2CF9E1DEC222F00A376FE /* userinfoheadcell.xib */; };
-		B4D2CFA21DEC238E00A376FE /* UserInfoHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D2CFA11DEC238E00A376FE /* UserInfoHeadCell.m */; };
-		B4D2CFA51DEC296900A376FE /* s1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D2CFA31DEC296900A376FE /* s1.png */; };
-		B4D2CFA61DEC296900A376FE /* s2.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D2CFA41DEC296900A376FE /* s2.png */; };
-		B4D2CFA91DEC2EFF00A376FE /* HttpEnterpriseaddressbook.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D2CFA81DEC2EFF00A376FE /* HttpEnterpriseaddressbook.m */; };
 		B4FB01331DE53F5D0050AE71 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FB01321DE53F5D0050AE71 /* MessageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -346,13 +341,6 @@
 		B4CF48D31DC8999D00EBC0D9 /* MeTableList1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeTableList1.m; sourceTree = "<group>"; };
 		B4CF48D51DC89B3500EBC0D9 /* me_t2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = me_t2.xib; sourceTree = "<group>"; };
 		B4D2CF9C1DEBC41200A376FE /* libHttpLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHttpLib.a; sourceTree = "<group>"; };
-		B4D2CF9E1DEC222F00A376FE /* userinfoheadcell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userinfoheadcell.xib; sourceTree = "<group>"; };
-		B4D2CFA01DEC238E00A376FE /* UserInfoHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoHeadCell.h; sourceTree = "<group>"; };
-		B4D2CFA11DEC238E00A376FE /* UserInfoHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoHeadCell.m; sourceTree = "<group>"; };
-		B4D2CFA31DEC296900A376FE /* s1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s1.png; sourceTree = "<group>"; };
-		B4D2CFA41DEC296900A376FE /* s2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s2.png; sourceTree = "<group>"; };
-		B4D2CFA71DEC2EFF00A376FE /* HttpEnterpriseaddressbook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpEnterpriseaddressbook.h; sourceTree = "<group>"; };
-		B4D2CFA81DEC2EFF00A376FE /* HttpEnterpriseaddressbook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpEnterpriseaddressbook.m; sourceTree = "<group>"; };
 		B4FB01311DE53F5D0050AE71 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		B4FB01321DE53F5D0050AE71 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -388,9 +376,6 @@
 				B411DEAF1DE81F6F0046ECED /* personcell.xib */,
 				B411DEB11DE81F8F0046ECED /* PersonCell.h */,
 				B411DEB21DE81F8F0046ECED /* PersonCell.m */,
-				B4D2CF9E1DEC222F00A376FE /* userinfoheadcell.xib */,
-				B4D2CFA01DEC238E00A376FE /* UserInfoHeadCell.h */,
-				B4D2CFA11DEC238E00A376FE /* UserInfoHeadCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -416,8 +401,6 @@
 		B442284C1DB8C53800C3E5E4 /* png */ = {
 			isa = PBXGroup;
 			children = (
-				B4D2CFA31DEC296900A376FE /* s1.png */,
-				B4D2CFA41DEC296900A376FE /* s2.png */,
 				B46450B91DE68D720043DA6B /* t3_1.png */,
 				B485E0A91DE2F0AE0096F4C6 /* comment.png */,
 				B485E0A71DE2F0A30096F4C6 /* artical.png */,
@@ -522,8 +505,6 @@
 				B47BF3691DD1AEAF00BAC161 /* HttpFile.m */,
 				B485E0A21DE2E8C20096F4C6 /* HttpScore.h */,
 				B485E0A31DE2E8C20096F4C6 /* HttpScore.m */,
-				B4D2CFA71DEC2EFF00A376FE /* HttpEnterpriseaddressbook.h */,
-				B4D2CFA81DEC2EFF00A376FE /* HttpEnterpriseaddressbook.m */,
 			);
 			path = HTPPServer;
 			sourceTree = "<group>";
@@ -893,7 +874,6 @@
 				B4CF48CC1DC8968100EBC0D9 /* me_t1.xib in Resources */,
 				B485E0AC1DE2F0D90096F4C6 /* scorecell.xib in Resources */,
 				B4CF48D61DC89B3500EBC0D9 /* me_t2.xib in Resources */,
-				B4D2CFA61DEC296900A376FE /* s2.png in Resources */,
 				B46CB4521DC9D919001C2FCF /* logo512.png in Resources */,
 				B485E0A81DE2F0A30096F4C6 /* artical.png in Resources */,
 				B485E0961DE291E20096F4C6 /* sharebarcode.png in Resources */,
@@ -906,12 +886,10 @@
 				B485E0AA1DE2F0AE0096F4C6 /* comment.png in Resources */,
 				B442284E1DB8C53800C3E5E4 /* logo.png in Resources */,
 				B46CB4571DC9E4F0001C2FCF /* commoncellnoimg.xib in Resources */,
-				B4D2CF9F1DEC222F00A376FE /* userinfoheadcell.xib in Resources */,
 				B46E26E61DDC4CE1002B87B7 /* bubble1.png in Resources */,
 				B47807CD1D2B96E6004B0392 /* LaunchScreen.storyboard in Resources */,
 				B4CF48C21DC88AEA00EBC0D9 /* default_user.png in Resources */,
 				B46E26E41DDC4C0D002B87B7 /* icon_like2.png in Resources */,
-				B4D2CFA51DEC296900A376FE /* s1.png in Resources */,
 				B485E0A61DE2F0910096F4C6 /* sigin.png in Resources */,
 				B47807CA1D2B96E6004B0392 /* Assets.xcassets in Resources */,
 				B46364F31DCB3916001DCAFD /* userinfo_nickimg.xib in Resources */,
@@ -957,7 +935,6 @@
 				B429D8001DD0702100096E6D /* MQTTConfig.m in Sources */,
 				B47BF3AE1DD1D9A500BAC161 /* CordovaWebViewController.m in Sources */,
 				B411DEB61DE8361C0046ECED /* UserInfoSampleViewController.m in Sources */,
-				B4D2CFA21DEC238E00A376FE /* UserInfoHeadCell.m in Sources */,
 				B46E26DC1DDC06A4002B87B7 /* Plugins.m in Sources */,
 				B47BF36A1DD1AEAF00BAC161 /* HttpFile.m in Sources */,
 				B4A6BE081DCC6DA70064EEB4 /* AppInfo.m in Sources */,
@@ -969,7 +946,6 @@
 				B485E0991DE294730096F4C6 /* MyScoreViewController.m in Sources */,
 				B485E0A41DE2E8C20096F4C6 /* HttpScore.m in Sources */,
 				B43403251DDDAF12005DC86D /* SetLoginPwdViewController.m in Sources */,
-				B4D2CFA91DEC2EFF00A376FE /* HttpEnterpriseaddressbook.m in Sources */,
 				B4CF48C91DC88E8000EBC0D9 /* BaseTabViewController.m in Sources */,
 				B46CB4501DC9D0E4001C2FCF /* AboutViewController.m in Sources */,
 				7BED1E3F1DD0BFA10001C370 /* HttpUserInfo.m in Sources */,
