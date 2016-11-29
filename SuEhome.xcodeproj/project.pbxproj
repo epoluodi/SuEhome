@@ -125,6 +125,13 @@
 		B4D2CFA51DEC296900A376FE /* s1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D2CFA31DEC296900A376FE /* s1.png */; };
 		B4D2CFA61DEC296900A376FE /* s2.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D2CFA41DEC296900A376FE /* s2.png */; };
 		B4D2CFA91DEC2EFF00A376FE /* HttpEnterpriseaddressbook.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D2CFA81DEC2EFF00A376FE /* HttpEnterpriseaddressbook.m */; };
+		B4E72AEF1DED270F00052676 /* T_DEPT+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E72AE41DED270F00052676 /* T_DEPT+CoreDataClass.m */; };
+		B4E72AF01DED270F00052676 /* T_DEPT+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E72AE61DED270F00052676 /* T_DEPT+CoreDataProperties.m */; };
+		B4E72AF11DED270F00052676 /* T_Member+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E72AE81DED270F00052676 /* T_Member+CoreDataClass.m */; };
+		B4E72AF21DED270F00052676 /* T_Member+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E72AEA1DED270F00052676 /* T_Member+CoreDataProperties.m */; };
+		B4E72AF31DED270F00052676 /* T_ORG+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E72AEC1DED270F00052676 /* T_ORG+CoreDataClass.m */; };
+		B4E72AF41DED270F00052676 /* T_ORG+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E72AEE1DED270F00052676 /* T_ORG+CoreDataProperties.m */; };
+		B4E72AF61DED809800052676 /* t3_3.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E72AF51DED809800052676 /* t3_3.png */; };
 		B4FB01331DE53F5D0050AE71 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FB01321DE53F5D0050AE71 /* MessageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -353,6 +360,19 @@
 		B4D2CFA41DEC296900A376FE /* s2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s2.png; sourceTree = "<group>"; };
 		B4D2CFA71DEC2EFF00A376FE /* HttpEnterpriseaddressbook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpEnterpriseaddressbook.h; sourceTree = "<group>"; };
 		B4D2CFA81DEC2EFF00A376FE /* HttpEnterpriseaddressbook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpEnterpriseaddressbook.m; sourceTree = "<group>"; };
+		B4E72AE31DED270F00052676 /* T_DEPT+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T_DEPT+CoreDataClass.h"; sourceTree = "<group>"; };
+		B4E72AE41DED270F00052676 /* T_DEPT+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "T_DEPT+CoreDataClass.m"; sourceTree = "<group>"; };
+		B4E72AE51DED270F00052676 /* T_DEPT+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T_DEPT+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B4E72AE61DED270F00052676 /* T_DEPT+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "T_DEPT+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B4E72AE71DED270F00052676 /* T_Member+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T_Member+CoreDataClass.h"; sourceTree = "<group>"; };
+		B4E72AE81DED270F00052676 /* T_Member+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "T_Member+CoreDataClass.m"; sourceTree = "<group>"; };
+		B4E72AE91DED270F00052676 /* T_Member+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T_Member+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B4E72AEA1DED270F00052676 /* T_Member+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "T_Member+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B4E72AEB1DED270F00052676 /* T_ORG+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T_ORG+CoreDataClass.h"; sourceTree = "<group>"; };
+		B4E72AEC1DED270F00052676 /* T_ORG+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "T_ORG+CoreDataClass.m"; sourceTree = "<group>"; };
+		B4E72AED1DED270F00052676 /* T_ORG+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T_ORG+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B4E72AEE1DED270F00052676 /* T_ORG+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "T_ORG+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B4E72AF51DED809800052676 /* t3_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t3_3.png; sourceTree = "<group>"; };
 		B4FB01311DE53F5D0050AE71 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		B4FB01321DE53F5D0050AE71 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -416,6 +436,7 @@
 		B442284C1DB8C53800C3E5E4 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				B4E72AF51DED809800052676 /* t3_3.png */,
 				B4D2CFA31DEC296900A376FE /* s1.png */,
 				B4D2CFA41DEC296900A376FE /* s2.png */,
 				B46450B91DE68D720043DA6B /* t3_1.png */,
@@ -766,6 +787,18 @@
 		B4AFF69E1DC8375D0025D1D9 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				B4E72AE31DED270F00052676 /* T_DEPT+CoreDataClass.h */,
+				B4E72AE41DED270F00052676 /* T_DEPT+CoreDataClass.m */,
+				B4E72AE51DED270F00052676 /* T_DEPT+CoreDataProperties.h */,
+				B4E72AE61DED270F00052676 /* T_DEPT+CoreDataProperties.m */,
+				B4E72AE71DED270F00052676 /* T_Member+CoreDataClass.h */,
+				B4E72AE81DED270F00052676 /* T_Member+CoreDataClass.m */,
+				B4E72AE91DED270F00052676 /* T_Member+CoreDataProperties.h */,
+				B4E72AEA1DED270F00052676 /* T_Member+CoreDataProperties.m */,
+				B4E72AEB1DED270F00052676 /* T_ORG+CoreDataClass.h */,
+				B4E72AEC1DED270F00052676 /* T_ORG+CoreDataClass.m */,
+				B4E72AED1DED270F00052676 /* T_ORG+CoreDataProperties.h */,
+				B4E72AEE1DED270F00052676 /* T_ORG+CoreDataProperties.m */,
 				B47BF3611DD1778600BAC161 /* T_friendlist+CoreDataClass.h */,
 				B47BF3621DD1778600BAC161 /* T_friendlist+CoreDataClass.m */,
 				B47BF3631DD1778600BAC161 /* T_friendlist+CoreDataProperties.h */,
@@ -923,6 +956,7 @@
 				B4CF48AE1DC87BA000EBC0D9 /* settings.png in Resources */,
 				B46E26D61DDBFFC2002B87B7 /* icon_return1.png in Resources */,
 				B46E26E21DDC4C0D002B87B7 /* icon_fav2.png in Resources */,
+				B4E72AF61DED809800052676 /* t3_3.png in Resources */,
 				B47807C81D2B96E6004B0392 /* Main.storyboard in Resources */,
 				B434031F1DDD8A84005DC86D /* icon_publish.png in Resources */,
 				B411DEB01DE81F6F0046ECED /* personcell.xib in Resources */,
@@ -940,7 +974,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4CF48D11DC8990300EBC0D9 /* BaseTableViewCell.m in Sources */,
+				B4E72AEF1DED270F00052676 /* T_DEPT+CoreDataClass.m in Sources */,
 				B47BF3651DD1778600BAC161 /* T_friendlist+CoreDataClass.m in Sources */,
+				B4E72AF41DED270F00052676 /* T_ORG+CoreDataProperties.m in Sources */,
 				B485E0931DE2915C0096F4C6 /* AboutShareViewController.m in Sources */,
 				B429D7FC1DD0646400096E6D /* HttpLogin.m in Sources */,
 				B4CF48A21DC8431000EBC0D9 /* LoginViewController.m in Sources */,
@@ -980,6 +1016,7 @@
 				B4BC801B1DDEDED500352307 /* UserInfoBarCodeViewController.m in Sources */,
 				B46364FB1DCB3AA4001DCAFD /* UserInfoNickImgCell.m in Sources */,
 				B46CB4551DC9E4E1001C2FCF /* CommonCellNoImg.m in Sources */,
+				B4E72AF21DED270F00052676 /* T_Member+CoreDataProperties.m in Sources */,
 				B47959631DD95660008902D7 /* ScanRequest.m in Sources */,
 				B47807C21D2B96E6004B0392 /* AppDelegate.m in Sources */,
 				B4A6BE011DCC676C0064EEB4 /* MBProgressHUD.m in Sources */,
@@ -987,11 +1024,14 @@
 				B411DEB31DE81F8F0046ECED /* PersonCell.m in Sources */,
 				B479596A1DD9571A008902D7 /* ScanCodeView.m in Sources */,
 				B4B3C36B1DD5B688008363D6 /* FTPopOverMenu.m in Sources */,
+				B4E72AF11DED270F00052676 /* T_Member+CoreDataClass.m in Sources */,
+				B4E72AF01DED270F00052676 /* T_DEPT+CoreDataProperties.m in Sources */,
 				B46CB44D1DC992FF001C2FCF /* MeTableList2.m in Sources */,
 				B46364F81DCB39A5001DCAFD /* STImageView.m in Sources */,
 				B4808AEF1DD40FBC0089228B /* SingleWebViewController.m in Sources */,
 				B46450BE1DE6914D0043DA6B /* ContactViewController.m in Sources */,
 				B43403221DDD8B6B005DC86D /* CommentsInputView.m in Sources */,
+				B4E72AF31DED270F00052676 /* T_ORG+CoreDataClass.m in Sources */,
 				B485E0AF1DE2F1BD0096F4C6 /* ScoreCell.m in Sources */,
 				B485E0A11DE29E9C0096F4C6 /* AMAnimatedNumber.m in Sources */,
 				B47807BF1D2B96E6004B0392 /* main.m in Sources */,

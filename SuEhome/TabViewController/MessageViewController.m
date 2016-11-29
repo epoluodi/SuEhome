@@ -76,6 +76,21 @@
         [self.navigationController.navigationBar addSubview:rightbtn1];
         [rightbtn1  addTarget:self action:@selector(ClickContract) forControlEvents:UIControlEventTouchUpInside];
         
+    }else if([[AppInfo getInstance] getUserInfo].userType == WORKER)
+    {
+        rightbtn1 = [[UIButton alloc] init];
+        [rightbtn1 setImage:[UIImage imageNamed:@"t3_3"] forState:UIControlStateNormal];
+        rightbtn1.frame = CGRectMake([PublicCommon GetALLScreen].size.width - 16-24, 22 -12, 24, 24);
+        [self.navigationController.navigationBar addSubview:rightbtn1];
+        [rightbtn1  addTarget:self action:@selector(ClickContract) forControlEvents:UIControlEventTouchUpInside];
+        
+        rightbtn2 = [[UIButton alloc] init];
+        [rightbtn2 setImage:[UIImage imageNamed:@"t3_1"] forState:UIControlStateNormal];
+        rightbtn2.frame = CGRectMake([PublicCommon GetALLScreen].size.width - 16-24 - 10 - 24, 22 -12, 24, 24);
+        [self.navigationController.navigationBar addSubview:rightbtn2];
+        [rightbtn2  addTarget:self action:@selector(ClickContract) forControlEvents:UIControlEventTouchUpInside];
+        
+        
     }
 }
 
@@ -92,6 +107,8 @@
     [self setNavTitle:@"消息"];
     if (rightbtn1)
         rightbtn1.hidden=NO;
+    if (rightbtn2)
+        rightbtn2.hidden=NO;
     
 }
 
@@ -99,6 +116,8 @@
 {
     if (rightbtn1)
         rightbtn1.hidden=YES;
+    if (rightbtn2)
+        rightbtn2.hidden=YES;
 }
 
 

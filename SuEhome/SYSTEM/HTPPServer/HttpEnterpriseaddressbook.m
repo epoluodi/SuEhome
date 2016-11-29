@@ -20,11 +20,51 @@
     
     NSLog(@"获取企业通讯录组织信息 %@", rd.returnDatas);
     
-//    [[DBmanger getIntance] deleAllFriendList];
-//    for (NSDictionary *d in rd.returnDatas) {
-//        [[DBmanger getIntance] addFriendList:d];
-//    }
+    [[DBmanger getIntance] deletAllOrg];
+    for (NSDictionary *d in rd.returnDatas) {
+        [[DBmanger getIntance] addORG:d];
+    }
     
     return  rd;
 }
+
+-(ReturnData *)queryDept
+{
+    _http.WebServiceUrl = DEPTQUERYURL;
+    
+    NSData * ret =  [_http httprequest:nil];
+    
+    ReturnData *rd = [ReturnData getReturnDatawithData:ret dataMode:NO];
+    
+    NSLog(@"获取企业通讯录部门信息 %@", rd.returnDatas);
+    
+    [[DBmanger getIntance] deletAllDept];
+    for (NSDictionary *d in rd.returnDatas) {
+        [[DBmanger getIntance] addDEPT:d];
+    }
+    
+    return  rd;
+}
+
+
+-(ReturnData *)queryMember
+{
+    _http.WebServiceUrl = MEMBERQUERYURL;
+    
+    NSData * ret =  [_http httprequest:nil];
+    
+    ReturnData *rd = [ReturnData getReturnDatawithData:ret dataMode:NO];
+    
+    NSLog(@"获取企业通讯录成员信息 %@", rd.returnDatas);
+    
+    [[DBmanger getIntance] deletAllMember];
+    for (NSDictionary *d in rd.returnDatas) {
+        [[DBmanger getIntance] addMember:d];
+    }
+    
+    return  rd;
+}
+
+
+
 @end

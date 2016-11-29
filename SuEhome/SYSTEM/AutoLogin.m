@@ -8,6 +8,7 @@
 
 #import "AutoLogin.h"
 #import "LoginViewController.h"
+
 @implementation AutoLogin
 @synthesize VC;
 
@@ -57,12 +58,14 @@
         
         
         HttpUserInfo *httpuserinfo = [[HttpUserInfo alloc] init];
+        HttpEnterpriseaddressbook *httpaddressbook ;
         r =  [httpuserinfo getBaseUserInfo];
         
         if (r.returnCode==0)
         {
             switch ([[AppInfo getInstance] getUserInfo].userType) {
                 case OLDMAN://老年人版本
+                    
                     r =  [httpuserinfo getFamilyList];
                     if (r.returnCode == 0)
                     {
@@ -82,14 +85,44 @@
                     
                 case WORKER://工作人员版本
                     
+                    httpaddressbook = [[HttpEnterpriseaddressbook alloc] init];
+                    r= [httpaddressbook queryOrg];
+                    if (r.returnCode != 0)
+                    {
+                        MAIN(^{
+                            [VC Loginfail:r.returnMsg];
+                        });
+                        return ;
+                    }
+                    r= [httpaddressbook queryDept];
+                    if (r.returnCode != 0)
+                    {
+                        MAIN(^{
+                            [VC Loginfail:r.returnMsg];
+                        });
+                        return ;
+                    }
+                    r= [httpaddressbook queryMember];
+                    if (r.returnCode != 0)
+                    {
+                        MAIN(^{
+                            [VC Loginfail:r.returnMsg];
+                        });
+                        return ;
+                    }
+              
                     
-                    
-                    
+                    //遗留聊天群组获取和开关获取没有加
+                    MAIN(^{
+                        [VC LoginSuccess];
+                        
+                    });
                     break;
             }
             
         }
         else{
+
             MAIN(^{
                 [VC Loginfail:r.returnMsg];
             });

@@ -24,7 +24,7 @@
     BOOL IsSearchMode;
     
     
-    UIButton *rightbtn1;
+    UIButton *rightbtn1,*rightbtn2;
 }
 @property (weak, nonatomic) IBOutlet UITableView *table;
 

@@ -11,5 +11,6 @@
 
 #import "HttpLogin.h"
 #import "HttpUserInfo.h"
+#import "HttpEnterpriseaddressbook.h"
 
 

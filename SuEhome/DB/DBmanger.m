@@ -187,6 +187,117 @@ static DBmanger *_db;
 
 
 
+#pragma mark 企业通讯录
+
+
+-(void)deletAllOrg
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_ORG"];
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    for (T_ORG *obj in arr)
+    {
+        [mangedcontext deleteObject:obj];
+    }
+    [mangedcontext save:nil];
+    return ;
+}
+
+
+
+
+//添加组织信息
+-(void)addORG:(NSDictionary *)orgdict
+{
+    T_ORG * _torg = [NSEntityDescription insertNewObjectForEntityForName:@"T_ORG" inManagedObjectContext:mangedcontext];
+    
+    [_torg setValue:[orgdict objectForKey:@"orgId"] forKey:@"org_id"];
+    [_torg setValue:[orgdict objectForKey:@"orgName"] forKey:@"org_name"];
+    [_torg setValue:[orgdict objectForKey:@"pOrgId"] forKey:@"p_org_id"];
+    [_torg setValue:[orgdict objectForKey:@"dispSn"] forKey:@"disp_sn"];
+    
+     [_torg setValue:[STCommon PingYingTran:[orgdict objectForKey:@"orgName"]] forKey:@"py"];
+    
+    [mangedcontext save:nil];
+}
+
+
+
+-(void)deletAllDept
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_DEPT"];
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    for (T_DEPT *obj in arr)
+    {
+        [mangedcontext deleteObject:obj];
+    }
+    [mangedcontext save:nil];
+    return ;
+}
+
+
+
+//添加组织信息
+-(void)addDEPT:(NSDictionary *)deptdict
+{
+    T_DEPT * _tdept = [NSEntityDescription insertNewObjectForEntityForName:@"T_DEPT" inManagedObjectContext:mangedcontext];
+    
+    [_tdept setValue:[deptdict objectForKey:@"deptId"] forKey:@"dept_id"];
+    [_tdept setValue:[deptdict objectForKey:@"deptName"] forKey:@"dept_name"];
+    [_tdept setValue:[deptdict objectForKey:@"pDeptId"] forKey:@"p_dept_id"];
+    [_tdept setValue:[deptdict objectForKey:@"dispSn"] forKey:@"disp_sn"];
+    
+    [_tdept setValue:[deptdict objectForKey:@"dispSn"] forKey:@"disp_sn"];
+    [_tdept setValue:[deptdict objectForKey:@"orgId"] forKey:@"org_id"];
+
+    [_tdept setValue:[STCommon PingYingTran:[deptdict objectForKey:@"deptName"]] forKey:@"py"];
+    
+    [mangedcontext save:nil];
+}
+
+
+
+-(void)deletAllMember
+{
+
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_Member"];
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    for (T_Member *obj in arr)
+    {
+        [mangedcontext deleteObject:obj];
+    }
+    [mangedcontext save:nil];
+    return ;
+}
+
+
+
+//添加组织信息
+-(void)addMember:(NSDictionary *)memberdict
+{
+    T_Member * _tmember = [NSEntityDescription insertNewObjectForEntityForName:@"T_Member" inManagedObjectContext:mangedcontext];
+    
+    [_tmember setValue:[memberdict objectForKey:@"deptId"] forKey:@"dept_id"];
+    if ([[memberdict objectForKey:@"gender"]   isEqualToString:@"2"])
+        [_tmember setValue:@2 forKey:@"gender"];
+    else
+         [_tmember setValue:@1 forKey:@"gender"];
+    [_tmember setValue:[memberdict objectForKey:@"name"] forKey:@"nick_name"];
+    [_tmember setValue:[memberdict objectForKey:@"userName"] forKey:@"user_name"];
+    [_tmember setValue:[memberdict objectForKey:@"phone"] forKey:@"phone"];
+    [_tmember setValue:[memberdict objectForKey:@"orgId"] forKey:@"org_id"];
+    
+    [_tmember setValue:[STCommon PingYingTran:[memberdict objectForKey:@"deptName"]] forKey:@"py"];
+    [_tmember setValue:[[STCommon PingYingTran:[memberdict objectForKey:@"deptName"]] substringFromIndex:1] forKey:@"fpy"];
+    
+    [mangedcontext save:nil];
+}
+
+
+
+
+
+#pragma mark -
+
 
 
 //

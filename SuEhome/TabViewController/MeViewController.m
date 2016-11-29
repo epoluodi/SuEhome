@@ -77,7 +77,10 @@
         case 0:
             return 1;
         case 1:
-            return 3;
+            if ([[AppInfo getInstance] getUserInfo].userType == OLDMAN)
+                return 3;
+            else if ([[AppInfo getInstance] getUserInfo].userType == WORKER)
+                return 2;
         case 2:
             return 1;
         case 3:

@@ -19,4 +19,21 @@
     
     return [filenamger fileExistsAtPath:filepath];
 }
+
+
++(NSString *)PingYingTran:(NSString *)str
+{
+
+    if ([str length]) {
+        NSMutableString *ms = [[NSMutableString alloc] initWithString:str];
+        if (CFStringTransform((__bridge CFMutableStringRef)ms, 0, kCFStringTransformMandarinLatin, NO)) {
+            NSLog(@"pinyin: %@", ms);
+        }
+        if (CFStringTransform((__bridge CFMutableStringRef)ms, 0, kCFStringTransformStripDiacritics, NO)) {
+            NSLog(@"pinyin: %@", ms);
+        }
+        return [ms stringByReplacingOccurrencesOfString:@" " withString:@""];
+    }
+    return nil;
+}
 @end

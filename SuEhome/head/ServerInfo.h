@@ -7,7 +7,7 @@
 //
 
 //#define HOST @"http://suehome.suypower.com/Cloudx"//正式
-#define HOST @"http://192.168.0.66:8081/Cloudx" //开发
+#define HOST @"http://192.168.0.66:8081/Cloudx_dev" //开发
 
 #define AuthUrl                  [NSString stringWithFormat:@"%@/auth/",HOST]
 #define AppUrl                   [NSString stringWithFormat:@"%@/app/",HOST]

@@ -13,4 +13,9 @@
 
 //检查文件是否存在
 +(BOOL)CheckFileForcache:(NSString *)mediaId filetype:(NSString *)filetype;
+
+//汉子转拼音
++(NSString *)PingYingTran:(NSString *)str;
+
+
 @end

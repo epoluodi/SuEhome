@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Xcode 7.0" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="T_DEPT" syncable="YES">
+    <entity name="T_DEPT" representedClassName="T_DEPT" syncable="YES">
         <attribute name="dept_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dept_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="disp_sn" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
@@ -18,7 +18,7 @@
         <attribute name="py" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="T_Member" syncable="YES">
+    <entity name="T_Member" representedClassName="T_Member" syncable="YES">
         <attribute name="dept_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fpy" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
@@ -30,7 +30,7 @@
         <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="user_name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="T_ORG" syncable="YES">
+    <entity name="T_ORG" representedClassName="T_ORG" syncable="YES">
         <attribute name="disp_sn" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="org_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="org_name" optional="YES" attributeType="String" syncable="YES"/>
@@ -38,9 +38,9 @@
         <attribute name="py" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="T_friendlist" positionX="-36" positionY="9" width="128" height="165"/>
-        <element name="T_ORG" positionX="-36" positionY="72" width="128" height="120"/>
         <element name="T_DEPT" positionX="-27" positionY="90" width="128" height="135"/>
+        <element name="T_friendlist" positionX="-36" positionY="9" width="128" height="165"/>
         <element name="T_Member" positionX="-9" positionY="117" width="128" height="195"/>
+        <element name="T_ORG" positionX="-36" positionY="72" width="128" height="120"/>
     </elements>
 </model>
