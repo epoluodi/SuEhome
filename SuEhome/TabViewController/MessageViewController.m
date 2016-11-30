@@ -88,10 +88,16 @@
         [rightbtn2 setImage:[UIImage imageNamed:@"t3_1"] forState:UIControlStateNormal];
         rightbtn2.frame = CGRectMake([PublicCommon GetALLScreen].size.width - 16-24 - 10 - 24, 22 -12, 24, 24);
         [self.navigationController.navigationBar addSubview:rightbtn2];
-        [rightbtn2  addTarget:self action:@selector(ClickContract) forControlEvents:UIControlEventTouchUpInside];
+        [rightbtn2  addTarget:self action:@selector(ClickPhoneBook) forControlEvents:UIControlEventTouchUpInside];
         
         
     }
+}
+
+
+-(void)ClickPhoneBook
+{
+      [self performSegueWithIdentifier:@"PhoneBookViewController" sender:self];
 }
 
 -(void)ClickContract

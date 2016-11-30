@@ -49,4 +49,12 @@
 -(void)deletAllMember;//删除成员信息
 -(void)addMember:(NSDictionary *)memberdict;//添加成员信息
 
+-(NSArray *)getMembersForDept:(NSString *)deptid;//根据部门id 获取部门成员信息
+-(NSString *)getOrgName:(NSString *)orgid;//根据单位ID 获取单位名称
+-(NSString *)getDeptName:(NSString *)deptid;//根据部门id 获取部门名称
+
+//获取当前根单位信息 
+-(NSDictionary *)getMainOrgInfo:(NSString *)orgid orgName:(NSString *)orgname;
+
+
 @end

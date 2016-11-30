@@ -22,6 +22,7 @@
     containerview.layer.masksToBounds = YES;
     
     nickname.text  =  [[AppInfo getInstance] getUserInfo].nickName;
+    
     [nickimg setMediaIdLoadImg:[[AppInfo getInstance]  getUserInfo].photo filesize:@""];
     
     nickimg.layer.cornerRadius = 8;

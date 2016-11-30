@@ -285,7 +285,7 @@ static DBmanger *_db;
     [_tmember setValue:[memberdict objectForKey:@"userName"] forKey:@"user_name"];
     [_tmember setValue:[memberdict objectForKey:@"phone"] forKey:@"phone"];
     [_tmember setValue:[memberdict objectForKey:@"orgId"] forKey:@"org_id"];
-    
+    [_tmember setValue:[memberdict objectForKey:@"userId"] forKey:@"user_id"];
     [_tmember setValue:[STCommon PingYingTran:[memberdict objectForKey:@"deptName"]] forKey:@"py"];
     [_tmember setValue:[[STCommon PingYingTran:[memberdict objectForKey:@"deptName"]] substringFromIndex:1] forKey:@"fpy"];
     
@@ -293,9 +293,64 @@ static DBmanger *_db;
 }
 
 
+-(NSArray *)getMembersForDept:(NSString *)deptid
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_Member"];
+    fetch.predicate=[NSPredicate predicateWithFormat:@"dept_id=%@",deptid];
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    return arr;
+    
+}
+
+-(NSString *)getOrgName:(NSString *)orgid
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_ORG"];
+    fetch.predicate=[NSPredicate predicateWithFormat:@"org_id=%@",orgid];
+    fetch.propertiesToFetch = @[@"org_name"];
+    fetch.resultType=NSDictionaryResultType ;
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    NSLog(@"%@",arr);
+    if (arr){
+        NSDictionary *d = arr[0];
+        return [d objectForKey:@"org_name"];
+    }
+    return nil;
+}
 
 
+-(NSString *)getDeptName:(NSString *)deptid
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_DEPT"];
+    fetch.predicate=[NSPredicate predicateWithFormat:@"dept_id=%@",deptid];
+    fetch.propertiesToFetch = @[@"dept_name"];
+    fetch.resultType=NSDictionaryResultType ;
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    NSLog(@"%@",arr);
+    if (arr)
+    {
+        NSDictionary *d = arr[0];
+        return [d objectForKey:@"dept_name"];
+    }
+    return nil;
+}
 
+
+-(NSDictionary *)getMainOrgInfo:(NSString *)orgid orgName:(NSString *)orgname
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_ORG"];
+    fetch.predicate=[NSPredicate predicateWithFormat:@"p_org_id=%@",@""];
+    fetch.propertiesToFetch = @[@"org_id",@"org_name"];
+    fetch.resultType=NSDictionaryResultType ;
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    NSLog(@"%@",arr);
+    if (arr)
+    {
+        NSDictionary *d = arr[0];
+        return d;
+    }
+  
+    return nil;
+}
 #pragma mark -
 
 

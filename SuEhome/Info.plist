@@ -31,6 +31,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>获取照片</string>
+	<key>NSContactsUsageDescription</key>
+	<string>获取和修改联系人信息</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>使用当前位置信息</string>
 	<key>NSPhotoLibraryUsageDescription</key>

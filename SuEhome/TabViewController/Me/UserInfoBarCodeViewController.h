@@ -13,7 +13,6 @@
 
 
 @property (weak, nonatomic) IBOutlet UIView *containerview;
-
 @property (weak, nonatomic) IBOutlet STImageView *nickimg;
 @property (weak, nonatomic) IBOutlet UILabel *nickname;
 @property (weak, nonatomic) IBOutlet UIImageView *barcode;

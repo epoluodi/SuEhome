@@ -53,7 +53,10 @@
         case 0:
             return 1;
         case 1:
-            return 2;
+            if (_T_member)
+                return 3;
+            if (_T_Friend)
+                return 2;
     }
     return 0;
 }
@@ -73,11 +76,20 @@
         
         UserInfoHeadCell *cell = [table dequeueReusableCellWithIdentifier:@"cell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.nickName = _T_Friend.nickname;
-        cell.nickSex = _T_Friend.gender;
+        if (_T_Friend){
+            cell.nickName = _T_Friend.nickname;
+            cell.nickSex = _T_Friend.gender;
+            [cell.nickimg setMediaIdLoadImg:_T_Friend.picid filesize:@"_120"];
+        }
+        if (_T_member)
+        {
+            cell.nickName = _T_member.nick_name;
+            cell.nickSex = _T_member.gender;
+            [cell.nickimg setMediaIdLoadImg:_T_member.pic_id filesize:@"_120"];
+        }
         [cell setUserInfo];
         [cell.nickimg setRadius];
-        [cell.nickimg setMediaIdLoadImg:_T_Friend.picid filesize:@"_120"];
+       
         return cell;
     }
     else if (indexPath.section == 1)
@@ -86,7 +98,11 @@
         switch (indexPath.row) {
             case 0:
                 [cell2 setListMode:NOINDICATOR];
-                [cell2 setListMemo:[[AppInfo getInstance] getUserInfo].orgName];
+                if (_T_member)
+                {
+                    [cell2 setListMemo:[[DBmanger getIntance] getOrgName:_T_member.org_id]];
+                }else
+                    [cell2 setListMemo:[[AppInfo getInstance] getUserInfo].orgName];
                 cell2.listtitle.text = @"单位";
                 [cell2 setCellSelectState:NO];
                 
@@ -94,9 +110,23 @@
                 
             case  1:
                 [cell2 setListMode:NOINDICATOR];
-                [cell2 setListMemo:[[AppInfo getInstance] getUserInfo].departName];
+                if (_T_member)
+                {
+                    [cell2 setListMemo:[[DBmanger getIntance] getDeptName:_T_member.dept_id]];
+                }else
+                    [cell2 setListMemo:[[AppInfo getInstance] getUserInfo].departName];
                 cell2.listtitle.text = @"部门";
                 [cell2 setCellSelectState:NO];
+                break;
+            case  2:
+                [cell2 setListMode:INDICATOR];
+                if (_T_member)
+                {
+                    [cell2 setListMemo:_T_member.phone];
+                }
+                cell2.listtitle.text = @"手机号";
+                [cell2 setCellSelectState:NO];
+                cell2.selectionStyle = UITableViewCellSelectionStyleDefault;
                 break;
         }
         return cell2;
@@ -143,6 +173,32 @@
 
 
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+ 
+    if (indexPath.section == 1)
+    {
+        if (indexPath.row == 2)
+        {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+            UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"打电话" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@",_T_member.phone];
+                //            NSLog(@"str======%@",str);
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+            }];
+            UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"加入手机通讯录" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            
+            [alert addAction:action1];
+//            [alert addAction:action2];
+            [alert addAction:action3];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }
+}
+
 #pragma mark -
 
 
@@ -153,6 +209,12 @@
     
     
 }
+
+
+//写入系统通讯录
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

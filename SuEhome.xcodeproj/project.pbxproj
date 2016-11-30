@@ -20,6 +20,11 @@
 		B434031F1DDD8A84005DC86D /* icon_publish.png in Resources */ = {isa = PBXBuildFile; fileRef = B434031D1DDD8A84005DC86D /* icon_publish.png */; };
 		B43403221DDD8B6B005DC86D /* CommentsInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = B43403211DDD8B6B005DC86D /* CommentsInputView.m */; };
 		B43403251DDDAF12005DC86D /* SetLoginPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43403241DDDAF12005DC86D /* SetLoginPwdViewController.m */; };
+		B43F43E71DEE6CDB00DB64EA /* PhoneBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F43E61DEE6CDB00DB64EA /* PhoneBookViewController.m */; };
+		B43F43E91DEE75BE00DB64EA /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = B43F43E81DEE75BE00DB64EA /* group.png */; };
+		B43F43EB1DEE75C600DB64EA /* family.png in Resources */ = {isa = PBXBuildFile; fileRef = B43F43EA1DEE75C600DB64EA /* family.png */; };
+		B43F43EE1DEECBD000DB64EA /* CompanyPhoneBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F43ED1DEECBD000DB64EA /* CompanyPhoneBookViewController.m */; };
+		B43F43F11DEECE8C00DB64EA /* PhoneBookDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F43F01DEECE8C00DB64EA /* PhoneBookDataSource.m */; };
 		B442284E1DB8C53800C3E5E4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B442284D1DB8C53800C3E5E4 /* logo.png */; };
 		B46364EC1DCACD2A001DCAFD /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46364EB1DCACD2A001DCAFD /* SettingViewController.m */; };
 		B46364F11DCB2E2A001DCAFD /* SelfInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46364F01DCB2E2A001DCAFD /* SelfInfoViewController.m */; };
@@ -173,6 +178,14 @@
 		B43403211DDD8B6B005DC86D /* CommentsInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsInputView.m; sourceTree = "<group>"; };
 		B43403231DDDAF12005DC86D /* SetLoginPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetLoginPwdViewController.h; sourceTree = "<group>"; };
 		B43403241DDDAF12005DC86D /* SetLoginPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetLoginPwdViewController.m; sourceTree = "<group>"; };
+		B43F43E51DEE6CDB00DB64EA /* PhoneBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBookViewController.h; sourceTree = "<group>"; };
+		B43F43E61DEE6CDB00DB64EA /* PhoneBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBookViewController.m; sourceTree = "<group>"; };
+		B43F43E81DEE75BE00DB64EA /* group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = group.png; sourceTree = "<group>"; };
+		B43F43EA1DEE75C600DB64EA /* family.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = family.png; sourceTree = "<group>"; };
+		B43F43EC1DEECBD000DB64EA /* CompanyPhoneBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyPhoneBookViewController.h; sourceTree = "<group>"; };
+		B43F43ED1DEECBD000DB64EA /* CompanyPhoneBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyPhoneBookViewController.m; sourceTree = "<group>"; };
+		B43F43EF1DEECE8C00DB64EA /* PhoneBookDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBookDataSource.h; sourceTree = "<group>"; };
+		B43F43F01DEECE8C00DB64EA /* PhoneBookDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBookDataSource.m; sourceTree = "<group>"; };
 		B442284D1DB8C53800C3E5E4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		B46364EA1DCACD2A001DCAFD /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		B46364EB1DCACD2A001DCAFD /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
@@ -436,6 +449,8 @@
 		B442284C1DB8C53800C3E5E4 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				B43F43EA1DEE75C600DB64EA /* family.png */,
+				B43F43E81DEE75BE00DB64EA /* group.png */,
 				B4E72AF51DED809800052676 /* t3_3.png */,
 				B4D2CFA31DEC296900A376FE /* s1.png */,
 				B4D2CFA41DEC296900A376FE /* s2.png */,
@@ -855,6 +870,12 @@
 				B46450BD1DE6914D0043DA6B /* ContactViewController.m */,
 				B411DEB41DE8361C0046ECED /* UserInfoSampleViewController.h */,
 				B411DEB51DE8361C0046ECED /* UserInfoSampleViewController.m */,
+				B43F43E51DEE6CDB00DB64EA /* PhoneBookViewController.h */,
+				B43F43E61DEE6CDB00DB64EA /* PhoneBookViewController.m */,
+				B43F43EC1DEECBD000DB64EA /* CompanyPhoneBookViewController.h */,
+				B43F43ED1DEECBD000DB64EA /* CompanyPhoneBookViewController.m */,
+				B43F43EF1DEECE8C00DB64EA /* PhoneBookDataSource.h */,
+				B43F43F01DEECE8C00DB64EA /* PhoneBookDataSource.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -953,10 +974,12 @@
 				B46E26D21DDBFE50002B87B7 /* commentsview.xib in Resources */,
 				B47BF3AB1DD1D47100BAC161 /* config.xml in Resources */,
 				B434031E1DDD8A84005DC86D /* icon_cancel.png in Resources */,
+				B43F43EB1DEE75C600DB64EA /* family.png in Resources */,
 				B4CF48AE1DC87BA000EBC0D9 /* settings.png in Resources */,
 				B46E26D61DDBFFC2002B87B7 /* icon_return1.png in Resources */,
 				B46E26E21DDC4C0D002B87B7 /* icon_fav2.png in Resources */,
 				B4E72AF61DED809800052676 /* t3_3.png in Resources */,
+				B43F43E91DEE75BE00DB64EA /* group.png in Resources */,
 				B47807C81D2B96E6004B0392 /* Main.storyboard in Resources */,
 				B434031F1DDD8A84005DC86D /* icon_publish.png in Resources */,
 				B411DEB01DE81F6F0046ECED /* personcell.xib in Resources */,
@@ -994,12 +1017,14 @@
 				B47BF3AE1DD1D9A500BAC161 /* CordovaWebViewController.m in Sources */,
 				B411DEB61DE8361C0046ECED /* UserInfoSampleViewController.m in Sources */,
 				B4D2CFA21DEC238E00A376FE /* UserInfoHeadCell.m in Sources */,
+				B43F43E71DEE6CDB00DB64EA /* PhoneBookViewController.m in Sources */,
 				B46E26DC1DDC06A4002B87B7 /* Plugins.m in Sources */,
 				B47BF36A1DD1AEAF00BAC161 /* HttpFile.m in Sources */,
 				B4A6BE081DCC6DA70064EEB4 /* AppInfo.m in Sources */,
 				B46450C11DE693500043DA6B /* SearchView.m in Sources */,
 				B46E26D91DDBFFEF002B87B7 /* CommentsBarView.m in Sources */,
 				B4A6BE051DCC6A520064EEB4 /* UserInfo.m in Sources */,
+				B43F43EE1DEECBD000DB64EA /* CompanyPhoneBookViewController.m in Sources */,
 				B4CF48B21DC87CE800EBC0D9 /* MainRootViewController.m in Sources */,
 				B4CF48C61DC88E3D00EBC0D9 /* MeViewController.m in Sources */,
 				B485E0991DE294730096F4C6 /* MyScoreViewController.m in Sources */,
@@ -1025,6 +1050,7 @@
 				B479596A1DD9571A008902D7 /* ScanCodeView.m in Sources */,
 				B4B3C36B1DD5B688008363D6 /* FTPopOverMenu.m in Sources */,
 				B4E72AF11DED270F00052676 /* T_Member+CoreDataClass.m in Sources */,
+				B43F43F11DEECE8C00DB64EA /* PhoneBookDataSource.m in Sources */,
 				B4E72AF01DED270F00052676 /* T_DEPT+CoreDataProperties.m in Sources */,
 				B46CB44D1DC992FF001C2FCF /* MeTableList2.m in Sources */,
 				B46364F81DCB39A5001DCAFD /* STImageView.m in Sources */,

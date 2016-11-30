@@ -178,6 +178,7 @@
                     <connections>
                         <outlet property="table" destination="9eu-OC-xB1" id="LfZ-NT-Klh"/>
                         <segue destination="Rtg-Hp-IjI" kind="push" identifier="showfamilylist" id="VUj-tC-6Eb"/>
+                        <segue destination="cNW-wW-Paj" kind="push" identifier="PhoneBookViewController" id="Uvh-6i-KRk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRe-tt-53L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -217,6 +218,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2x8-yk-IVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8098.5507246376819" y="946.46739130434787"/>
+        </scene>
+        <!--通讯录-->
+        <scene sceneID="oBD-LJ-pIH">
+            <objects>
+                <viewController id="cNW-wW-Paj" customClass="PhoneBookViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Lb-bo-jee"/>
+                        <viewControllerLayoutGuide type="bottom" id="TmE-Sb-wkl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ho-kO-XSi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PXi-Dj-aIU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PXi-Dj-aIU" firstAttribute="top" secondItem="8ho-kO-XSi" secondAttribute="top" id="7dd-Qk-xt5"/>
+                            <constraint firstAttribute="trailing" secondItem="PXi-Dj-aIU" secondAttribute="trailing" id="E3r-yc-80W"/>
+                            <constraint firstItem="PXi-Dj-aIU" firstAttribute="leading" secondItem="8ho-kO-XSi" secondAttribute="leading" id="HdI-eJ-F4S"/>
+                            <constraint firstItem="TmE-Sb-wkl" firstAttribute="top" secondItem="PXi-Dj-aIU" secondAttribute="bottom" id="cDN-tg-9bG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="通讯录" id="fJf-pW-Q48"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="table" destination="PXi-Dj-aIU" id="m9X-YM-mof"/>
+                        <segue destination="CzA-UJ-hjG" kind="push" identifier="showcompanyphonebook" id="xYW-vG-lSa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbR-QU-2op" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8099" y="1694"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="N7g-Mg-KUZ">
+            <objects>
+                <viewController storyboardIdentifier="CompanyPhoneBookViewController" id="CzA-UJ-hjG" customClass="CompanyPhoneBookViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3g5-aL-0Ch"/>
+                        <viewControllerLayoutGuide type="bottom" id="TAU-Rx-JUs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sZZ-HK-Wfw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XKr-en-YPF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XKr-en-YPF" firstAttribute="top" secondItem="sZZ-HK-Wfw" secondAttribute="top" id="Rxq-WW-6bq"/>
+                            <constraint firstItem="TAU-Rx-JUs" firstAttribute="top" secondItem="XKr-en-YPF" secondAttribute="bottom" id="Ys2-Oz-XOF"/>
+                            <constraint firstAttribute="trailing" secondItem="XKr-en-YPF" secondAttribute="trailing" id="gng-xc-4ex"/>
+                            <constraint firstItem="XKr-en-YPF" firstAttribute="leading" secondItem="sZZ-HK-Wfw" secondAttribute="leading" id="sJ5-zP-Gaa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="rzN-yq-gXk"/>
+                    <connections>
+                        <outlet property="navtitle" destination="rzN-yq-gXk" id="SbY-Xe-vm8"/>
+                        <outlet property="table" destination="XKr-en-YPF" id="RII-al-P9I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goF-qz-Al1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9486.9565217391319" y="1692.3913043478262"/>
         </scene>
         <!--圈子-->
         <scene sceneID="PaS-QJ-o9T">
@@ -540,7 +612,7 @@
         <!-- 个人信息-->
         <scene sceneID="RoB-h6-NBt">
             <objects>
-                <viewController id="Gmv-GJ-Ccd" customClass="SelfInfoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelfInfoViewController" id="Gmv-GJ-Ccd" customClass="SelfInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6lJ-UQ-3hE"/>
                         <viewControllerLayoutGuide type="bottom" id="zXr-Vl-6QU"/>
@@ -634,7 +706,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHj-oA-poM">
                                 <rect key="frame" x="40" y="99" width="334" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yzv-dr-cN7" customClass="STImageView">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user.png" translatesAutoresizingMaskIntoConstraints="NO" id="yzv-dr-cN7" customClass="STImageView">
                                         <rect key="frame" x="16" y="16" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Yfm-2H-5HZ"/>
