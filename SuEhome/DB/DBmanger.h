@@ -55,6 +55,9 @@
 
 //获取当前根单位信息 
 -(NSDictionary *)getMainOrgInfo:(NSString *)orgid orgName:(NSString *)orgname;
+-(NSArray *)getOrgForOrg:(NSString *)orgid;//根据id 获取单位信息
+-(NSArray *)getDeptForOrg:(NSString *)orgid;//根据id 获取 部门信息 
+-(NSArray *)getDeptForDept:(NSString *)deptid;//根据id 获取部门信息
 
 
 @end

@@ -13,6 +13,7 @@
 
 
 
+
 @interface CordovaWebViewController ()
 
 @end
@@ -29,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     isHideNavBar = NO;
+
     [UIApplication sharedApplication].keyWindow.backgroundColor = UIColorFromRGB(0xEAEAEA);
     if (IsHideNavBar)
     {
@@ -36,6 +38,7 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
         self.webView.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         self.navigationController.navigationBar.hidden = YES;
+       
     }
     _webtitle = @"";
     if (!IsUserWebTitle){
@@ -86,17 +89,21 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
         self.webView.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         self.navigationController.navigationBar.hidden = YES;
+         [((MainRootViewController *)(self.navigationController)) setStatusbarMode:UIStatusBarStyleDefault];
     }
-    
+    else
+         [((MainRootViewController *)(self.navigationController)) setStatusbarMode:UIStatusBarStyleLightContent];
   
 }
+
 
 -(void)viewWillDisappear:(BOOL)animated
 {
 //    self.navigationItem.title = @"";
-    
+   
     if (isHideNavBar)
     {
+     
         self.automaticallyAdjustsScrollViewInsets = YES;
         self.webView.scrollView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
         self.navigationController.navigationBar.hidden = NO;
@@ -135,14 +142,14 @@
             {
                 isHideNavBar = YES;
                 weakself.navigationController.navigationBar.hidden = YES;
-               
+                [((MainRootViewController *)(self.navigationController)) setStatusbarMode:UIStatusBarStyleDefault];
                 weakself.automaticallyAdjustsScrollViewInsets=NO;
                 [UIView animateWithDuration:0.4f animations:^{
                     weakself.webView.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
                 }];
             }else if  ([[ arg objectForKey:@"hide"] isEqualToString:@"false"])
             {
-          
+                [((MainRootViewController *)(self.navigationController)) setStatusbarMode:UIStatusBarStyleLightContent];
                 weakself.automaticallyAdjustsScrollViewInsets = YES;
                 weakself.webView.scrollView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
                 weakself.navigationController.navigationBar.hidden = NO;

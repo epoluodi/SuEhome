@@ -33,6 +33,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [((MainRootViewController *)(self.navigationController)) setStatusbarMode:UIStatusBarStyleLightContent];
+}
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
 

@@ -34,6 +34,7 @@ typedef enum : NSUInteger {
     NSMutableArray<NSString *> * _JSLIst; //右上角 按钮点击回调列表
     BARRIGHTENUM _barrightmode; //右上角 模式
 
+ 
     NSMutableArray *menuname ;
     NSMutableArray *menuicon ;
 

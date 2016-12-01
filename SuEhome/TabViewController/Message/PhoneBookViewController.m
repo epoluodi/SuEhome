@@ -35,7 +35,7 @@
     UINib *nib= [UINib nibWithNibName:@"personcell" bundle:nil];
     [table registerNib:nib forCellReuseIdentifier:@"cell"];
     
-    
+    table.separatorInset = UIEdgeInsetsMake(0, 8, 0, 0);
 
     // Do any additional setup after loading the view.
     

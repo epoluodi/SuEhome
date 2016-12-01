@@ -351,6 +351,44 @@ static DBmanger *_db;
   
     return nil;
 }
+
+
+//根据id 获取单位信息
+-(NSArray *)getOrgForOrg:(NSString *)orgid
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_ORG"];
+    NSSortDescriptor *sort=[NSSortDescriptor sortDescriptorWithKey:@"disp_sn" ascending:YES];
+    fetch.sortDescriptors=@[sort];
+    fetch.predicate=[NSPredicate predicateWithFormat:@"p_org_id=%@",orgid];
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    return arr;
+    
+}
+
+-(NSArray *)getDeptForOrg:(NSString *)orgid
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_DEPT"];
+    NSSortDescriptor *sort=[NSSortDescriptor sortDescriptorWithKey:@"disp_sn" ascending:YES];
+    fetch.sortDescriptors=@[sort];
+    fetch.predicate=[NSPredicate predicateWithFormat:@"p_dept_id=%@",@""];
+    fetch.predicate=[NSPredicate predicateWithFormat:@"org_id =%@",orgid];
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    return arr;
+    
+}
+
+-(NSArray *)getDeptForDept:(NSString *)deptid
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_DEPT"];
+    NSSortDescriptor *sort=[NSSortDescriptor sortDescriptorWithKey:@"disp_sn" ascending:YES];
+    fetch.sortDescriptors=@[sort];
+    fetch.predicate=[NSPredicate predicateWithFormat:@"p_dept_id=%@",deptid];
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    return arr;
+    
+}
+
+
 #pragma mark -
 
 

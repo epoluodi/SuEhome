@@ -153,6 +153,7 @@
 -(void)setStatusbarMode:(UIStatusBarStyle)statusmode
 {
     statusbarstyle =statusmode;
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle

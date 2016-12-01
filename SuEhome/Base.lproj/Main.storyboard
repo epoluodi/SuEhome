@@ -114,6 +114,41 @@
             </objects>
             <point key="canvasLocation" x="6446" y="87"/>
         </scene>
+        <!--发起聊天-->
+        <scene sceneID="cOw-3C-CKx">
+            <objects>
+                <viewController id="nCA-UM-u35" customClass="SelectPhoneBookMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uwf-0f-3aH"/>
+                        <viewControllerLayoutGuide type="bottom" id="aEn-8q-B4e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RhO-Ft-Jff">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qFQ-nu-gl2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aEn-8q-B4e" firstAttribute="top" secondItem="qFQ-nu-gl2" secondAttribute="bottom" id="ced-gM-8RW"/>
+                            <constraint firstItem="qFQ-nu-gl2" firstAttribute="leading" secondItem="RhO-Ft-Jff" secondAttribute="leading" id="gCm-ch-7EY"/>
+                            <constraint firstItem="qFQ-nu-gl2" firstAttribute="top" secondItem="RhO-Ft-Jff" secondAttribute="top" id="jav-mB-Anv"/>
+                            <constraint firstAttribute="trailing" secondItem="qFQ-nu-gl2" secondAttribute="trailing" id="vEQ-hy-50o"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="发起聊天" id="N5i-gq-1Pt"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="table" destination="qFQ-nu-gl2" id="y1u-aP-VIU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wu2-92-UMX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8098.5507246376819" y="122.28260869565219"/>
+        </scene>
         <!--111-->
         <scene sceneID="ZVd-F0-xTC">
             <objects>
@@ -179,6 +214,7 @@
                         <outlet property="table" destination="9eu-OC-xB1" id="LfZ-NT-Klh"/>
                         <segue destination="Rtg-Hp-IjI" kind="push" identifier="showfamilylist" id="VUj-tC-6Eb"/>
                         <segue destination="cNW-wW-Paj" kind="push" identifier="PhoneBookViewController" id="Uvh-6i-KRk"/>
+                        <segue destination="nCA-UM-u35" kind="push" identifier="selctphonebook" id="QDJ-8j-IUw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRe-tt-53L" userLabel="First Responder" sceneMemberID="firstResponder"/>
