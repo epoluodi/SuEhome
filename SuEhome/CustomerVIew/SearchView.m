@@ -18,7 +18,7 @@
 -(instancetype)init:(UIView *)view
 {
     self = [super init];
-    beffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    beffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     _backview = [[UIVisualEffectView alloc]initWithEffect:beffect];
     _backview.frame = CGRectMake(0, viewOffset, view.frame.size.width, view.frame.size.height-viewOffset);
     //    [self.tabBarController.view addSubview:_backview];

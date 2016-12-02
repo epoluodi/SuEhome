@@ -36,7 +36,7 @@
 -(void)deleAllFriendList;//删除所有亲情好友
 -(NSArray *)getFiendlistGroupCoountForPingYing;//获得好友拼音分组
 -(NSArray *)getFiendListAllForPY:(NSString *)fpy;//获得好友用户根据拼音
-
+-(NSArray *)searchFriendForKey:(NSString *)key;//根据关键字获取用户信息
 
 
 //企业通讯录
@@ -58,6 +58,6 @@
 -(NSArray *)getOrgForOrg:(NSString *)orgid;//根据id 获取单位信息
 -(NSArray *)getDeptForOrg:(NSString *)orgid;//根据id 获取 部门信息 
 -(NSArray *)getDeptForDept:(NSString *)deptid;//根据id 获取部门信息
-
+-(NSArray *)searchMemberForKey:(NSString *)key;//根据关键字查询
 
 @end

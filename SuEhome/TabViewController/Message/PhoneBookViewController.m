@@ -45,6 +45,27 @@
 }
 
 
+//搜索点击选中
+-(void)SelectCell:(NSManagedObject *)Obj
+{
+    [self searchBarCancelButtonClicked:searchbar];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    T_Member * tmember =  (T_Member *) Obj;
+    if ([[[AppInfo getInstance] getUserInfo].userId isEqualToString:tmember.user_id])
+    {
+        
+        SelfInfoViewController *selfinfovc = (SelfInfoViewController *)[storyboard instantiateViewControllerWithIdentifier:@"SelfInfoViewController"];
+        [self.navigationController pushViewController:selfinfovc animated:YES];
+        return;
+    }else
+    {
+        UserInfoSampleViewController *_UserInfoSampleViewController =[storyboard instantiateViewControllerWithIdentifier:@"UserInfoSampleViewController"];
+        _UserInfoSampleViewController.T_member= tmember;
+        [self.navigationController pushViewController:_UserInfoSampleViewController animated:YES];
+    }
+}
+
+
 //初始化搜索view
 -(void)initSearchBackView
 {
@@ -52,8 +73,8 @@
     
     searchview = [[SearchView alloc] init:self.view];
     _backview = [searchview getBackView];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeInputborad)];
-    [_backview addGestureRecognizer:tap];
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeInputborad)];
+//    [_backview addGestureRecognizer:tap];
     
 }
 
@@ -110,7 +131,11 @@
         [_backview removeFromSuperview];
         [mainviewcontroller setStatusbarMode:UIStatusBarStyleLightContent];
         [weakself setNeedsStatusBarAppearanceUpdate];
-        
+        if (_stable)
+        {
+            [_stable removeFromSuperview];
+            _stable=nil;
+        }
     }];
     
     
@@ -118,6 +143,16 @@
 
 
 
+//搜索
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSArray *reslut = [[DBmanger getIntance] searchMemberForKey:searchBar.text];
+    _stable = [[SearchTableView alloc] init:reslut];
+    _stable.frame = CGRectMake(0, 0, _backview.frame.size.width, _backview.frame.size.height);
+    _stable.VC=self;
+    [_backview addSubview:_stable];
+    
+}
 
 #pragma mark tabledelegate
 
@@ -240,6 +275,7 @@
         
     }
 }
+
 
 
 

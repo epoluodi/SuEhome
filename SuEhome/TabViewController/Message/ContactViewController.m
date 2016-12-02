@@ -46,7 +46,18 @@
     // Do any additional setup after loading the view.
 }
 
-
+//搜索点击选中
+-(void)SelectCell:(NSManagedObject *)Obj
+{
+    [self searchBarCancelButtonClicked:searchbar];
+    
+    T_friendlist * tfriend =(T_friendlist *)Obj;
+    
+    UIStoryboard *storyborad = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UserInfoSampleViewController *_UserInfoSampleViewController =[storyborad instantiateViewControllerWithIdentifier:@"UserInfoSampleViewController"];
+    _UserInfoSampleViewController.T_Friend =tfriend;
+    [self.navigationController pushViewController:_UserInfoSampleViewController animated:YES];
+}
 //读取用户数据
 -(void)loadContract
 {
@@ -68,8 +79,8 @@
     
     searchview = [[SearchView alloc] init:self.view];
     _backview = [searchview getBackView];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeInputborad)];
-    [_backview addGestureRecognizer:tap];
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeInputborad)];
+//    [_backview addGestureRecognizer:tap];
     
 }
 
@@ -125,6 +136,11 @@
         [_backview removeFromSuperview];
         [mainviewcontroller setStatusbarMode:UIStatusBarStyleLightContent];
         [weakself setNeedsStatusBarAppearanceUpdate];
+        if (_stable)
+        {
+            [_stable removeFromSuperview];
+            _stable=nil;
+        }
         
     }];
     
@@ -132,6 +148,16 @@
 }
 
 
+//搜索
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSArray *reslut = [[DBmanger getIntance] searchFriendForKey:searchBar.text];
+    _stable = [[SearchTableView alloc] init:reslut];
+    _stable.frame = CGRectMake(0, 0, _backview.frame.size.width, _backview.frame.size.height);
+    _stable.VC=self;
+    [_backview addSubview:_stable];
+    
+}
 
 
 

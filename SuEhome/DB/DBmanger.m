@@ -183,6 +183,15 @@ static DBmanger *_db;
     
 }
 
+
+-(NSArray *)searchFriendForKey:(NSString *)key
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_friendlist"];
+    fetch.predicate=[NSPredicate predicateWithFormat:@"nickname like %@",[NSString stringWithFormat:@"*%@*",key]];
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    return arr;
+}
+
 #pragma mark -
 
 
@@ -386,6 +395,14 @@ static DBmanger *_db;
     NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
     return arr;
     
+}
+
+-(NSArray *)searchMemberForKey:(NSString *)key
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_Member"];
+    fetch.predicate=[NSPredicate predicateWithFormat:@"nick_name like %@",[NSString stringWithFormat:@"*%@*",key]];
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    return arr;
 }
 
 

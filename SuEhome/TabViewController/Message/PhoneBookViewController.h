@@ -8,9 +8,9 @@
 
 #import "BaseTabViewController.h"
 #import "SearchView.h"
+#import "SearchTableView.h"
 
-
-@interface PhoneBookViewController : BaseTabViewController<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
+@interface PhoneBookViewController : BaseTabViewController<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate,SearchTableDelegate>
 {
     SearchView *searchview;
     UIVisualEffectView *_backview;
@@ -18,7 +18,7 @@
     UISearchBar *searchbar;
     BOOL IsSearchMode;
     
-    
+    SearchTableView *_stable;
     NSArray * memberlists;
 }
 @property (weak, nonatomic) IBOutlet UITableView *table;

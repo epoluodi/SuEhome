@@ -95,6 +95,7 @@
 		B485E0AF1DE2F1BD0096F4C6 /* ScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B485E0AE1DE2F1BD0096F4C6 /* ScoreCell.m */; };
 		B497E36E1DEFCCE90057C6A0 /* company.png in Resources */ = {isa = PBXBuildFile; fileRef = B497E36D1DEFCCE90057C6A0 /* company.png */; };
 		B497E3711DF026460057C6A0 /* SelectPhoneBookMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B497E3701DF026460057C6A0 /* SelectPhoneBookMainViewController.m */; };
+		B49920E11DF11B93008837F9 /* SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49920E01DF11B93008837F9 /* SearchTableView.m */; };
 		B4A641221DD317AC002BF258 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A641211DD317AC002BF258 /* InfoViewController.m */; };
 		B4A641251DD31805002BF258 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A641241DD31805002BF258 /* GroupViewController.m */; };
 		B4A6412A1DD32159002BF258 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A641291DD32159002BF258 /* BaseWebViewController.m */; };
@@ -316,6 +317,8 @@
 		B497E36D1DEFCCE90057C6A0 /* company.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = company.png; sourceTree = "<group>"; };
 		B497E36F1DF026460057C6A0 /* SelectPhoneBookMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPhoneBookMainViewController.h; sourceTree = "<group>"; };
 		B497E3701DF026460057C6A0 /* SelectPhoneBookMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPhoneBookMainViewController.m; sourceTree = "<group>"; };
+		B49920DF1DF11B93008837F9 /* SearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchTableView.h; path = CustomerVIew/SearchTableView.h; sourceTree = "<group>"; };
+		B49920E01DF11B93008837F9 /* SearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchTableView.m; path = CustomerVIew/SearchTableView.m; sourceTree = "<group>"; };
 		B4A4AC951DCC862900956A81 /* HttpClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClass.h; sourceTree = "<group>"; };
 		B4A4AC961DCC862900956A81 /* info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = info.h; sourceTree = "<group>"; };
 		B4A4AC981DCC862900956A81 /* ReturnData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReturnData.h; sourceTree = "<group>"; };
@@ -505,6 +508,8 @@
 				B46364F71DCB39A5001DCAFD /* STImageView.m */,
 				B46450BF1DE693500043DA6B /* SearchView.h */,
 				B46450C01DE693500043DA6B /* SearchView.m */,
+				B49920DF1DF11B93008837F9 /* SearchTableView.h */,
+				B49920E01DF11B93008837F9 /* SearchTableView.m */,
 			);
 			name = CustomerView;
 			sourceTree = "<group>";
@@ -1034,6 +1039,7 @@
 				B46E26D91DDBFFEF002B87B7 /* CommentsBarView.m in Sources */,
 				B4A6BE051DCC6A520064EEB4 /* UserInfo.m in Sources */,
 				B43F43EE1DEECBD000DB64EA /* CompanyPhoneBookViewController.m in Sources */,
+				B49920E11DF11B93008837F9 /* SearchTableView.m in Sources */,
 				B4CF48B21DC87CE800EBC0D9 /* MainRootViewController.m in Sources */,
 				B4CF48C61DC88E3D00EBC0D9 /* MeViewController.m in Sources */,
 				B485E0991DE294730096F4C6 /* MyScoreViewController.m in Sources */,
