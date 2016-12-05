@@ -23,4 +23,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *qrcodeimg;
 
 
+
+-(void)setQRCodeHide:(BOOL)hide;
 @end

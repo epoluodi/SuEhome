@@ -244,7 +244,10 @@
     return 1;
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"showchat" sender:nil];
+}
 /*
 #pragma mark - Navigation
 

@@ -51,6 +51,14 @@
 		B46E26E31DDC4C0D002B87B7 /* icon_like1.png in Resources */ = {isa = PBXBuildFile; fileRef = B46E26DF1DDC4C0D002B87B7 /* icon_like1.png */; };
 		B46E26E41DDC4C0D002B87B7 /* icon_like2.png in Resources */ = {isa = PBXBuildFile; fileRef = B46E26E01DDC4C0D002B87B7 /* icon_like2.png */; };
 		B46E26E61DDC4CE1002B87B7 /* bubble1.png in Resources */ = {isa = PBXBuildFile; fileRef = B46E26E51DDC4CE1002B87B7 /* bubble1.png */; };
+		B476F7D11DF53FDE00544C01 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B476F7D01DF53FDE00544C01 /* ChatViewController.m */; };
+		B476F7D61DF5520C00544C01 /* chatbarview.xib in Resources */ = {isa = PBXBuildFile; fileRef = B476F7D51DF5520C00544C01 /* chatbarview.xib */; };
+		B476F7D81DF5528F00544C01 /* t7.png in Resources */ = {isa = PBXBuildFile; fileRef = B476F7D71DF5528F00544C01 /* t7.png */; };
+		B476F7DA1DF554AD00544C01 /* sz.png in Resources */ = {isa = PBXBuildFile; fileRef = B476F7D91DF554AD00544C01 /* sz.png */; };
+		B476F7DC1DF554B900544C01 /* chat_more_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = B476F7DB1DF554B900544C01 /* chat_more_normal.png */; };
+		B476F7DF1DF5572400544C01 /* ChatBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B476F7DE1DF5572400544C01 /* ChatBarView.m */; };
+		B476F7E11DF5663D00544C01 /* emjview.xib in Resources */ = {isa = PBXBuildFile; fileRef = B476F7E01DF5663D00544C01 /* emjview.xib */; };
+		B476F7E41DF5686700544C01 /* EmjView.m in Sources */ = {isa = PBXBuildFile; fileRef = B476F7E31DF5686700544C01 /* EmjView.m */; };
 		B47807BF1D2B96E6004B0392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B47807BE1D2B96E6004B0392 /* main.m */; };
 		B47807C21D2B96E6004B0392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B47807C11D2B96E6004B0392 /* AppDelegate.m */; };
 		B47807C81D2B96E6004B0392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47807C61D2B96E6004B0392 /* Main.storyboard */; };
@@ -229,6 +237,17 @@
 		B46E26DF1DDC4C0D002B87B7 /* icon_like1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_like1.png; sourceTree = "<group>"; };
 		B46E26E01DDC4C0D002B87B7 /* icon_like2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_like2.png; sourceTree = "<group>"; };
 		B46E26E51DDC4CE1002B87B7 /* bubble1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble1.png; sourceTree = "<group>"; };
+		B476F7CF1DF53FDE00544C01 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		B476F7D01DF53FDE00544C01 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		B476F7D51DF5520C00544C01 /* chatbarview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = chatbarview.xib; sourceTree = "<group>"; };
+		B476F7D71DF5528F00544C01 /* t7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t7.png; sourceTree = "<group>"; };
+		B476F7D91DF554AD00544C01 /* sz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sz.png; sourceTree = "<group>"; };
+		B476F7DB1DF554B900544C01 /* chat_more_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_more_normal.png; sourceTree = "<group>"; };
+		B476F7DD1DF5572400544C01 /* ChatBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBarView.h; sourceTree = "<group>"; };
+		B476F7DE1DF5572400544C01 /* ChatBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBarView.m; sourceTree = "<group>"; };
+		B476F7E01DF5663D00544C01 /* emjview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = emjview.xib; sourceTree = "<group>"; };
+		B476F7E21DF5686700544C01 /* EmjView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmjView.h; sourceTree = "<group>"; };
+		B476F7E31DF5686700544C01 /* EmjView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmjView.m; sourceTree = "<group>"; };
 		B47807BA1D2B96E6004B0392 /* SuEhome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuEhome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47807BE1D2B96E6004B0392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B47807C01D2B96E6004B0392 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -457,6 +476,9 @@
 		B442284C1DB8C53800C3E5E4 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				B476F7DB1DF554B900544C01 /* chat_more_normal.png */,
+				B476F7D91DF554AD00544C01 /* sz.png */,
+				B476F7D71DF5528F00544C01 /* t7.png */,
 				B497E36D1DEFCCE90057C6A0 /* company.png */,
 				B43F43EA1DEE75C600DB64EA /* family.png */,
 				B43F43E81DEE75BE00DB64EA /* group.png */,
@@ -588,6 +610,29 @@
 			path = CustomerVIew/CommentsView;
 			sourceTree = "<group>";
 		};
+		B476F7CE1DF53FC300544C01 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				B476F7D41DF551FF00544C01 /* ChatbarView */,
+				B476F7CF1DF53FDE00544C01 /* ChatViewController.h */,
+				B476F7D01DF53FDE00544C01 /* ChatViewController.m */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		B476F7D41DF551FF00544C01 /* ChatbarView */ = {
+			isa = PBXGroup;
+			children = (
+				B476F7D51DF5520C00544C01 /* chatbarview.xib */,
+				B476F7DD1DF5572400544C01 /* ChatBarView.h */,
+				B476F7DE1DF5572400544C01 /* ChatBarView.m */,
+				B476F7E01DF5663D00544C01 /* emjview.xib */,
+				B476F7E21DF5686700544C01 /* EmjView.h */,
+				B476F7E31DF5686700544C01 /* EmjView.m */,
+			);
+			path = ChatbarView;
+			sourceTree = "<group>";
+		};
 		B47807B11D2B96E6004B0392 = {
 			isa = PBXGroup;
 			children = (
@@ -608,6 +653,7 @@
 		B47807BC1D2B96E6004B0392 /* SuEhome */ = {
 			isa = PBXGroup;
 			children = (
+				B476F7CE1DF53FC300544C01 /* Chat */,
 				B411DEB71DE83BE20046ECED /* CELL */,
 				B4808AEC1DD40E370089228B /* Plugins */,
 				B47BF3AA1DD1D47100BAC161 /* config.xml */,
@@ -963,6 +1009,7 @@
 				B4D2CFA61DEC296900A376FE /* s2.png in Resources */,
 				B46CB4521DC9D919001C2FCF /* logo512.png in Resources */,
 				B485E0A81DE2F0A30096F4C6 /* artical.png in Resources */,
+				B476F7D61DF5520C00544C01 /* chatbarview.xib in Resources */,
 				B485E0961DE291E20096F4C6 /* sharebarcode.png in Resources */,
 				B4CF48AD1DC87BA000EBC0D9 /* score.png in Resources */,
 				B4CF48AB1DC87BA000EBC0D9 /* family2.png in Resources */,
@@ -973,6 +1020,7 @@
 				B485E0AA1DE2F0AE0096F4C6 /* comment.png in Resources */,
 				B442284E1DB8C53800C3E5E4 /* logo.png in Resources */,
 				B46CB4571DC9E4F0001C2FCF /* commoncellnoimg.xib in Resources */,
+				B476F7D81DF5528F00544C01 /* t7.png in Resources */,
 				B4D2CF9F1DEC222F00A376FE /* userinfoheadcell.xib in Resources */,
 				B46E26E61DDC4CE1002B87B7 /* bubble1.png in Resources */,
 				B47807CD1D2B96E6004B0392 /* LaunchScreen.storyboard in Resources */,
@@ -980,6 +1028,7 @@
 				B497E36E1DEFCCE90057C6A0 /* company.png in Resources */,
 				B46E26E41DDC4C0D002B87B7 /* icon_like2.png in Resources */,
 				B4D2CFA51DEC296900A376FE /* s1.png in Resources */,
+				B476F7DA1DF554AD00544C01 /* sz.png in Resources */,
 				B485E0A61DE2F0910096F4C6 /* sigin.png in Resources */,
 				B47807CA1D2B96E6004B0392 /* Assets.xcassets in Resources */,
 				B46364F31DCB3916001DCAFD /* userinfo_nickimg.xib in Resources */,
@@ -991,9 +1040,11 @@
 				B43F43EB1DEE75C600DB64EA /* family.png in Resources */,
 				B4CF48AE1DC87BA000EBC0D9 /* settings.png in Resources */,
 				B46E26D61DDBFFC2002B87B7 /* icon_return1.png in Resources */,
+				B476F7E11DF5663D00544C01 /* emjview.xib in Resources */,
 				B46E26E21DDC4C0D002B87B7 /* icon_fav2.png in Resources */,
 				B4E72AF61DED809800052676 /* t3_3.png in Resources */,
 				B43F43E91DEE75BE00DB64EA /* group.png in Resources */,
+				B476F7DC1DF554B900544C01 /* chat_more_normal.png in Resources */,
 				B47807C81D2B96E6004B0392 /* Main.storyboard in Resources */,
 				B434031F1DDD8A84005DC86D /* icon_publish.png in Resources */,
 				B411DEB01DE81F6F0046ECED /* personcell.xib in Resources */,
@@ -1017,6 +1068,7 @@
 				B485E0931DE2915C0096F4C6 /* AboutShareViewController.m in Sources */,
 				B429D7FC1DD0646400096E6D /* HttpLogin.m in Sources */,
 				B4CF48A21DC8431000EBC0D9 /* LoginViewController.m in Sources */,
+				B476F7DF1DF5572400544C01 /* ChatBarView.m in Sources */,
 				B4808AF21DD418690089228B /* SystemRequest.m in Sources */,
 				B4FB01331DE53F5D0050AE71 /* MessageViewController.m in Sources */,
 				B46C12C61DD45DB900E851FF /* WebViewRequest.m in Sources */,
@@ -1030,6 +1082,7 @@
 				B429D8001DD0702100096E6D /* MQTTConfig.m in Sources */,
 				B47BF3AE1DD1D9A500BAC161 /* CordovaWebViewController.m in Sources */,
 				B411DEB61DE8361C0046ECED /* UserInfoSampleViewController.m in Sources */,
+				B476F7D11DF53FDE00544C01 /* ChatViewController.m in Sources */,
 				B4D2CFA21DEC238E00A376FE /* UserInfoHeadCell.m in Sources */,
 				B43F43E71DEE6CDB00DB64EA /* PhoneBookViewController.m in Sources */,
 				B46E26DC1DDC06A4002B87B7 /* Plugins.m in Sources */,
@@ -1039,6 +1092,7 @@
 				B46E26D91DDBFFEF002B87B7 /* CommentsBarView.m in Sources */,
 				B4A6BE051DCC6A520064EEB4 /* UserInfo.m in Sources */,
 				B43F43EE1DEECBD000DB64EA /* CompanyPhoneBookViewController.m in Sources */,
+				B476F7E41DF5686700544C01 /* EmjView.m in Sources */,
 				B49920E11DF11B93008837F9 /* SearchTableView.m in Sources */,
 				B4CF48B21DC87CE800EBC0D9 /* MainRootViewController.m in Sources */,
 				B4CF48C61DC88E3D00EBC0D9 /* MeViewController.m in Sources */,

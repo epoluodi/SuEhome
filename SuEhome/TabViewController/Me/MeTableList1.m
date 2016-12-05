@@ -27,4 +27,8 @@
     nickimg.layer.masksToBounds=YES;
 }
 
+-(void)setQRCodeHide:(BOOL)hide
+{
+    qrcodeimg.hidden = hide;
+}
 @end

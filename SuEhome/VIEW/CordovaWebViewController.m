@@ -188,6 +188,7 @@
                 NSString *_webtitle=[arg objectForKey:@"title"];
                 webviewcontroller.IsUserWebTitle=NO;
                 webviewcontroller.webTitle =[arg objectForKey:@"title"];
+                
             }
             else
                 webviewcontroller.IsUserWebTitle=YES;

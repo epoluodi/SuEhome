@@ -38,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="87"/>
+            <point key="canvasLocation" x="190" y="-1048"/>
         </scene>
         <!--Single Web View Controller-->
         <scene sceneID="1Id-He-d2f">
@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNu-m1-3N5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2949" y="-1203"/>
+            <point key="canvasLocation" x="3480" y="-1583"/>
         </scene>
         <!--Main Root View Controller-->
         <scene sceneID="hEt-h9-l9x">
@@ -182,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1La-Uz-dqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3689.8550724637685" y="-1203.2608695652175"/>
+            <point key="canvasLocation" x="4222" y="-1583"/>
         </scene>
         <!--消息-->
         <scene sceneID="kXX-B5-H1E">
@@ -215,6 +215,7 @@
                         <segue destination="Rtg-Hp-IjI" kind="push" identifier="showfamilylist" id="VUj-tC-6Eb"/>
                         <segue destination="cNW-wW-Paj" kind="push" identifier="PhoneBookViewController" id="Uvh-6i-KRk"/>
                         <segue destination="nCA-UM-u35" kind="push" identifier="selctphonebook" id="QDJ-8j-IUw"/>
+                        <segue destination="6Mg-8k-u4h" kind="push" identifier="showchat" id="aAp-MD-E7Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRe-tt-53L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -446,7 +447,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOr-Wd-lDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="524.63768115942037" y="1169.8369565217392"/>
+            <point key="canvasLocation" x="190" y="86"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="syY-7l-FfD">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="6Mg-8k-u4h" customClass="ChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7VU-8v-kxg"/>
+                        <viewControllerLayoutGuide type="bottom" id="3GX-Oe-oRf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YNw-CI-Q9u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2S2-Mc-JG5">
+                                <rect key="frame" x="0.0" y="64" width="414" height="622"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZD-g7-Uof">
+                                <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="z5b-GV-dm7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2S2-Mc-JG5" secondAttribute="trailing" id="5yv-Dm-7gO"/>
+                            <constraint firstItem="2S2-Mc-JG5" firstAttribute="top" secondItem="7VU-8v-kxg" secondAttribute="bottom" id="ATT-W8-dBL"/>
+                            <constraint firstItem="yZD-g7-Uof" firstAttribute="top" secondItem="2S2-Mc-JG5" secondAttribute="bottom" id="QME-wO-kkl"/>
+                            <constraint firstItem="2S2-Mc-JG5" firstAttribute="leading" secondItem="YNw-CI-Q9u" secondAttribute="leading" id="WPn-fb-aWy"/>
+                            <constraint firstItem="yZD-g7-Uof" firstAttribute="leading" secondItem="YNw-CI-Q9u" secondAttribute="leading" id="YU7-gW-90v"/>
+                            <constraint firstItem="3GX-Oe-oRf" firstAttribute="top" secondItem="yZD-g7-Uof" secondAttribute="bottom" id="bIE-LT-fkq"/>
+                            <constraint firstAttribute="trailing" secondItem="yZD-g7-Uof" secondAttribute="trailing" id="pEO-Rx-cSt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="wCU-Vg-kPm"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bottom" destination="bIE-LT-fkq" id="5j1-Mx-9yi"/>
+                        <outlet property="chatbar" destination="yZD-g7-Uof" id="dSN-af-TXg"/>
+                        <outlet property="chattitle" destination="wCU-Vg-kPm" id="ut8-ZI-on6"/>
+                        <outlet property="table" destination="2S2-Mc-JG5" id="1kE-2B-lVD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cq5-7R-zlq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8098.5507246376819" y="-672.554347826087"/>
         </scene>
         <!--我-->
         <scene sceneID="mmw-b6-1EZ">
@@ -725,7 +773,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Kb-rE-FxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1753.6231884057972" y="1843.2065217391305"/>
+            <point key="canvasLocation" x="801" y="2708"/>
         </scene>
         <!--二维码信息-->
         <scene sceneID="onj-dv-XIN">

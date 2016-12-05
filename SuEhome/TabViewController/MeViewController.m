@@ -138,6 +138,12 @@
                 mt1.name.text = [[AppInfo getInstance] getUserInfo].nickName;
                 mt1.loginname.text = [NSString stringWithFormat:@"登录名:%@",[[AppInfo getInstance]  getUserInfo].loginName];
                 [mt1.nickimg setMediaIdLoadImg:[[AppInfo getInstance] getUserInfo].photo filesize:@""];
+                
+                if ([[AppInfo getInstance] getUserInfo].userType == OLDMAN)
+                    [mt1 setQRCodeHide:NO];
+                else if ([[AppInfo getInstance] getUserInfo].userType == WORKER)
+                    [mt1 setQRCodeHide:YES];
+                
                 return mt1;
             }
             break;

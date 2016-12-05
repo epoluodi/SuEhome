@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9Gn-G1-buH" customClass="EmjView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsv-Cc-rCY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="CLq-ho-2ct"/>
+                    </constraints>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="AKa-F4-kxr">
+                    <rect key="frame" x="16" y="160" width="343" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="Y3H-4l-PNz"/>
+                    </constraints>
+                    <color key="pageIndicatorTintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="currentPageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Rsv-Cc-rCY" secondAttribute="trailing" id="M2n-li-j4J"/>
+                <constraint firstItem="AKa-F4-kxr" firstAttribute="top" secondItem="Rsv-Cc-rCY" secondAttribute="bottom" id="NbY-Kt-Jge"/>
+                <constraint firstItem="Rsv-Cc-rCY" firstAttribute="leading" secondItem="9Gn-G1-buH" secondAttribute="leading" id="QeH-zT-k4V"/>
+                <constraint firstAttribute="trailing" secondItem="AKa-F4-kxr" secondAttribute="trailing" constant="16" id="UYD-wD-6eS"/>
+                <constraint firstItem="Rsv-Cc-rCY" firstAttribute="top" secondItem="9Gn-G1-buH" secondAttribute="top" id="cnE-Lt-1Jc"/>
+                <constraint firstItem="AKa-F4-kxr" firstAttribute="leading" secondItem="9Gn-G1-buH" secondAttribute="leading" constant="16" id="nzp-At-Q2N"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="emjscroll" destination="Rsv-Cc-rCY" id="nz2-5I-LPt"/>
+                <outlet property="pageview" destination="AKa-F4-kxr" id="sUP-9s-FVN"/>
+            </connections>
+            <point key="canvasLocation" x="-272.5" y="213"/>
+        </view>
+    </objects>
+</document>
