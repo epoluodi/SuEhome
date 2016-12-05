@@ -46,4 +46,5 @@ typedef enum : NSUInteger {
 -(void)initDelegate:(id)target;//设置代理
 -(void)closeInputBoard;//关闭键盘
 -(EmjView *)getEmjView;//得到表情view
+-(void)closeEmjView;
 @end

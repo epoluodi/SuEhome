@@ -53,6 +53,8 @@
 
 -(void)textViewDidBeginEditing:(UITextView *)textView
 {
+    chatbarview.chatviewenum = KEYBOARD;
+    [chatbarview closeEmjView];
     [UIView animateWithDuration:0.4 animations:^{
         bottom.constant = 270;
     }];
@@ -80,6 +82,9 @@
 {
     switch (chatviewenum) {
         case EMJ:
+            if (chatbarview.chatviewenum == EMJ )
+                return;
+            
             [chatbarview closeInputBoard];
             
             [self loadEmjView];
@@ -105,8 +110,8 @@
     [self.view addSubview:[chatbarview getEmjView ]];
     
     [UIView animateWithDuration:0.4 animations:^{
-        [chatbarview getEmjView ].transform = CGAffineTransformMakeTranslation(0,940);
-    }];
+        [chatbarview getEmjView ].frame= CGRectMake(0,[PublicCommon GetScreen].size.height-EMJVIEWHEIGHT, [PublicCommon GetALLScreen].size.width, EMJVIEWHEIGHT);
+   }];
 }
 
 

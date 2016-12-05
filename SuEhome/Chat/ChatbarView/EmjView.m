@@ -9,7 +9,7 @@
 #import "EmjView.h"
 
 @implementation EmjView
-
+@synthesize emjscroll,pageview;
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

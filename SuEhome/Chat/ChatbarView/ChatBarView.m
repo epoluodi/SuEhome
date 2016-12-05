@@ -22,7 +22,7 @@
     chattext.layer.cornerRadius = 6;
     chattext.layer.masksToBounds =YES;
   
-    
+    _chatviewenum = NONE;
     //加载表情view
     NSArray *_varry = [[NSBundle mainBundle] loadNibNamed:@"emjview" owner:self options:nil];
     emjview = _varry[0];
@@ -40,9 +40,15 @@
 
 -(void)closeInputBoard
 {
+    _chatviewenum=NONE;
     [chattext resignFirstResponder];
     [emjview removeFromSuperview];
     
+}
+
+-(void)closeEmjView
+{
+    [emjview removeFromSuperview];
 }
 -(void)initDelegate:(id)target
 {
