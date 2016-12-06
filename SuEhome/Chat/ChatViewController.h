@@ -16,7 +16,7 @@ typedef enum : NSUInteger {
     GROUP,//群聊
 } CHATMODE;
 
-@interface ChatViewController : BaseTabViewController<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,ChatBarViewDelegate>
+@interface ChatViewController : BaseTabViewController<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,ChatBarViewDelegate,MoreDelegate,EmjDelegate>
 {
     UIBarButtonItem *btnright;
     ChatBarView *chatbarview;

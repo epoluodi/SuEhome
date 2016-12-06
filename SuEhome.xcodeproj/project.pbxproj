@@ -174,6 +174,12 @@
 		B485E0AA1DE2F0AE0096F4C6 /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = B485E0A91DE2F0AE0096F4C6 /* comment.png */; };
 		B485E0AC1DE2F0D90096F4C6 /* scorecell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B485E0AB1DE2F0D90096F4C6 /* scorecell.xib */; };
 		B485E0AF1DE2F1BD0096F4C6 /* ScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B485E0AE1DE2F1BD0096F4C6 /* ScoreCell.m */; };
+		B488ED761DF64CD800AC64C3 /* moreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = B488ED751DF64CD800AC64C3 /* moreview.xib */; };
+		B488ED791DF64D4100AC64C3 /* MoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = B488ED781DF64D4100AC64C3 /* MoreView.m */; };
+		B488ED7E1DF65BA600AC64C3 /* input_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B488ED7C1DF65BA600AC64C3 /* input_camera.png */; };
+		B488ED7F1DF65BA600AC64C3 /* input_picture.png in Resources */ = {isa = PBXBuildFile; fileRef = B488ED7D1DF65BA600AC64C3 /* input_picture.png */; };
+		B488ED821DF6947C00AC64C3 /* Emj.m in Sources */ = {isa = PBXBuildFile; fileRef = B488ED811DF6947C00AC64C3 /* Emj.m */; };
+		B488ED841DF6A3B100AC64C3 /* chat_emj_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = B488ED831DF6A3B100AC64C3 /* chat_emj_delete.png */; };
 		B497E36E1DEFCCE90057C6A0 /* company.png in Resources */ = {isa = PBXBuildFile; fileRef = B497E36D1DEFCCE90057C6A0 /* company.png */; };
 		B497E3711DF026460057C6A0 /* SelectPhoneBookMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B497E3701DF026460057C6A0 /* SelectPhoneBookMainViewController.m */; };
 		B49920E11DF11B93008837F9 /* SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49920E01DF11B93008837F9 /* SearchTableView.m */; };
@@ -479,6 +485,14 @@
 		B485E0AB1DE2F0D90096F4C6 /* scorecell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scorecell.xib; sourceTree = "<group>"; };
 		B485E0AD1DE2F1BD0096F4C6 /* ScoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreCell.h; sourceTree = "<group>"; };
 		B485E0AE1DE2F1BD0096F4C6 /* ScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreCell.m; sourceTree = "<group>"; };
+		B488ED751DF64CD800AC64C3 /* moreview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = moreview.xib; sourceTree = "<group>"; };
+		B488ED771DF64D4100AC64C3 /* MoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreView.h; sourceTree = "<group>"; };
+		B488ED781DF64D4100AC64C3 /* MoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreView.m; sourceTree = "<group>"; };
+		B488ED7C1DF65BA600AC64C3 /* input_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_camera.png; sourceTree = "<group>"; };
+		B488ED7D1DF65BA600AC64C3 /* input_picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_picture.png; sourceTree = "<group>"; };
+		B488ED801DF6947C00AC64C3 /* Emj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emj.h; sourceTree = "<group>"; };
+		B488ED811DF6947C00AC64C3 /* Emj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emj.m; sourceTree = "<group>"; };
+		B488ED831DF6A3B100AC64C3 /* chat_emj_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_emj_delete.png; sourceTree = "<group>"; };
 		B497E36D1DEFCCE90057C6A0 /* company.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = company.png; sourceTree = "<group>"; };
 		B497E36F1DF026460057C6A0 /* SelectPhoneBookMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPhoneBookMainViewController.h; sourceTree = "<group>"; };
 		B497E3701DF026460057C6A0 /* SelectPhoneBookMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPhoneBookMainViewController.m; sourceTree = "<group>"; };
@@ -702,6 +716,9 @@
 		B442284C1DB8C53800C3E5E4 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				B488ED831DF6A3B100AC64C3 /* chat_emj_delete.png */,
+				B488ED7C1DF65BA600AC64C3 /* input_camera.png */,
+				B488ED7D1DF65BA600AC64C3 /* input_picture.png */,
 				B476F7DB1DF554B900544C01 /* chat_more_normal.png */,
 				B476F7D91DF554AD00544C01 /* sz.png */,
 				B476F7D71DF5528F00544C01 /* t7.png */,
@@ -855,6 +872,9 @@
 				B476F7E01DF5663D00544C01 /* emjview.xib */,
 				B476F7E21DF5686700544C01 /* EmjView.h */,
 				B476F7E31DF5686700544C01 /* EmjView.m */,
+				B488ED751DF64CD800AC64C3 /* moreview.xib */,
+				B488ED771DF64D4100AC64C3 /* MoreView.h */,
+				B488ED781DF64D4100AC64C3 /* MoreView.m */,
 			);
 			path = ChatbarView;
 			sourceTree = "<group>";
@@ -1070,6 +1090,8 @@
 				B429D8051DD0790C00096E6D /* AutoLogin.m */,
 				B47BF36B1DD1B3BD00BAC161 /* STCommon.h */,
 				B47BF36C1DD1B3BD00BAC161 /* STCommon.m */,
+				B488ED801DF6947C00AC64C3 /* Emj.h */,
+				B488ED811DF6947C00AC64C3 /* Emj.m */,
 			);
 			path = SYSTEM;
 			sourceTree = "<group>";
@@ -1246,6 +1268,7 @@
 				B485E0A81DE2F0A30096F4C6 /* artical.png in Resources */,
 				5C2C36961DF5A709000F0C2E /* unamused.png in Resources */,
 				5C2C366A1DF5A709000F0C2E /* grin.png in Resources */,
+				B488ED841DF6A3B100AC64C3 /* chat_emj_delete.png in Resources */,
 				B476F7D61DF5520C00544C01 /* chatbarview.xib in Resources */,
 				B485E0961DE291E20096F4C6 /* sharebarcode.png in Resources */,
 				5C2C368B1DF5A709000F0C2E /* stuck_out_tongue.png in Resources */,
@@ -1274,6 +1297,7 @@
 				5C2C367A1DF5A709000F0C2E /* open_mouth.png in Resources */,
 				B46E26E61DDC4CE1002B87B7 /* bubble1.png in Resources */,
 				5C2C36721DF5A709000F0C2E /* kissing_heart.png in Resources */,
+				B488ED7E1DF65BA600AC64C3 /* input_camera.png in Resources */,
 				B47807CD1D2B96E6004B0392 /* LaunchScreen.storyboard in Resources */,
 				5C2C36701DF5A709000F0C2E /* kissing.png in Resources */,
 				5C2C36671DF5A709000F0C2E /* flushed.png in Resources */,
@@ -1316,6 +1340,7 @@
 				B46E26D61DDBFFC2002B87B7 /* icon_return1.png in Resources */,
 				5C2C36841DF5A709000F0C2E /* smiley.png in Resources */,
 				5C2C365A1DF5A709000F0C2E /* blush.png in Resources */,
+				B488ED761DF64CD800AC64C3 /* moreview.xib in Resources */,
 				B476F7E11DF5663D00544C01 /* emjview.xib in Resources */,
 				B46E26E21DDC4C0D002B87B7 /* icon_fav2.png in Resources */,
 				5C2C36711DF5A709000F0C2E /* kissing_closed_eyes.png in Resources */,
@@ -1340,6 +1365,7 @@
 				5C2C36811DF5A709000F0C2E /* sleeping.png in Resources */,
 				5C2C36861DF5A709000F0C2E /* smirk.png in Resources */,
 				5C2C36691DF5A709000F0C2E /* grimacing.png in Resources */,
+				B488ED7F1DF65BA600AC64C3 /* input_picture.png in Resources */,
 				5C2C36571DF5A709000F0C2E /* angry.png in Resources */,
 				5C2C36921DF5A709000F0C2E /* thumbsup.png in Resources */,
 				5C2C369B1DF5A709000F0C2E /* worried.png in Resources */,
@@ -1391,6 +1417,7 @@
 				B46450C11DE693500043DA6B /* SearchView.m in Sources */,
 				B46E26D91DDBFFEF002B87B7 /* CommentsBarView.m in Sources */,
 				B4A6BE051DCC6A520064EEB4 /* UserInfo.m in Sources */,
+				B488ED821DF6947C00AC64C3 /* Emj.m in Sources */,
 				B43F43EE1DEECBD000DB64EA /* CompanyPhoneBookViewController.m in Sources */,
 				B476F7E41DF5686700544C01 /* EmjView.m in Sources */,
 				B49920E11DF11B93008837F9 /* SearchTableView.m in Sources */,
@@ -1411,6 +1438,7 @@
 				B46364FB1DCB3AA4001DCAFD /* UserInfoNickImgCell.m in Sources */,
 				B46CB4551DC9E4E1001C2FCF /* CommonCellNoImg.m in Sources */,
 				B4E72AF21DED270F00052676 /* T_Member+CoreDataProperties.m in Sources */,
+				B488ED791DF64D4100AC64C3 /* MoreView.m in Sources */,
 				B47959631DD95660008902D7 /* ScanRequest.m in Sources */,
 				B47807C21D2B96E6004B0392 /* AppDelegate.m in Sources */,
 				B4A6BE011DCC676C0064EEB4 /* MBProgressHUD.m in Sources */,

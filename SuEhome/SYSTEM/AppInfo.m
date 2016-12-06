@@ -20,11 +20,12 @@ static AppInfo *_self;
     self = [super init];
     
     
-
+    
     appRunInfo.deviceType = 1;
   
     _userinfo = [[UserInfo alloc] init];
 
+    [Emj getEmj];
     [self FirstRun];
     return self;
 }

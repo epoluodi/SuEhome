@@ -8,10 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EmjView : UIView
+#define PageCount 26
 
+@protocol EmjDelegate
+
+-(void)ClickEmj:(int)index;
+
+@end
+
+
+
+@interface EmjView : UIView<UIScrollViewDelegate>
+{
+    UIButton * btnsend;
+    UIButton *btndel;
+    
+    int emjwidth;
+}
 @property (weak, nonatomic) IBOutlet UIScrollView *emjscroll;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageview;
+@property (weak,nonatomic) UIViewController<EmjDelegate> *delegate;
+
 
 
 @end

@@ -8,6 +8,7 @@
 
 #import "ChatViewController.h"
 #import <Common/PublicCommon.h>
+#import "Emj.h"
 
 @interface ChatViewController ()
 
@@ -53,6 +54,8 @@
 
 -(void)textViewDidBeginEditing:(UITextView *)textView
 {
+
+     NSLog(@"文字 %@",textView.attributedText);
     chatbarview.chatviewenum = KEYBOARD;
     [chatbarview closeEmjView];
     [UIView animateWithDuration:0.4 animations:^{
@@ -78,18 +81,22 @@
 
 #pragma mark ChatBar Delegate
 
+
+//bar 操作
 -(void)ClickButton:(ChatViewEnum)chatviewenum
 {
     switch (chatviewenum) {
         case EMJ:
             if (chatbarview.chatviewenum == EMJ )
                 return;
-            
             [chatbarview closeInputBoard];
-            
             [self loadEmjView];
             break;
         case MORE:
+            if (chatbarview.chatviewenum == MORE )
+                return;
+            [chatbarview closeInputBoard];
+            [self loadMoreView];
             break;
         case RECORDSOUND:
             break;
@@ -97,9 +104,35 @@
     }
 }
 
+
+
+//更多
+-(void)ClickMore:(MORETYPE)moretype
+{
+    NSLog(@"更多选择 %lu",(unsigned long)moretype);
+}
+
+//表情
+-(void)ClickEmj:(int)index
+{
+    if (index == -1)
+    {
+        
+        //删除
+        [chatbarview textdeleteLast];
+        return;
+    }
+    UIImage *emgimg=[UIImage imageWithData:[[Emj getEmj] getEmjDataForIndex:index]];
+    [chatbarview insertEmj:emgimg];
+    
+
+}
 #pragma mark -
 
 
+
+
+//加载 表情view
 -(void)loadEmjView
 {
     [UIView animateWithDuration:0.4 animations:^{
@@ -115,7 +148,20 @@
 }
 
 
-
+//加载 表情view
+-(void)loadMoreView
+{
+    [UIView animateWithDuration:0.4 animations:^{
+        bottom.constant = 100;
+    }];
+    
+    
+    [self.view addSubview:[chatbarview getMoreView ]];
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        [chatbarview getMoreView ].frame= CGRectMake(0,[PublicCommon GetScreen].size.height-MOREVIEWHEIGHT, [PublicCommon GetALLScreen].size.width, MOREVIEWHEIGHT);
+    }];
+}
 
 //点击右上角 聊天信息，单聊和群聊，显示不一样
 -(void)clickChatInfo

@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "EmjView.h"
+#import "MoreView.h"
 
 #define EMJVIEWHEIGHT 240
+#define MOREVIEWHEIGHT 100
+
 
 typedef enum : NSUInteger {
     EMJ,
@@ -31,7 +34,8 @@ typedef enum : NSUInteger {
 
 @interface ChatBarView : UIView
 {
-        EmjView * emjview;
+    EmjView * emjview;
+    MoreView *moreview;
 }
 
 
@@ -45,6 +49,12 @@ typedef enum : NSUInteger {
 
 -(void)initDelegate:(id)target;//设置代理
 -(void)closeInputBoard;//关闭键盘
+-(void)textdeleteLast;//删除最后一个内容
+-(void)insertEmj:(UIImage *)emjImg;//插入表情
+
 -(EmjView *)getEmjView;//得到表情view
+-(MoreView *)getMoreView;
+
+-(void)closeMoreView;
 -(void)closeEmjView;
 @end

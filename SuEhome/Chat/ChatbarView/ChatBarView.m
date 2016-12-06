@@ -8,6 +8,7 @@
 
 #import "ChatBarView.h"
 #import <Common/PublicCommon.h>
+#import "Emj.h"
 @implementation ChatBarView
 @synthesize chattext;
 @synthesize delegate;
@@ -21,12 +22,15 @@
     chattext.layer.borderWidth=0.3;
     chattext.layer.cornerRadius = 6;
     chattext.layer.masksToBounds =YES;
-  
+    chattext.font = [UIFont systemFontOfSize:18];
     _chatviewenum = NONE;
     //加载表情view
     NSArray *_varry = [[NSBundle mainBundle] loadNibNamed:@"emjview" owner:self options:nil];
     emjview = _varry[0];
+    _varry = [[NSBundle mainBundle] loadNibNamed:@"moreview" owner:self options:nil];
+    moreview = _varry[0];
 
+    [moreview initView:TAKEPHOTO|PHOTOLIBRARY];
     
 }
 
@@ -37,12 +41,20 @@
     return emjview;
 }
 
+-(MoreView *)getMoreView
+{
+    moreview.frame = CGRectMake(0,[PublicCommon GetScreen].size.height+MOREVIEWHEIGHT, [PublicCommon GetALLScreen].size.width, MOREVIEWHEIGHT);
+    return moreview;
+}
 
+
+//关闭所有chatbar的窗口
 -(void)closeInputBoard
 {
     _chatviewenum=NONE;
     [chattext resignFirstResponder];
     [emjview removeFromSuperview];
+    [moreview removeFromSuperview];
     
 }
 
@@ -50,12 +62,35 @@
 {
     [emjview removeFromSuperview];
 }
+
+-(void)closeMoreView
+{
+    [moreview removeFromSuperview];
+}
+
+
 -(void)initDelegate:(id)target
 {
     chattext.delegate = target;
     delegate = target;
+    moreview.delegate = target;
+    emjview.delegate = target;
 }
 
+-(void)textdeleteLast
+{
+    if (chattext.text.length == 0)
+        return;
+    chattext .text = [chattext.text substringToIndex:chattext.text.length-1];
+  
+}
+
+-(void)insertEmj:(UIImage *)emjImg
+{
+
+   chattext.attributedText =  [Emj getAttrString:chattext.text addimg:emjImg];
+
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
