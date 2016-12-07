@@ -13,35 +13,48 @@
 -(ReturnData *)queryOrg
 {
     _http.WebServiceUrl = ORGQUERYURL;
+    if ( [USER_DEFAULT integerForKey:@"orgver"] != -1 )
+        [_http addParamsString:@"numVer" values:[NSString stringWithFormat:@"%ld", [USER_DEFAULT integerForKey:@"orgver"] ]];
+    NSData * ret =  [_http httprequest:[_http getDataForArrary] ];
     
-    NSData * ret =  [_http httprequest:nil];
+    NSLog(@"返回数据 %@",[[NSString alloc] initWithData:ret encoding:NSUTF8StringEncoding]);
+    ReturnData *rd = [ReturnData getReturnDatawithData:ret dataMode:YES];
+
+    NSLog(@"获取企业通讯录组织信息 %@",     rd.returnData);
     
-    ReturnData *rd = [ReturnData getReturnDatawithData:ret dataMode:NO];
-    
-    NSLog(@"获取企业通讯录组织信息 %@", rd.returnDatas);
-    
-    [[DBmanger getIntance] deletAllOrg];
-    for (NSDictionary *d in rd.returnDatas) {
-        [[DBmanger getIntance] addORG:d];
+    if (![[rd.returnData objectForKey:@"lastNumVer"] isEqual:@([USER_DEFAULT integerForKey:@"orgver"])])
+    {
+        [[DBmanger getIntance] deletAllOrg];
+        NSArray *arr = [rd.returnData objectForKey:@"orgs"];
+        for (NSDictionary *d in arr) {
+            [[DBmanger getIntance] addORG:d];
+        }
+        [USER_DEFAULT setInteger:[[rd.returnData objectForKey:@"lastNumVer"] intValue] forKey:@"orgver"];
     }
-    
     return  rd;
 }
 
 -(ReturnData *)queryDept
 {
     _http.WebServiceUrl = DEPTQUERYURL;
+    if ( [USER_DEFAULT integerForKey:@"deptver"] != -1 )
+        [_http addParamsString:@"numVer" values:[NSString stringWithFormat:@"%ld", [USER_DEFAULT integerForKey:@"deptver"] ]];
+    NSData * ret =  [_http httprequest:[_http getDataForArrary] ];
+    ReturnData *rd = [ReturnData getReturnDatawithData:ret dataMode:YES];
     
-    NSData * ret =  [_http httprequest:nil];
+    NSLog(@"获取企业通讯录部门信息 %@", rd.returnData);
     
-    ReturnData *rd = [ReturnData getReturnDatawithData:ret dataMode:NO];
-    
-    NSLog(@"获取企业通讯录部门信息 %@", rd.returnDatas);
-    
-    [[DBmanger getIntance] deletAllDept];
-    for (NSDictionary *d in rd.returnDatas) {
-        [[DBmanger getIntance] addDEPT:d];
-    }
+        if (![[rd.returnData objectForKey:@"lastNumVer"] isEqual:@([USER_DEFAULT integerForKey:@"deptver"])])
+        {
+            [[DBmanger getIntance] deletAllDept];
+            NSArray *arr = [rd.returnData objectForKey:@"depts"];
+            for (NSDictionary *d in arr) {
+                [[DBmanger getIntance] addDEPT:d];
+            }
+            
+            [USER_DEFAULT setInteger:[[rd.returnData objectForKey:@"lastNumVer"] intValue] forKey:@"deptver"];
+        }
+
     
     return  rd;
 }
@@ -50,17 +63,23 @@
 -(ReturnData *)queryMember
 {
     _http.WebServiceUrl = MEMBERQUERYURL;
+    if ( [USER_DEFAULT integerForKey:@"deptver"] != -1 )
+        [_http addParamsString:@"numVer" values:[NSString stringWithFormat:@"%ld", [USER_DEFAULT integerForKey:@"userver"] ]];
+    NSData * ret =  [_http httprequest:[_http getDataForArrary] ];
     
-    NSData * ret =  [_http httprequest:nil];
+    ReturnData *rd = [ReturnData getReturnDatawithData:ret dataMode:YES];
     
-    ReturnData *rd = [ReturnData getReturnDatawithData:ret dataMode:NO];
-    
-    NSLog(@"获取企业通讯录成员信息 %@", rd.returnDatas);
-    
-    [[DBmanger getIntance] deletAllMember];
-    for (NSDictionary *d in rd.returnDatas) {
-        [[DBmanger getIntance] addMember:d];
+    NSLog(@"获取企业通讯录成员信息 %@", rd.returnData);
+    if (![[rd.returnData objectForKey:@"lastNumVer"] isEqual:@([USER_DEFAULT integerForKey:@"userver"])])
+    {
+        [[DBmanger getIntance] deletAllMember];
+        NSArray *arr = [rd.returnData objectForKey:@"users"];
+        for (NSDictionary *d in arr) {
+            [[DBmanger getIntance] addMember:d];
+        }
+        [USER_DEFAULT setInteger:[[rd.returnData objectForKey:@"lastNumVer"] intValue] forKey:@"userver"];
     }
+
     
     return  rd;
 }

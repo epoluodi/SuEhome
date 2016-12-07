@@ -36,6 +36,8 @@ typedef enum : NSUInteger {
 {
     EmjView * emjview;
     MoreView *moreview;
+    NSRange _currange;
+
 }
 
 
@@ -50,7 +52,7 @@ typedef enum : NSUInteger {
 -(void)initDelegate:(id)target;//设置代理
 -(void)closeInputBoard;//关闭键盘
 -(void)textdeleteLast;//删除最后一个内容
--(void)insertEmj:(UIImage *)emjImg;//插入表情
+-(void)insertEmj:(UIImage *)emjImg emjstring:(NSString *)emjstring;//插入表情
 
 -(EmjView *)getEmjView;//得到表情view
 -(MoreView *)getMoreView;

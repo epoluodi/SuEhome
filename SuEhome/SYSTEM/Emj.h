@@ -19,7 +19,7 @@
 +(instancetype)getEmj;
 
 //插入一个表情
-+(NSAttributedString *)getAttrString:(NSString *)string addimg:(UIImage *)img;
++(NSAttributedString *)getAttrString:(NSString *)string addimg:(UIImage *)img EmjString:(NSString *)emjstr Range:(NSRange)CurRange;
 
 
 

@@ -81,15 +81,36 @@
 {
     if (chattext.text.length == 0)
         return;
+    
+    if (chattext.text.length > 3){
+        if ([[chattext.text substringFromIndex:chattext.text.length -2] isEqualToString:@"!]"])
+        {
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\[\\!\\w*\\!\\]" options:NSRegularExpressionCaseInsensitive error:nil];
+            NSArray *result = [regex matchesInString :chattext.text options:0 range:NSMakeRange(0, [chattext.text length])];
+            if (result.count != 0)
+            {
+                NSTextCheckingResult *checkresult =result[result.count-1];
+                chattext .text = [chattext.text substringToIndex:checkresult.range.location];
+                _currange = NSMakeRange(checkresult.range.location, 0);
+                return;
+            }
+        }
+    }
+    
     chattext .text = [chattext.text substringToIndex:chattext.text.length-1];
-  
+    if (chattext.text.length == 0){
+        _currange = chattext.selectedRange;
+        return;
+    }
+    _currange = NSMakeRange(chattext.text.length, 0);
 }
 
--(void)insertEmj:(UIImage *)emjImg
+-(void)insertEmj:(UIImage *)emjImg emjstring:(NSString *)emjstring
 {
 
-   chattext.attributedText =  [Emj getAttrString:chattext.text addimg:emjImg];
 
+   chattext.attributedText =  [Emj getAttrString:chattext.text addimg:emjImg EmjString:emjstring Range:_currange];
+    _currange = NSMakeRange(_currange.location+emjstring.length, 0);
 }
 
 /*
@@ -103,6 +124,7 @@
 - (IBAction)clickEmj:(id)sender {
     [delegate ClickButton:EMJ];
     _chatviewenum = EMJ;
+    _currange =  chattext.selectedRange;
 }
 
 - (IBAction)clcikrecord:(id)sender {

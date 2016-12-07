@@ -39,6 +39,23 @@
     
     [chatbar addSubview:chatbarview];//添加chatbar
     
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+     
+                                             selector:@selector(keyboardWasShown:)
+     
+                                                 name:UIKeyboardWillShowNotification object:nil];
+    
+    //注册键盘消失的通知
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+     
+                                             selector:@selector(keyboardWillBeHidden:)
+     
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -50,22 +67,57 @@
     }];
 }
 
+
+- (void)keyboardWasShown:(NSNotification*)aNotification
+
+{
+    
+    //键盘高度
+    
+    CGRect keyBoardFrame = [[[aNotification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    [UIView animateWithDuration:0.4 animations:^{
+        bottom.constant = keyBoardFrame.size.height;
+    }];
+}
+
+
+
+-(void)keyboardWillBeHidden:(NSNotification*)aNotification
+
+{
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        bottom.constant = 0;
+    }];
+    
+}
+
+
+
 #pragma mark chattext delegate
 
 -(void)textViewDidBeginEditing:(UITextView *)textView
 {
 
-     NSLog(@"文字 %@",textView.attributedText);
+    NSLog(@"文字光标位置 %@",  NSStringFromRange(textView.selectedRange));
     chatbarview.chatviewenum = KEYBOARD;
     [chatbarview closeEmjView];
-    [UIView animateWithDuration:0.4 animations:^{
-        bottom.constant = 270;
-    }];
+  
 }
+
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 
 {
-    
+    if ([text isEqualToString:@""])
+    {
+        if (textView.text.length > 3){
+            if ([[textView.text substringFromIndex:textView.text.length -2] isEqualToString:@"!]"]){
+                [chatbarview textdeleteLast];
+                return NO;
+            }
+        }
+        return YES;
+    }
     if ([text isEqualToString:@"\n"])
     {
         NSLog(@"发送内容 %@",textView.text);
@@ -117,13 +169,14 @@
 {
     if (index == -1)
     {
-        
         //删除
         [chatbarview textdeleteLast];
         return;
     }
+    
     UIImage *emgimg=[UIImage imageWithData:[[Emj getEmj] getEmjDataForIndex:index]];
-    [chatbarview insertEmj:emgimg];
+    NSDictionary *d =  [[Emj getEmj] getEmjKeyAndValue:index];
+    [chatbarview insertEmj:emgimg emjstring:[d objectForKey:@"emojiwildcard"]];
     
 
 }

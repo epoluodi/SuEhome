@@ -275,13 +275,10 @@
                             
                     }
                     
-                    
-                    
-                    
-                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"更新成功" preferredStyle:UIAlertControllerStyleAlert];
-                    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
-                    [alert addAction:action];
-                    [self presentViewController:alert animated:YES completion:nil];
+//                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"更新成功" preferredStyle:UIAlertControllerStyleAlert];
+//                    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+//                    [alert addAction:action];
+//                    [self presentViewController:alert animated:YES completion:nil];
                     [table reloadData];
                     return ;
                 }
