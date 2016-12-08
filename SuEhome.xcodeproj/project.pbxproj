@@ -88,6 +88,20 @@
 		B429D8001DD0702100096E6D /* MQTTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B429D7FF1DD0702100096E6D /* MQTTConfig.m */; };
 		B429D8031DD0712E00096E6D /* MQTT.m in Sources */ = {isa = PBXBuildFile; fileRef = B429D8021DD0712E00096E6D /* MQTT.m */; };
 		B429D8061DD0790C00096E6D /* AutoLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = B429D8051DD0790C00096E6D /* AutoLogin.m */; };
+		B42D2E7A1DF900340001D0CB /* RecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D2E791DF900340001D0CB /* RecordButton.m */; };
+		B42D2E7C1DF934E40001D0CB /* t5.png in Resources */ = {isa = PBXBuildFile; fileRef = B42D2E7B1DF934E40001D0CB /* t5.png */; };
+		B42D2E801DF939B20001D0CB /* ChatTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D2E7F1DF939B20001D0CB /* ChatTableDelegate.m */; };
+		B42D2E821DF93A140001D0CB /* self_text_cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42D2E811DF93A140001D0CB /* self_text_cell.xib */; };
+		B42D2E841DF93A1F0001D0CB /* other_text_cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42D2E831DF93A1F0001D0CB /* other_text_cell.xib */; };
+		B42D2E861DF93A310001D0CB /* self_photo_cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42D2E851DF93A310001D0CB /* self_photo_cell.xib */; };
+		B42D2E881DF93A540001D0CB /* other_photo_cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42D2E871DF93A540001D0CB /* other_photo_cell.xib */; };
+		B42D2E8A1DF93A7C0001D0CB /* self_sound_cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42D2E891DF93A7C0001D0CB /* self_sound_cell.xib */; };
+		B42D2E8C1DF93A880001D0CB /* other_sound_cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42D2E8B1DF93A880001D0CB /* other_sound_cell.xib */; };
+		B42D2E8F1DF948020001D0CB /* chat_left.png in Resources */ = {isa = PBXBuildFile; fileRef = B42D2E8D1DF948020001D0CB /* chat_left.png */; };
+		B42D2E901DF948020001D0CB /* chat_right.png in Resources */ = {isa = PBXBuildFile; fileRef = B42D2E8E1DF948020001D0CB /* chat_right.png */; };
+		B42D2E931DF94C230001D0CB /* SelfTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D2E921DF94C230001D0CB /* SelfTextCell.m */; };
+		B42D2E961DF94C330001D0CB /* OtherTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D2E951DF94C330001D0CB /* OtherTextCell.m */; };
+		B42D2E991DF951C70001D0CB /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D2E981DF951C70001D0CB /* ChatCell.m */; };
 		B434031A1DDD4DEB005DC86D /* pl.png in Resources */ = {isa = PBXBuildFile; fileRef = B43403191DDD4DEB005DC86D /* pl.png */; };
 		B434031E1DDD8A84005DC86D /* icon_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = B434031C1DDD8A84005DC86D /* icon_cancel.png */; };
 		B434031F1DDD8A84005DC86D /* icon_publish.png in Resources */ = {isa = PBXBuildFile; fileRef = B434031D1DDD8A84005DC86D /* icon_publish.png */; };
@@ -334,6 +348,25 @@
 		B429D8021DD0712E00096E6D /* MQTT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQTT.m; sourceTree = "<group>"; };
 		B429D8041DD0790C00096E6D /* AutoLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLogin.h; sourceTree = "<group>"; };
 		B429D8051DD0790C00096E6D /* AutoLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLogin.m; sourceTree = "<group>"; };
+		B42D2E781DF900340001D0CB /* RecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordButton.h; sourceTree = "<group>"; };
+		B42D2E791DF900340001D0CB /* RecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordButton.m; sourceTree = "<group>"; };
+		B42D2E7B1DF934E40001D0CB /* t5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t5.png; sourceTree = "<group>"; };
+		B42D2E7E1DF939B20001D0CB /* ChatTableDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableDelegate.h; sourceTree = "<group>"; };
+		B42D2E7F1DF939B20001D0CB /* ChatTableDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableDelegate.m; sourceTree = "<group>"; };
+		B42D2E811DF93A140001D0CB /* self_text_cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = self_text_cell.xib; sourceTree = "<group>"; };
+		B42D2E831DF93A1F0001D0CB /* other_text_cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = other_text_cell.xib; sourceTree = "<group>"; };
+		B42D2E851DF93A310001D0CB /* self_photo_cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = self_photo_cell.xib; sourceTree = "<group>"; };
+		B42D2E871DF93A540001D0CB /* other_photo_cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = other_photo_cell.xib; sourceTree = "<group>"; };
+		B42D2E891DF93A7C0001D0CB /* self_sound_cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = self_sound_cell.xib; sourceTree = "<group>"; };
+		B42D2E8B1DF93A880001D0CB /* other_sound_cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = other_sound_cell.xib; sourceTree = "<group>"; };
+		B42D2E8D1DF948020001D0CB /* chat_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_left.png; sourceTree = "<group>"; };
+		B42D2E8E1DF948020001D0CB /* chat_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_right.png; sourceTree = "<group>"; };
+		B42D2E911DF94C230001D0CB /* SelfTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfTextCell.h; sourceTree = "<group>"; };
+		B42D2E921DF94C230001D0CB /* SelfTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfTextCell.m; sourceTree = "<group>"; };
+		B42D2E941DF94C330001D0CB /* OtherTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherTextCell.h; sourceTree = "<group>"; };
+		B42D2E951DF94C330001D0CB /* OtherTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherTextCell.m; sourceTree = "<group>"; };
+		B42D2E971DF951C70001D0CB /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		B42D2E981DF951C70001D0CB /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		B43403191DDD4DEB005DC86D /* pl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pl.png; sourceTree = "<group>"; };
 		B434031C1DDD8A84005DC86D /* icon_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_cancel.png; sourceTree = "<group>"; };
 		B434031D1DDD8A84005DC86D /* icon_publish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_publish.png; sourceTree = "<group>"; };
@@ -713,9 +746,31 @@
 			path = MQTT;
 			sourceTree = "<group>";
 		};
+		B42D2E7D1DF935980001D0CB /* ChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				B42D2E811DF93A140001D0CB /* self_text_cell.xib */,
+				B42D2E831DF93A1F0001D0CB /* other_text_cell.xib */,
+				B42D2E851DF93A310001D0CB /* self_photo_cell.xib */,
+				B42D2E871DF93A540001D0CB /* other_photo_cell.xib */,
+				B42D2E891DF93A7C0001D0CB /* self_sound_cell.xib */,
+				B42D2E8B1DF93A880001D0CB /* other_sound_cell.xib */,
+				B42D2E911DF94C230001D0CB /* SelfTextCell.h */,
+				B42D2E921DF94C230001D0CB /* SelfTextCell.m */,
+				B42D2E941DF94C330001D0CB /* OtherTextCell.h */,
+				B42D2E951DF94C330001D0CB /* OtherTextCell.m */,
+				B42D2E971DF951C70001D0CB /* ChatCell.h */,
+				B42D2E981DF951C70001D0CB /* ChatCell.m */,
+			);
+			path = ChatCell;
+			sourceTree = "<group>";
+		};
 		B442284C1DB8C53800C3E5E4 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				B42D2E8D1DF948020001D0CB /* chat_left.png */,
+				B42D2E8E1DF948020001D0CB /* chat_right.png */,
+				B42D2E7B1DF934E40001D0CB /* t5.png */,
 				B488ED831DF6A3B100AC64C3 /* chat_emj_delete.png */,
 				B488ED7C1DF65BA600AC64C3 /* input_camera.png */,
 				B488ED7D1DF65BA600AC64C3 /* input_picture.png */,
@@ -856,9 +911,12 @@
 		B476F7CE1DF53FC300544C01 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				B42D2E7D1DF935980001D0CB /* ChatCell */,
 				B476F7D41DF551FF00544C01 /* ChatbarView */,
 				B476F7CF1DF53FDE00544C01 /* ChatViewController.h */,
 				B476F7D01DF53FDE00544C01 /* ChatViewController.m */,
+				B42D2E7E1DF939B20001D0CB /* ChatTableDelegate.h */,
+				B42D2E7F1DF939B20001D0CB /* ChatTableDelegate.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -875,6 +933,8 @@
 				B488ED751DF64CD800AC64C3 /* moreview.xib */,
 				B488ED771DF64D4100AC64C3 /* MoreView.h */,
 				B488ED781DF64D4100AC64C3 /* MoreView.m */,
+				B42D2E781DF900340001D0CB /* RecordButton.h */,
+				B42D2E791DF900340001D0CB /* RecordButton.m */,
 			);
 			path = ChatbarView;
 			sourceTree = "<group>";
@@ -1256,6 +1316,7 @@
 				5C2C368A1DF5A709000F0C2E /* sparkles.png in Resources */,
 				5C2C368E1DF5A709000F0C2E /* sunglasses.png in Resources */,
 				B46E26E31DDC4C0D002B87B7 /* icon_like1.png in Resources */,
+				B42D2E8C1DF93A880001D0CB /* other_sound_cell.xib in Resources */,
 				B47BF3A91DD1D3F000BAC161 /* WWW in Resources */,
 				B4CF48CC1DC8968100EBC0D9 /* me_t1.xib in Resources */,
 				5C2C36931DF5A709000F0C2E /* tired_face.png in Resources */,
@@ -1265,6 +1326,7 @@
 				B46CB4521DC9D919001C2FCF /* logo512.png in Resources */,
 				5C2C36901DF5A709000F0C2E /* sweat_smile.png in Resources */,
 				5C2C36591DF5A709000F0C2E /* astonished.png in Resources */,
+				B42D2E901DF948020001D0CB /* chat_right.png in Resources */,
 				B485E0A81DE2F0A30096F4C6 /* artical.png in Resources */,
 				5C2C36961DF5A709000F0C2E /* unamused.png in Resources */,
 				5C2C366A1DF5A709000F0C2E /* grin.png in Resources */,
@@ -1274,6 +1336,7 @@
 				5C2C368B1DF5A709000F0C2E /* stuck_out_tongue.png in Resources */,
 				5C2C36651DF5A709000F0C2E /* expressionless.png in Resources */,
 				5C2C36761DF5A709000F0C2E /* neutral_face.png in Resources */,
+				B42D2E8F1DF948020001D0CB /* chat_left.png in Resources */,
 				B4CF48AD1DC87BA000EBC0D9 /* score.png in Resources */,
 				B4CF48AB1DC87BA000EBC0D9 /* family2.png in Resources */,
 				B4CF48AA1DC87BA000EBC0D9 /* about.png in Resources */,
@@ -1282,6 +1345,7 @@
 				B46450BA1DE68D720043DA6B /* t3_1.png in Resources */,
 				B485E09B1DE294C90096F4C6 /* score_head.png in Resources */,
 				5C2C36891DF5A709000F0C2E /* sob.png in Resources */,
+				B42D2E841DF93A1F0001D0CB /* other_text_cell.xib in Resources */,
 				B434031A1DDD4DEB005DC86D /* pl.png in Resources */,
 				B485E0AA1DE2F0AE0096F4C6 /* comment.png in Resources */,
 				B442284E1DB8C53800C3E5E4 /* logo.png in Resources */,
@@ -1290,6 +1354,7 @@
 				5C2C36871DF5A709000F0C2E /* smoking.png in Resources */,
 				5C2C367C1DF5A709000F0C2E /* persevere.png in Resources */,
 				B46CB4571DC9E4F0001C2FCF /* commoncellnoimg.xib in Resources */,
+				B42D2E861DF93A310001D0CB /* self_photo_cell.xib in Resources */,
 				B476F7D81DF5528F00544C01 /* t7.png in Resources */,
 				5C2C366F1DF5A709000F0C2E /* joy.png in Resources */,
 				5C2C367D1DF5A709000F0C2E /* rage.png in Resources */,
@@ -1303,6 +1368,7 @@
 				5C2C36671DF5A709000F0C2E /* flushed.png in Resources */,
 				B4CF48C21DC88AEA00EBC0D9 /* default_user.png in Resources */,
 				5C2C36731DF5A709000F0C2E /* kissing_smiling_eyes.png in Resources */,
+				B42D2E821DF93A140001D0CB /* self_text_cell.xib in Resources */,
 				5C2C365E1DF5A709000F0C2E /* confounded.png in Resources */,
 				B497E36E1DEFCCE90057C6A0 /* company.png in Resources */,
 				5C2C36581DF5A709000F0C2E /* anguished.png in Resources */,
@@ -1331,8 +1397,11 @@
 				5C2C366C1DF5A709000F0C2E /* heart_eyes.png in Resources */,
 				5C2C36881DF5A709000F0C2E /* snowflake.png in Resources */,
 				5C2C365C1DF5A709000F0C2E /* clap.png in Resources */,
+				B42D2E881DF93A540001D0CB /* other_photo_cell.xib in Resources */,
+				B42D2E7C1DF934E40001D0CB /* t5.png in Resources */,
 				B434031E1DDD8A84005DC86D /* icon_cancel.png in Resources */,
 				5C2C36611DF5A709000F0C2E /* disappointed.png in Resources */,
+				B42D2E8A1DF93A7C0001D0CB /* self_sound_cell.xib in Resources */,
 				B43F43EB1DEE75C600DB64EA /* family.png in Resources */,
 				B4CF48AE1DC87BA000EBC0D9 /* settings.png in Resources */,
 				5C2C367F1DF5A709000F0C2E /* relieved.png in Resources */,
@@ -1388,6 +1457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4CF48D11DC8990300EBC0D9 /* BaseTableViewCell.m in Sources */,
+				B42D2E801DF939B20001D0CB /* ChatTableDelegate.m in Sources */,
 				B4E72AEF1DED270F00052676 /* T_DEPT+CoreDataClass.m in Sources */,
 				B47BF3651DD1778600BAC161 /* T_friendlist+CoreDataClass.m in Sources */,
 				B4E72AF41DED270F00052676 /* T_ORG+CoreDataProperties.m in Sources */,
@@ -1408,6 +1478,7 @@
 				B429D8001DD0702100096E6D /* MQTTConfig.m in Sources */,
 				B47BF3AE1DD1D9A500BAC161 /* CordovaWebViewController.m in Sources */,
 				B411DEB61DE8361C0046ECED /* UserInfoSampleViewController.m in Sources */,
+				B42D2E991DF951C70001D0CB /* ChatCell.m in Sources */,
 				B476F7D11DF53FDE00544C01 /* ChatViewController.m in Sources */,
 				B4D2CFA21DEC238E00A376FE /* UserInfoHeadCell.m in Sources */,
 				B43F43E71DEE6CDB00DB64EA /* PhoneBookViewController.m in Sources */,
@@ -1431,6 +1502,7 @@
 				B46CB4501DC9D0E4001C2FCF /* AboutViewController.m in Sources */,
 				7BED1E3F1DD0BFA10001C370 /* HttpUserInfo.m in Sources */,
 				B4A641221DD317AC002BF258 /* InfoViewController.m in Sources */,
+				B42D2E961DF94C330001D0CB /* OtherTextCell.m in Sources */,
 				B47BF3601DD176EF00BAC161 /* db.xcdatamodeld in Sources */,
 				B4CF48B51DC87D0F00EBC0D9 /* RootViewController.m in Sources */,
 				B47BF36D1DD1B3BD00BAC161 /* STCommon.m in Sources */,
@@ -1456,6 +1528,7 @@
 				B46450BE1DE6914D0043DA6B /* ContactViewController.m in Sources */,
 				B43403221DDD8B6B005DC86D /* CommentsInputView.m in Sources */,
 				B4E72AF31DED270F00052676 /* T_ORG+CoreDataClass.m in Sources */,
+				B42D2E931DF94C230001D0CB /* SelfTextCell.m in Sources */,
 				B485E0AF1DE2F1BD0096F4C6 /* ScoreCell.m in Sources */,
 				B485E0A11DE29E9C0096F4C6 /* AMAnimatedNumber.m in Sources */,
 				B47807BF1D2B96E6004B0392 /* main.m in Sources */,
@@ -1463,6 +1536,7 @@
 				B47BF3661DD1778600BAC161 /* T_friendlist+CoreDataProperties.m in Sources */,
 				B4B3C3601DD5A94F008363D6 /* AjaxRequest.m in Sources */,
 				B4A6412A1DD32159002BF258 /* BaseWebViewController.m in Sources */,
+				B42D2E7A1DF900340001D0CB /* RecordButton.m in Sources */,
 				B429D8031DD0712E00096E6D /* MQTT.m in Sources */,
 				B46E26CF1DDBF645002B87B7 /* CommentsRequest.m in Sources */,
 			);

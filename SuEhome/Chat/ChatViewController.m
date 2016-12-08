@@ -15,7 +15,7 @@
 @end
 
 @implementation ChatViewController
-@synthesize bottom;
+@synthesize bottom,chattextheight;
 @synthesize chattitle;
 @synthesize chatbar;
 @synthesize table;
@@ -40,21 +40,22 @@
     [chatbar addSubview:chatbarview];//添加chatbar
     
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-     
-                                             selector:@selector(keyboardWasShown:)
-     
-                                                 name:UIKeyboardWillShowNotification object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardWillShowNotification object:nil];
     //注册键盘消失的通知
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-     
-                                             selector:@selector(keyboardWillBeHidden:)
-     
-                                                 name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+
     
     
+    //列表
+    UINib *nib = [UINib nibWithNibName:@"self_text_cell" bundle:nil];
+    [table registerNib:nib forCellReuseIdentifier:@"selftextcell"];
+    
+    nib = [UINib nibWithNibName:@"other_text_cell" bundle:nil];
+    [table registerNib:nib forCellReuseIdentifier:@"othertextcell"];
+    
+    tabledelegate  = [[ChatTableDelegate alloc] init];
+    table.delegate=tabledelegate;
+    table.dataSource = tabledelegate;
     
     // Do any additional setup after loading the view.
 }
@@ -69,11 +70,8 @@
 
 
 - (void)keyboardWasShown:(NSNotification*)aNotification
-
 {
-    
     //键盘高度
-    
     CGRect keyBoardFrame = [[[aNotification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     [UIView animateWithDuration:0.4 animations:^{
         bottom.constant = keyBoardFrame.size.height;
@@ -83,13 +81,10 @@
 
 
 -(void)keyboardWillBeHidden:(NSNotification*)aNotification
-
 {
-    
     [UIView animateWithDuration:0.4 animations:^{
         bottom.constant = 0;
     }];
-    
 }
 
 
@@ -106,16 +101,17 @@
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
-
 {
     if ([text isEqualToString:@""])
     {
         if (textView.text.length > 3){
             if ([[textView.text substringFromIndex:textView.text.length -2] isEqualToString:@"!]"]){
                 [chatbarview textdeleteLast];
+                
                 return NO;
             }
         }
+        [chatbarview updateChatTextlayout];
         return YES;
     }
     if ([text isEqualToString:@"\n"])
@@ -123,11 +119,36 @@
         NSLog(@"发送内容 %@",textView.text);
         return NO;
     }
-    
+    [chatbarview updateChatTextlayout];
     return YES;
     
 }
 
+
+-(void)updateChatTextlayout:(UITextView *)textview
+{
+    NSString *_str = textview.text;
+    CGFloat width = textview.frame.size.width -10;
+    CGSize size =CGSizeMake(width,50*3);
+    NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:textview.font,NSFontAttributeName,nil];
+    CGSize updatesize = [_str boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
+    
+    if (CHATTEXTONEWORDHEIGHT == (int)updatesize.height){
+        chattextheight.constant=  50;
+        chatbarview.frame = CGRectMake(0, 0, chatbarview.frame.size.width, CHATBARHEIGHT);
+    }
+    else if  (CHATTEXTONEWORDHEIGHT *2 == (int)updatesize.height){
+        chattextheight.constant=  70;
+        chatbarview.frame = CGRectMake(0, 0, chatbarview.frame.size.width, 70);
+    }
+    else if  (  (int)updatesize.height>CHATTEXTONEWORDHEIGHT *3){
+        chattextheight.constant=  102;
+        chatbarview.frame = CGRectMake(0, 0, chatbarview.frame.size.width, 102);
+    }
+
+  
+    
+}
 #pragma mark -
 
 
@@ -180,6 +201,20 @@
     
 
 }
+
+//////录音=============
+//点击录音
+-(void)BeginTap
+{
+    NSLog(@"开始录音");
+}
+
+//完成
+-(void)Finish:(BOOL)Cancel
+{
+    NSLog(@"结束录音 %d",Cancel);
+}
+//===============
 #pragma mark -
 
 

@@ -8,7 +8,7 @@
 
 #import "BaseTabViewController.h"
 #import "ChatBarView.h"
-
+#import "ChatTableDelegate.h"
 #define CHATBARHEIGHT 50
 
 typedef enum : NSUInteger {
@@ -16,11 +16,11 @@ typedef enum : NSUInteger {
     GROUP,//群聊
 } CHATMODE;
 
-@interface ChatViewController : BaseTabViewController<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,ChatBarViewDelegate,MoreDelegate,EmjDelegate>
+@interface ChatViewController : BaseTabViewController<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,ChatBarViewDelegate,MoreDelegate,EmjDelegate,RecordDelegate>
 {
     UIBarButtonItem *btnright;
     ChatBarView *chatbarview;
-
+    ChatTableDelegate *tabledelegate;
     
 }
 
@@ -32,6 +32,7 @@ typedef enum : NSUInteger {
 
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottom;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *chattextheight;
 
 
 @end

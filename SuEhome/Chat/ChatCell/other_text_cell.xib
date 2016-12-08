@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="99" id="aoA-fI-06v" customClass="OtherTextCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aoA-fI-06v" id="cRo-Gw-q5U">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90y-K8-wzV">
+                        <rect key="frame" x="8" y="8" width="359" height="18"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Ck5-PW-WTf"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user.png" translatesAutoresizingMaskIntoConstraints="NO" id="adl-ZZ-dsv" customClass="STImageView">
+                        <rect key="frame" x="8" y="34" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="PPE-Lt-7wK"/>
+                            <constraint firstAttribute="width" constant="40" id="am9-9B-IFf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你好" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RD-mL-qio">
+                        <rect key="frame" x="56" y="34" width="311" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="4Om-z9-hnK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="zRv-9w-fue">
+                        <rect key="frame" x="56" y="50" width="249" height="40"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zRv-9w-fue" firstAttribute="leading" secondItem="adl-ZZ-dsv" secondAttribute="trailing" constant="8" id="00I-ia-d1L"/>
+                    <constraint firstItem="90y-K8-wzV" firstAttribute="top" secondItem="cRo-Gw-q5U" secondAttribute="top" constant="8" id="5lU-W8-cWs"/>
+                    <constraint firstAttribute="trailing" secondItem="zRv-9w-fue" secondAttribute="trailing" constant="70" id="AHq-9I-byQ"/>
+                    <constraint firstAttribute="bottom" secondItem="zRv-9w-fue" secondAttribute="bottom" constant="8.5" id="ERZ-Qm-GLb"/>
+                    <constraint firstItem="adl-ZZ-dsv" firstAttribute="leading" secondItem="cRo-Gw-q5U" secondAttribute="leading" constant="8" id="KiT-Tk-UM1"/>
+                    <constraint firstItem="4RD-mL-qio" firstAttribute="leading" secondItem="adl-ZZ-dsv" secondAttribute="trailing" constant="8" id="VGg-Hh-gg6"/>
+                    <constraint firstAttribute="trailing" secondItem="4RD-mL-qio" secondAttribute="trailing" constant="8" id="VxH-Dt-wme"/>
+                    <constraint firstAttribute="trailing" secondItem="90y-K8-wzV" secondAttribute="trailing" constant="8" id="WQ3-RO-Uoi"/>
+                    <constraint firstItem="4RD-mL-qio" firstAttribute="top" secondItem="90y-K8-wzV" secondAttribute="bottom" constant="8" id="Y8g-IF-kem"/>
+                    <constraint firstItem="adl-ZZ-dsv" firstAttribute="top" secondItem="90y-K8-wzV" secondAttribute="bottom" constant="8" id="bxH-fu-lRc"/>
+                    <constraint firstItem="zRv-9w-fue" firstAttribute="top" secondItem="4RD-mL-qio" secondAttribute="bottom" constant="4" id="ckm-o4-Lx2"/>
+                    <constraint firstItem="90y-K8-wzV" firstAttribute="leading" secondItem="cRo-Gw-q5U" secondAttribute="leading" constant="8" id="qFl-jh-Zx2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="info" destination="zRv-9w-fue" id="qQu-ji-DZB"/>
+                <outlet property="infoandnicknameheight" destination="ckm-o4-Lx2" id="Nl3-q7-kiD"/>
+                <outlet property="infomaginleft" destination="AHq-9I-byQ" id="fQU-X8-yiv"/>
+                <outlet property="nickimg" destination="adl-ZZ-dsv" id="YYT-o7-DSo"/>
+                <outlet property="nickname" destination="4RD-mL-qio" id="JJq-gJ-8kK"/>
+                <outlet property="nicknameheight" destination="4Om-z9-hnK" id="zqT-Mr-7rO"/>
+                <outlet property="viewdt" destination="90y-K8-wzV" id="KUi-M5-2gu"/>
+            </connections>
+            <point key="canvasLocation" x="-70.5" y="32.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chat_left.png" width="56" height="56"/>
+        <image name="default_user.png" width="100" height="100"/>
+    </resources>
+</document>

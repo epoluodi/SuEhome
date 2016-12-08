@@ -12,6 +12,7 @@
 @implementation ChatBarView
 @synthesize chattext;
 @synthesize delegate;
+@synthesize btnrecord;
 
 -(void)awakeFromNib
 {
@@ -30,6 +31,8 @@
     _varry = [[NSBundle mainBundle] loadNibNamed:@"moreview" owner:self options:nil];
     moreview = _varry[0];
 
+    recordbtn = [[RecordButton alloc] init];
+    
     [moreview initView:TAKEPHOTO|PHOTOLIBRARY];
     
 }
@@ -75,6 +78,13 @@
     delegate = target;
     moreview.delegate = target;
     emjview.delegate = target;
+    recordbtn.delegate = target;
+}
+
+
+-(void)updateChatTextlayout
+{
+    [delegate updateChatTextlayout:chattext];
 }
 
 -(void)textdeleteLast
@@ -92,6 +102,7 @@
                 NSTextCheckingResult *checkresult =result[result.count-1];
                 chattext .text = [chattext.text substringToIndex:checkresult.range.location];
                 _currange = NSMakeRange(checkresult.range.location, 0);
+                [self updateChatTextlayout];
                 return;
             }
         }
@@ -100,9 +111,11 @@
     chattext .text = [chattext.text substringToIndex:chattext.text.length-1];
     if (chattext.text.length == 0){
         _currange = chattext.selectedRange;
+        [self updateChatTextlayout];
         return;
     }
     _currange = NSMakeRange(chattext.text.length, 0);
+    [self updateChatTextlayout];
 }
 
 -(void)insertEmj:(UIImage *)emjImg emjstring:(NSString *)emjstring
@@ -111,6 +124,7 @@
 
    chattext.attributedText =  [Emj getAttrString:chattext.text addimg:emjImg EmjString:emjstring Range:_currange];
     _currange = NSMakeRange(_currange.location+emjstring.length, 0);
+    [self updateChatTextlayout];
 }
 
 /*
@@ -128,12 +142,30 @@
 }
 
 - (IBAction)clcikrecord:(id)sender {
-    [delegate ClickButton:RECORDSOUND];
-    _chatviewenum=RECORDSOUND;
+    
+    if (_chatviewenum == RECORDSOUND)
+    {
+        _chatviewenum = NONE;
+        [delegate ClickButton:NONE];
+        [recordbtn removeFromSuperview];
+        chattext.hidden=NO;
+        [btnrecord setImage:[UIImage imageNamed:@"t7"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        [delegate ClickButton:RECORDSOUND];
+        recordbtn.frame = chattext.frame;
+        chattext.hidden=YES;
+        [self addSubview:recordbtn];
+        _chatviewenum=RECORDSOUND;
+        [btnrecord setImage:[UIImage imageNamed:@"t5"] forState:UIControlStateNormal];
+    }
 }
 
 - (IBAction)clickMore:(id)sender {
     [delegate ClickButton:MORE];
     _chatviewenum = MORE;
 }
+
+
 @end

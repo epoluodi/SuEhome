@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="84" id="zAZ-24-Nka" customClass="SelfTextCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zAZ-24-Nka" id="30K-Sv-xiA">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unz-DN-8TB">
+                        <rect key="frame" x="8" y="8" width="359" height="18"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Fgm-ua-3wK"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_right.png" translatesAutoresizingMaskIntoConstraints="NO" id="eq9-m6-RAX">
+                        <rect key="frame" x="70" y="35" width="249" height="40"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user.png" translatesAutoresizingMaskIntoConstraints="NO" id="UEi-JK-HcI" customClass="STImageView">
+                        <rect key="frame" x="327" y="34" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="f4z-IN-5DD"/>
+                            <constraint firstAttribute="height" constant="40" id="xV3-iC-j4K"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="unz-DN-8TB" firstAttribute="leading" secondItem="30K-Sv-xiA" secondAttribute="leading" constant="8" id="1gn-81-VGq"/>
+                    <constraint firstItem="UEi-JK-HcI" firstAttribute="top" secondItem="unz-DN-8TB" secondAttribute="bottom" constant="8" id="2CC-hl-f9w"/>
+                    <constraint firstItem="unz-DN-8TB" firstAttribute="top" secondItem="30K-Sv-xiA" secondAttribute="top" constant="8" id="3g3-v1-KA6"/>
+                    <constraint firstItem="eq9-m6-RAX" firstAttribute="leading" secondItem="30K-Sv-xiA" secondAttribute="leading" constant="70" id="5Mh-2g-nSJ"/>
+                    <constraint firstItem="eq9-m6-RAX" firstAttribute="top" secondItem="unz-DN-8TB" secondAttribute="bottom" constant="9" id="B3i-tg-Rfr"/>
+                    <constraint firstItem="UEi-JK-HcI" firstAttribute="leading" secondItem="eq9-m6-RAX" secondAttribute="trailing" constant="8" id="PD3-cS-bJK"/>
+                    <constraint firstAttribute="bottom" secondItem="eq9-m6-RAX" secondAttribute="bottom" constant="8.5" id="qbP-Rw-ahW"/>
+                    <constraint firstAttribute="trailing" secondItem="unz-DN-8TB" secondAttribute="trailing" constant="8" id="taL-m0-3W0"/>
+                    <constraint firstAttribute="trailing" secondItem="UEi-JK-HcI" secondAttribute="trailing" constant="8" id="w5E-ph-Gbc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="info" destination="eq9-m6-RAX" id="Ge5-O8-Uad"/>
+                <outlet property="infomaginright" destination="5Mh-2g-nSJ" id="hFS-nQ-KMD"/>
+                <outlet property="nickimg" destination="UEi-JK-HcI" id="6vC-yK-RZ5"/>
+                <outlet property="viewdt" destination="unz-DN-8TB" id="Ap2-jy-eZE"/>
+            </connections>
+            <point key="canvasLocation" x="-120.5" y="1"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chat_right.png" width="56" height="56"/>
+        <image name="default_user.png" width="100" height="100"/>
+    </resources>
+</document>

@@ -71,6 +71,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="btnrecord" destination="yJz-8e-hx5" id="ckA-k4-8WM"/>
                 <outlet property="chattext" destination="qiY-ls-JhP" id="ikt-tR-AcY"/>
             </connections>
             <point key="canvasLocation" x="-104.5" y="-69"/>

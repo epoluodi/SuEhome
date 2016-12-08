@@ -488,6 +488,7 @@
                     <connections>
                         <outlet property="bottom" destination="bIE-LT-fkq" id="5j1-Mx-9yi"/>
                         <outlet property="chatbar" destination="yZD-g7-Uof" id="dSN-af-TXg"/>
+                        <outlet property="chattextheight" destination="z5b-GV-dm7" id="ELP-Rx-Kdb"/>
                         <outlet property="chattitle" destination="wCU-Vg-kPm" id="ut8-ZI-on6"/>
                         <outlet property="table" destination="2S2-Mc-JG5" id="1kE-2B-lVD"/>
                     </connections>
