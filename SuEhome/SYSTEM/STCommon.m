@@ -36,4 +36,10 @@
     }
     return nil;
 }
+
+
++(NSString *)getLongNowDate
+{
+    return [NSString stringWithFormat:@"%ld", (long)([[NSDate date] timeIntervalSince1970])];
+}
 @end

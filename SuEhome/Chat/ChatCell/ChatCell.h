@@ -18,6 +18,7 @@
 @property (assign) int16_t CellHeight;
 
 
-
-
+//基类方法，让机场者重载
+-(void)setMsgContent:(NSString *)content;//设置消息内容
+-(BOOL)setMsgDt:(NSString *)olddt newDT:(NSString *)newdt; //设置显示消息时间
 @end

@@ -9,8 +9,36 @@
 #import "ChatTableDelegate.h"
 
 @implementation ChatTableDelegate
+@synthesize groupid;
+@synthesize table;
+
+-(instancetype)init
+{
+    self  = [super init];
+    messagelist = [[NSMutableArray alloc] init];
+    
+    return self;
+}
+
+-(void)getMessageList
+{
+    
+}
 
 
+-(void)sendMsg:(ChatMessage *)chatmessage
+{
+    [table beginUpdates];
+    [messagelist insertObject:chatmessage atIndex:messagelist.count];
+    if (messagelist.count ==1)
+        [table insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+    else
+    {
+        [table insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:messagelist.count-1 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    [table endUpdates];
+  
+}
 
 #pragma mark table delegate
 
@@ -21,7 +49,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return messagelist.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -37,20 +65,33 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    ChatCell *cell;
     SelfTextCell *selftextcell;
     OtherTextCell *othertextcell;
     
-    if (indexPath.row == 0 || indexPath.row==1)
-    {
-        selftextcell = [tableView dequeueReusableCellWithIdentifier:@"selftextcell"];
-        return selftextcell;
-    }else
-    {
-        othertextcell = [tableView dequeueReusableCellWithIdentifier:@"othertextcell"];
-        return othertextcell;
+    ChatMessage *chatmessage = messagelist[indexPath.row];
+    ChatMessage *chatmessageold = nil;
+    if (indexPath.row > 0)
+        chatmessageold =messagelist[indexPath.row-1];
+    
+    switch (chatmessage.messageEnum) {
+        case TEXT:
+            if (chatmessage.isSelf)
+            {
+                selftextcell = [table dequeueReusableCellWithIdentifier:@"selftextcell"];
+                
+            }
+            cell = selftextcell;
+            if (chatmessageold)
+            {
+                [cell setMsgDt:chatmessageold.msgLongDT newDT:chatmessage.msgLongDT];
+            }
+            
+            return cell;
     }
     
-    return nil;
+    
+    return cell;
 }
 #pragma mark -
 

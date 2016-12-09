@@ -12,6 +12,7 @@
 #import "T_ORG+CoreDataClass.h"
 #import "T_DEPT+CoreDataClass.h"
 #import "T_Member+CoreDataClass.h"
+#import "T_ChatMessage+CoreDataClass.h"
 #import "AppCommon.h"
 
 

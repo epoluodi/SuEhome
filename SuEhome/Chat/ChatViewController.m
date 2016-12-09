@@ -54,6 +54,11 @@
     [table registerNib:nib forCellReuseIdentifier:@"othertextcell"];
     
     tabledelegate  = [[ChatTableDelegate alloc] init];
+    tabledelegate.groupid = @"123";//当前聊天id
+    [tabledelegate getMessageList];
+    tabledelegate.table = table;
+    
+    
     table.delegate=tabledelegate;
     table.dataSource = tabledelegate;
     
@@ -79,7 +84,7 @@
 }
 
 
-
+//键盘消失
 -(void)keyboardWillBeHidden:(NSNotification*)aNotification
 {
     [UIView animateWithDuration:0.4 animations:^{
@@ -100,6 +105,8 @@
   
 }
 
+
+//输入框变化
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     if ([text isEqualToString:@""])
@@ -117,12 +124,16 @@
     if ([text isEqualToString:@"\n"])
     {
         NSLog(@"发送内容 %@",textView.text);
+        [self sendText:textView.text];
         return NO;
     }
     [chatbarview updateChatTextlayout];
     return YES;
     
 }
+
+
+
 
 
 -(void)updateChatTextlayout:(UITextView *)textview
@@ -194,12 +205,9 @@
         [chatbarview textdeleteLast];
         return;
     }
-    
     UIImage *emgimg=[UIImage imageWithData:[[Emj getEmj] getEmjDataForIndex:index]];
     NSDictionary *d =  [[Emj getEmj] getEmjKeyAndValue:index];
     [chatbarview insertEmj:emgimg emjstring:[d objectForKey:@"emojiwildcard"]];
-    
-
 }
 
 //////录音=============
@@ -258,7 +266,25 @@
 }
 
 
-
+-(void)sendText:(NSString *)text
+{
+    ChatMessage *chatmessage = [[ChatMessage alloc] init];
+    chatmessage.isSelf = YES;
+    chatmessage.createmsgLongDT =[STCommon getLongNowDate];
+    chatmessage.createmsgdate = [NSDate date];
+    chatmessage.msgLongDT =[STCommon getLongNowDate];
+    chatmessage.msgdate = [NSDate date];
+    chatmessage.senderid = [[AppInfo getInstance] getUserInfo].userId;
+    chatmessage.sender =[[AppInfo getInstance] getUserInfo].nickName;
+    chatmessage.chatEnum = _chatmode;
+    chatmessage.msgcontent = text;
+    chatmessage.messageEnum = TEXT;
+    chatmessage.groupid = @"";//应该传入 当前聊天标识
+    chatmessage.msgid =[[NSUUID UUID] UUIDString];
+    NSLog(@"发送结构 %@",chatmessage.createmsgLongDT);
+    [tabledelegate sendMsg:chatmessage];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

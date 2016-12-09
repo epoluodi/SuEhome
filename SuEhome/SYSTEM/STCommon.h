@@ -17,5 +17,5 @@
 //汉子转拼音
 +(NSString *)PingYingTran:(NSString *)str;
 
-
++(NSString *)getLongNowDate;//得到当前时间的long
 @end

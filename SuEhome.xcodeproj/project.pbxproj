@@ -241,6 +241,9 @@
 		B4E72AF31DED270F00052676 /* T_ORG+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E72AEC1DED270F00052676 /* T_ORG+CoreDataClass.m */; };
 		B4E72AF41DED270F00052676 /* T_ORG+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E72AEE1DED270F00052676 /* T_ORG+CoreDataProperties.m */; };
 		B4E72AF61DED809800052676 /* t3_3.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E72AF51DED809800052676 /* t3_3.png */; };
+		B4F46E7E1DFA50BA00A97A40 /* ChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F46E7D1DFA50BA00A97A40 /* ChatMessage.m */; };
+		B4F46E831DFA51F700A97A40 /* T_ChatMessage+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F46E801DFA51F700A97A40 /* T_ChatMessage+CoreDataClass.m */; };
+		B4F46E841DFA51F700A97A40 /* T_ChatMessage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F46E821DFA51F700A97A40 /* T_ChatMessage+CoreDataProperties.m */; };
 		B4FB01331DE53F5D0050AE71 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FB01321DE53F5D0050AE71 /* MessageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -606,6 +609,12 @@
 		B4E72AED1DED270F00052676 /* T_ORG+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T_ORG+CoreDataProperties.h"; sourceTree = "<group>"; };
 		B4E72AEE1DED270F00052676 /* T_ORG+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "T_ORG+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B4E72AF51DED809800052676 /* t3_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t3_3.png; sourceTree = "<group>"; };
+		B4F46E7C1DFA50BA00A97A40 /* ChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessage.h; sourceTree = "<group>"; };
+		B4F46E7D1DFA50BA00A97A40 /* ChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessage.m; sourceTree = "<group>"; };
+		B4F46E7F1DFA51F700A97A40 /* T_ChatMessage+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T_ChatMessage+CoreDataClass.h"; sourceTree = "<group>"; };
+		B4F46E801DFA51F700A97A40 /* T_ChatMessage+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "T_ChatMessage+CoreDataClass.m"; sourceTree = "<group>"; };
+		B4F46E811DFA51F700A97A40 /* T_ChatMessage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T_ChatMessage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B4F46E821DFA51F700A97A40 /* T_ChatMessage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "T_ChatMessage+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B4FB01311DE53F5D0050AE71 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		B4FB01321DE53F5D0050AE71 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -917,6 +926,8 @@
 				B476F7D01DF53FDE00544C01 /* ChatViewController.m */,
 				B42D2E7E1DF939B20001D0CB /* ChatTableDelegate.h */,
 				B42D2E7F1DF939B20001D0CB /* ChatTableDelegate.m */,
+				B4F46E7C1DFA50BA00A97A40 /* ChatMessage.h */,
+				B4F46E7D1DFA50BA00A97A40 /* ChatMessage.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -1168,6 +1179,10 @@
 		B4AFF69E1DC8375D0025D1D9 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				B4F46E7F1DFA51F700A97A40 /* T_ChatMessage+CoreDataClass.h */,
+				B4F46E801DFA51F700A97A40 /* T_ChatMessage+CoreDataClass.m */,
+				B4F46E811DFA51F700A97A40 /* T_ChatMessage+CoreDataProperties.h */,
+				B4F46E821DFA51F700A97A40 /* T_ChatMessage+CoreDataProperties.m */,
 				B4E72AE31DED270F00052676 /* T_DEPT+CoreDataClass.h */,
 				B4E72AE41DED270F00052676 /* T_DEPT+CoreDataClass.m */,
 				B4E72AE51DED270F00052676 /* T_DEPT+CoreDataProperties.h */,
@@ -1500,6 +1515,7 @@
 				B4D2CFA91DEC2EFF00A376FE /* HttpEnterpriseaddressbook.m in Sources */,
 				B4CF48C91DC88E8000EBC0D9 /* BaseTabViewController.m in Sources */,
 				B46CB4501DC9D0E4001C2FCF /* AboutViewController.m in Sources */,
+				B4F46E841DFA51F700A97A40 /* T_ChatMessage+CoreDataProperties.m in Sources */,
 				7BED1E3F1DD0BFA10001C370 /* HttpUserInfo.m in Sources */,
 				B4A641221DD317AC002BF258 /* InfoViewController.m in Sources */,
 				B42D2E961DF94C330001D0CB /* OtherTextCell.m in Sources */,
@@ -1537,6 +1553,8 @@
 				B4B3C3601DD5A94F008363D6 /* AjaxRequest.m in Sources */,
 				B4A6412A1DD32159002BF258 /* BaseWebViewController.m in Sources */,
 				B42D2E7A1DF900340001D0CB /* RecordButton.m in Sources */,
+				B4F46E7E1DFA50BA00A97A40 /* ChatMessage.m in Sources */,
+				B4F46E831DFA51F700A97A40 /* T_ChatMessage+CoreDataClass.m in Sources */,
 				B429D8031DD0712E00096E6D /* MQTT.m in Sources */,
 				B46E26CF1DDBF645002B87B7 /* CommentsRequest.m in Sources */,
 			);

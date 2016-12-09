@@ -17,22 +17,20 @@
 -(void)awakeFromNib
 {
     [super awakeFromNib];
-    
     chattext.backgroundColor = [UIColor whiteColor];
     chattext.layer.borderColor = [[[UIColor blackColor] colorWithAlphaComponent:0.3] CGColor];
     chattext.layer.borderWidth=0.3;
     chattext.layer.cornerRadius = 6;
     chattext.layer.masksToBounds =YES;
     chattext.font = [UIFont systemFontOfSize:18];
+    chattext.enablesReturnKeyAutomatically = YES;//设置在输入框为空的情况下，发送按钮不能用 :)
     _chatviewenum = NONE;
     //加载表情view
     NSArray *_varry = [[NSBundle mainBundle] loadNibNamed:@"emjview" owner:self options:nil];
     emjview = _varry[0];
     _varry = [[NSBundle mainBundle] loadNibNamed:@"moreview" owner:self options:nil];
     moreview = _varry[0];
-
     recordbtn = [[RecordButton alloc] init];
-    
     [moreview initView:TAKEPHOTO|PHOTOLIBRARY];
     
 }
@@ -58,7 +56,6 @@
     [chattext resignFirstResponder];
     [emjview removeFromSuperview];
     [moreview removeFromSuperview];
-    
 }
 
 -(void)closeEmjView
@@ -91,7 +88,6 @@
 {
     if (chattext.text.length == 0)
         return;
-    
     if (chattext.text.length > 3){
         if ([[chattext.text substringFromIndex:chattext.text.length -2] isEqualToString:@"!]"])
         {
@@ -120,8 +116,6 @@
 
 -(void)insertEmj:(UIImage *)emjImg emjstring:(NSString *)emjstring
 {
-
-
    chattext.attributedText =  [Emj getAttrString:chattext.text addimg:emjImg EmjString:emjstring Range:_currange];
     _currange = NSMakeRange(_currange.location+emjstring.length, 0);
     [self updateChatTextlayout];
@@ -139,6 +133,9 @@
     [delegate ClickButton:EMJ];
     _chatviewenum = EMJ;
     _currange =  chattext.selectedRange;
+    [recordbtn removeFromSuperview];
+    chattext.hidden=NO;
+    [btnrecord setImage:[UIImage imageNamed:@"t7"] forState:UIControlStateNormal];
 }
 
 - (IBAction)clcikrecord:(id)sender {
@@ -165,6 +162,9 @@
 - (IBAction)clickMore:(id)sender {
     [delegate ClickButton:MORE];
     _chatviewenum = MORE;
+    [recordbtn removeFromSuperview];
+    chattext.hidden=NO;
+    [btnrecord setImage:[UIImage imageNamed:@"t7"] forState:UIControlStateNormal];
 }
 
 
