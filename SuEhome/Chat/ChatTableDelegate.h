@@ -15,7 +15,7 @@
 @interface ChatTableDelegate : NSObject<UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray<ChatMessage *>* messagelist;
-    
+    NSMutableDictionary *cellheight;
 }
 
 @property (weak,nonatomic)NSString *groupid;//当前聊天的标识

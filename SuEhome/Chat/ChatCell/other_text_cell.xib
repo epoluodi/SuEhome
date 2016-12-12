@@ -26,14 +26,14 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user.png" translatesAutoresizingMaskIntoConstraints="NO" id="adl-ZZ-dsv" customClass="STImageView">
-                        <rect key="frame" x="8" y="34" width="40" height="40"/>
+                        <rect key="frame" x="8" y="41" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="PPE-Lt-7wK"/>
                             <constraint firstAttribute="width" constant="40" id="am9-9B-IFf"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你好" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RD-mL-qio">
-                        <rect key="frame" x="56" y="34" width="311" height="12"/>
+                        <rect key="frame" x="56" y="41" width="311" height="12"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="12" id="4Om-z9-hnK"/>
                         </constraints>
@@ -42,7 +42,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="zRv-9w-fue">
-                        <rect key="frame" x="56" y="50" width="249" height="40"/>
+                        <rect key="frame" x="56" y="57" width="249" height="33"/>
                     </imageView>
                 </subviews>
                 <constraints>
@@ -54,8 +54,8 @@
                     <constraint firstItem="4RD-mL-qio" firstAttribute="leading" secondItem="adl-ZZ-dsv" secondAttribute="trailing" constant="8" id="VGg-Hh-gg6"/>
                     <constraint firstAttribute="trailing" secondItem="4RD-mL-qio" secondAttribute="trailing" constant="8" id="VxH-Dt-wme"/>
                     <constraint firstAttribute="trailing" secondItem="90y-K8-wzV" secondAttribute="trailing" constant="8" id="WQ3-RO-Uoi"/>
-                    <constraint firstItem="4RD-mL-qio" firstAttribute="top" secondItem="90y-K8-wzV" secondAttribute="bottom" constant="8" id="Y8g-IF-kem"/>
-                    <constraint firstItem="adl-ZZ-dsv" firstAttribute="top" secondItem="90y-K8-wzV" secondAttribute="bottom" constant="8" id="bxH-fu-lRc"/>
+                    <constraint firstItem="4RD-mL-qio" firstAttribute="top" secondItem="90y-K8-wzV" secondAttribute="bottom" constant="15" id="Y8g-IF-kem"/>
+                    <constraint firstItem="adl-ZZ-dsv" firstAttribute="top" secondItem="90y-K8-wzV" secondAttribute="bottom" constant="15" id="bxH-fu-lRc"/>
                     <constraint firstItem="zRv-9w-fue" firstAttribute="top" secondItem="4RD-mL-qio" secondAttribute="bottom" constant="4" id="ckm-o4-Lx2"/>
                     <constraint firstItem="90y-K8-wzV" firstAttribute="leading" secondItem="cRo-Gw-q5U" secondAttribute="leading" constant="8" id="qFl-jh-Zx2"/>
                 </constraints>
@@ -68,6 +68,8 @@
                 <outlet property="nickname" destination="4RD-mL-qio" id="JJq-gJ-8kK"/>
                 <outlet property="nicknameheight" destination="4Om-z9-hnK" id="zqT-Mr-7rO"/>
                 <outlet property="viewdt" destination="90y-K8-wzV" id="KUi-M5-2gu"/>
+                <outlet property="viewdtheight" destination="Ck5-PW-WTf" id="T8X-mb-fxF"/>
+                <outlet property="viewdttop" destination="5lU-W8-cWs" id="hFZ-OA-0ZG"/>
             </connections>
             <point key="canvasLocation" x="-70.5" y="32.5"/>
         </tableViewCell>

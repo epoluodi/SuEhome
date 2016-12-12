@@ -46,12 +46,7 @@
 
     
     
-    //列表
-    UINib *nib = [UINib nibWithNibName:@"self_text_cell" bundle:nil];
-    [table registerNib:nib forCellReuseIdentifier:@"selftextcell"];
-    
-    nib = [UINib nibWithNibName:@"other_text_cell" bundle:nil];
-    [table registerNib:nib forCellReuseIdentifier:@"othertextcell"];
+
     
     tabledelegate  = [[ChatTableDelegate alloc] init];
     tabledelegate.groupid = @"123";//当前聊天id
@@ -281,8 +276,29 @@
     chatmessage.messageEnum = TEXT;
     chatmessage.groupid = @"";//应该传入 当前聊天标识
     chatmessage.msgid =[[NSUUID UUID] UUIDString];
+    
     NSLog(@"发送结构 %@",chatmessage.createmsgLongDT);
     [tabledelegate sendMsg:chatmessage];
+    
+    
+    chatmessage = [[ChatMessage alloc] init];
+    chatmessage.isSelf = NO;
+    chatmessage.createmsgLongDT =[STCommon getLongNowDate];
+    chatmessage.createmsgdate = [NSDate date];
+    chatmessage.msgLongDT =[STCommon getLongNowDate];
+    chatmessage.msgdate = [NSDate date];
+    chatmessage.senderid = [[AppInfo getInstance] getUserInfo].userId;
+    chatmessage.sender =[[AppInfo getInstance] getUserInfo].nickName;
+    chatmessage.chatEnum = _chatmode;
+    chatmessage.msgcontent = text;
+    chatmessage.messageEnum = TEXT;
+    chatmessage.groupid = @"";//应该传入 当前聊天标识
+    chatmessage.msgid =[[NSUUID UUID] UUIDString];
+    
+    NSLog(@"发送结构 %@",chatmessage.createmsgLongDT);
+    [tabledelegate sendMsg:chatmessage];
+    
+    
     
 }
 

@@ -22,9 +22,11 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *infoandnicknameheight; //defalut 4
 
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewdtheight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewdttop;
 
 
-
+-(void)setHideNickName:(BOOL)hide;
 
 
 

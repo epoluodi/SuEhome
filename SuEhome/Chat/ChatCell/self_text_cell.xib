@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zAZ-24-Nka" id="30K-Sv-xiA">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unz-DN-8TB">
@@ -26,10 +26,10 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_right.png" translatesAutoresizingMaskIntoConstraints="NO" id="eq9-m6-RAX">
-                        <rect key="frame" x="70" y="35" width="249" height="40"/>
+                        <rect key="frame" x="70" y="41" width="249" height="34"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user.png" translatesAutoresizingMaskIntoConstraints="NO" id="UEi-JK-HcI" customClass="STImageView">
-                        <rect key="frame" x="327" y="34" width="40" height="40"/>
+                        <rect key="frame" x="327" y="41" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="f4z-IN-5DD"/>
                             <constraint firstAttribute="height" constant="40" id="xV3-iC-j4K"/>
@@ -38,10 +38,10 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="unz-DN-8TB" firstAttribute="leading" secondItem="30K-Sv-xiA" secondAttribute="leading" constant="8" id="1gn-81-VGq"/>
-                    <constraint firstItem="UEi-JK-HcI" firstAttribute="top" secondItem="unz-DN-8TB" secondAttribute="bottom" constant="8" id="2CC-hl-f9w"/>
+                    <constraint firstItem="UEi-JK-HcI" firstAttribute="top" secondItem="unz-DN-8TB" secondAttribute="bottom" constant="15" id="2CC-hl-f9w"/>
                     <constraint firstItem="unz-DN-8TB" firstAttribute="top" secondItem="30K-Sv-xiA" secondAttribute="top" constant="8" id="3g3-v1-KA6"/>
                     <constraint firstItem="eq9-m6-RAX" firstAttribute="leading" secondItem="30K-Sv-xiA" secondAttribute="leading" constant="70" id="5Mh-2g-nSJ"/>
-                    <constraint firstItem="eq9-m6-RAX" firstAttribute="top" secondItem="unz-DN-8TB" secondAttribute="bottom" constant="9" id="B3i-tg-Rfr"/>
+                    <constraint firstItem="eq9-m6-RAX" firstAttribute="top" secondItem="unz-DN-8TB" secondAttribute="bottom" constant="15" id="B3i-tg-Rfr"/>
                     <constraint firstItem="UEi-JK-HcI" firstAttribute="leading" secondItem="eq9-m6-RAX" secondAttribute="trailing" constant="8" id="PD3-cS-bJK"/>
                     <constraint firstAttribute="bottom" secondItem="eq9-m6-RAX" secondAttribute="bottom" constant="8.5" id="qbP-Rw-ahW"/>
                     <constraint firstAttribute="trailing" secondItem="unz-DN-8TB" secondAttribute="trailing" constant="8" id="taL-m0-3W0"/>
@@ -49,6 +49,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="dtviewheight" destination="Fgm-ua-3wK" id="0x4-t1-TrH"/>
+                <outlet property="dtviewtop" destination="3g3-v1-KA6" id="2cs-16-Mgr"/>
                 <outlet property="info" destination="eq9-m6-RAX" id="Ge5-O8-Uad"/>
                 <outlet property="infomaginright" destination="5Mh-2g-nSJ" id="hFS-nQ-KMD"/>
                 <outlet property="nickimg" destination="UEi-JK-HcI" id="6vC-yK-RZ5"/>

@@ -18,4 +18,5 @@
 +(NSString *)PingYingTran:(NSString *)str;
 
 +(NSString *)getLongNowDate;//得到当前时间的long
++(NSString *)getDateTimeForLongDT:(NSString*)longdt;
 @end

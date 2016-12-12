@@ -19,6 +19,8 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *infomaginright;//default 70
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *dtviewheight; //18
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *dtviewtop;//8
 
 
 @end
