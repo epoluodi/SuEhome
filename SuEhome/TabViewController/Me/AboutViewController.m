@@ -24,7 +24,7 @@
     img.layer.masksToBounds = YES;
     
     labver = [[UILabel alloc] init];
-    NSString *verstr = [NSString stringWithFormat:@"苏电新桥 版本号:V%@",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
+    NSString *verstr = [NSString stringWithFormat:@"苏电心桥 版本号:V%@",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
     
     CGSize size = [verstr sizeWithAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:12]}];
     

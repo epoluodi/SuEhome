@@ -49,11 +49,19 @@
     
     
     NSNotificationCenter *notiCenter = [NSNotificationCenter defaultCenter];
-    
     // 注册一个监听事件。第三个参数的事件名， 系统用这个参数来区别不同事件。
-    [notiCenter addObserver:self selector:@selector(webViewControllerCloseNotification:) name:@"closeViewController" object:nil];
-    [notiCenter addObserver:self selector:@selector(webViewControllerCloseNotification:) name:@"closeViewControllerNotification" object:nil];
+    [notiCenter addObserver:self selector:@selector(webViewControllerCloseNotification:) name:Notification_CLOSEVIEWCONTROLLER object:nil];
+    [notiCenter addObserver:self selector:@selector(webViewControllerCloseNotification:) name:Notification_CLOSEVIEWCONTROLLEREVENT object:nil];
     
+    
+    //开始连接MQTT
+    
+    
+    _mqtt = [MQTT getInstance];
+    _mqtt.delegate=self;
+    [_mqtt ConnectMQTT];
+    
+    messagecontroll = [[MessageControll alloc] init];
 }
 
 
@@ -141,6 +149,7 @@
 //注销
 -(void)LogOut
 {
+    [[MQTT getInstance] DisConnectMQTT];
     [[AppInfo getInstance] ClearInfo];
     [USER_DEFAULT setObject:@"" forKey:@"userpwd"];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -163,7 +172,62 @@
 }
 
 
+#pragma mark MQTT Delegate
 
+//处理所有MQTT的消息
+-(void)OnMessage:(NSString *)msg topic:(NSString *)topic
+{
+    NSLog(@"收到的信息MQTT\n:%@\n--->%@\n",topic,msg);
+    ChatProtocol *chatprotocol;
+    SystemProtocol *systemprotocol;
+    if ([topic isEqualToString:[MQTT getInstance] .getMQTTConfig.ChatNoice])
+    {
+         chatprotocol = [[ChatProtocol alloc] init:msg];
+        
+        NSDictionary *recpjson = [NSDictionary dictionaryWithObjectsAndKeys:chatprotocol.ope,@"ope",
+                                  chatprotocol.msgid,@"msgId",
+                                  [[AppInfo getInstance] getUserInfo].userId,@"userId", nil];
+        NSData *data = [NSJSONSerialization dataWithJSONObject:recpjson options:NSJSONWritingPrettyPrinted error:nil];
+        BACK(^{
+                [[MQTT getInstance] sendMessage:receipMsgTopic content:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];//回执
+        });
+        
+    }
+   else if([topic isEqualToString:[MQTT getInstance] .getMQTTConfig.SystemNoice])
+   {
+       systemprotocol = [[SystemProtocol alloc] init:msg];
+       
+       NSDictionary *recpjson = [NSDictionary dictionaryWithObjectsAndKeys:systemprotocol.noticeId,@"noticeId",nil];
+       NSData *data = [NSJSONSerialization dataWithJSONObject:recpjson options:NSJSONWritingPrettyPrinted error:nil];
+       BACK(^{
+           [[MQTT getInstance] sendMessage:receiptNoticeTopic content:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];//回执
+       });
+   }
+}
+
+
+
+-(void)OnDisConnect
+{
+    NSLog(@"MQTT断开连接");
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center postNotificationName:Notification_MQTTDISCONNECT object:nil userInfo:nil];
+}
+
+-(void)OnConnectMqtt
+{
+    NSLog(@"MQTT连接成功");
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center postNotificationName:Notification_MQTTCONNECT object:nil userInfo:nil];
+}
+
+-(void)OnConnectError
+{
+    NSLog(@"MQTT连接错误");
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center postNotificationName:Notification_MQTTDISCONNECT object:nil userInfo:nil];
+}
+#pragma mark -
 
 //转场
 //

@@ -15,14 +15,14 @@
 {
     UISearchBar *searchbar;
     NSArray* _messagelist;
-    
+    NSString *titledesc;
     SearchView *searchview;
     UIVisualEffectView *_backview;
     
     UIButton *cancelButton;
     
     BOOL IsSearchMode;
-    
+    BOOL IsActive;
     
     UIButton *rightbtn1,*rightbtn2;
 }

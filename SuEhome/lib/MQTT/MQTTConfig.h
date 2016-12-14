@@ -6,6 +6,12 @@
 //  Copyright © 2016年 Suypower. All rights reserved.
 //
 
+
+#define    offlineTopic @"topic/offline"
+#define    onlineTopic  @"topic/online"
+#define    receipMsgTopic @"topic/msgReceipt" //消息回执
+#define    receiptNoticeTopic  @"topic/noticeReceipt"//系统消息回执
+
 #import <Foundation/Foundation.h>
 
 @interface MQTTConfig : NSObject

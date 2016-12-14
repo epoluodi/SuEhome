@@ -113,6 +113,10 @@
 		B43F43EE1DEECBD000DB64EA /* CompanyPhoneBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F43ED1DEECBD000DB64EA /* CompanyPhoneBookViewController.m */; };
 		B43F43F11DEECE8C00DB64EA /* PhoneBookDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F43F01DEECE8C00DB64EA /* PhoneBookDataSource.m */; };
 		B442284E1DB8C53800C3E5E4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B442284D1DB8C53800C3E5E4 /* logo.png */; };
+		B45799F41E00E51C008C0AF5 /* BaseProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B45799F31E00E51C008C0AF5 /* BaseProtocol.m */; };
+		B45799F71E00E52F008C0AF5 /* SystemProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B45799F61E00E52F008C0AF5 /* SystemProtocol.m */; };
+		B45799FA1E00E540008C0AF5 /* ChatProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B45799F91E00E540008C0AF5 /* ChatProtocol.m */; };
+		B45799FD1E00E56F008C0AF5 /* MessageControll.m in Sources */ = {isa = PBXBuildFile; fileRef = B45799FC1E00E56F008C0AF5 /* MessageControll.m */; };
 		B46364EC1DCACD2A001DCAFD /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46364EB1DCACD2A001DCAFD /* SettingViewController.m */; };
 		B46364F11DCB2E2A001DCAFD /* SelfInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46364F01DCB2E2A001DCAFD /* SelfInfoViewController.m */; };
 		B46364F31DCB3916001DCAFD /* userinfo_nickimg.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46364F21DCB3916001DCAFD /* userinfo_nickimg.xib */; };
@@ -188,6 +192,7 @@
 		B485E0AA1DE2F0AE0096F4C6 /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = B485E0A91DE2F0AE0096F4C6 /* comment.png */; };
 		B485E0AC1DE2F0D90096F4C6 /* scorecell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B485E0AB1DE2F0D90096F4C6 /* scorecell.xib */; };
 		B485E0AF1DE2F1BD0096F4C6 /* ScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B485E0AE1DE2F1BD0096F4C6 /* ScoreCell.m */; };
+		B4888EF21DFF979B0022D791 /* libMQTTKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4888EF01DFF979B0022D791 /* libMQTTKit.a */; };
 		B488ED761DF64CD800AC64C3 /* moreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = B488ED751DF64CD800AC64C3 /* moreview.xib */; };
 		B488ED791DF64D4100AC64C3 /* MoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = B488ED781DF64D4100AC64C3 /* MoreView.m */; };
 		B488ED7E1DF65BA600AC64C3 /* input_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B488ED7C1DF65BA600AC64C3 /* input_camera.png */; };
@@ -386,6 +391,14 @@
 		B43F43EF1DEECE8C00DB64EA /* PhoneBookDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBookDataSource.h; sourceTree = "<group>"; };
 		B43F43F01DEECE8C00DB64EA /* PhoneBookDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBookDataSource.m; sourceTree = "<group>"; };
 		B442284D1DB8C53800C3E5E4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		B45799F21E00E51C008C0AF5 /* BaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseProtocol.h; sourceTree = "<group>"; };
+		B45799F31E00E51C008C0AF5 /* BaseProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseProtocol.m; sourceTree = "<group>"; };
+		B45799F51E00E52F008C0AF5 /* SystemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemProtocol.h; sourceTree = "<group>"; };
+		B45799F61E00E52F008C0AF5 /* SystemProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemProtocol.m; sourceTree = "<group>"; };
+		B45799F81E00E540008C0AF5 /* ChatProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatProtocol.h; sourceTree = "<group>"; };
+		B45799F91E00E540008C0AF5 /* ChatProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatProtocol.m; sourceTree = "<group>"; };
+		B45799FB1E00E56F008C0AF5 /* MessageControll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageControll.h; sourceTree = "<group>"; };
+		B45799FC1E00E56F008C0AF5 /* MessageControll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageControll.m; sourceTree = "<group>"; };
 		B46364EA1DCACD2A001DCAFD /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		B46364EB1DCACD2A001DCAFD /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		B46364EF1DCB2E2A001DCAFD /* SelfInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfInfoViewController.h; sourceTree = "<group>"; };
@@ -521,6 +534,8 @@
 		B485E0AB1DE2F0D90096F4C6 /* scorecell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scorecell.xib; sourceTree = "<group>"; };
 		B485E0AD1DE2F1BD0096F4C6 /* ScoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreCell.h; sourceTree = "<group>"; };
 		B485E0AE1DE2F1BD0096F4C6 /* ScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreCell.m; sourceTree = "<group>"; };
+		B4888EF01DFF979B0022D791 /* libMQTTKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMQTTKit.a; sourceTree = "<group>"; };
+		B4888EF11DFF979B0022D791 /* MQTTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTKit.h; sourceTree = "<group>"; };
 		B488ED751DF64CD800AC64C3 /* moreview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = moreview.xib; sourceTree = "<group>"; };
 		B488ED771DF64D4100AC64C3 /* MoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreView.h; sourceTree = "<group>"; };
 		B488ED781DF64D4100AC64C3 /* MoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreView.m; sourceTree = "<group>"; };
@@ -630,6 +645,7 @@
 				B47BF3A21DD1D01700BAC161 /* MobileCoreServices.framework in Frameworks */,
 				B47BF3A01DD1D00600BAC161 /* QuartzCore.framework in Frameworks */,
 				B47BF39E1DD1CFF900BAC161 /* Security.framework in Frameworks */,
+				B4888EF21DFF979B0022D791 /* libMQTTKit.a in Frameworks */,
 				B47BF39C1DD1CFF100BAC161 /* libsqlite3.0.tbd in Frameworks */,
 				B47BF39A1DD1CFE500BAC161 /* SystemConfiguration.framework in Frameworks */,
 				B47BF3981DD1CFDB00BAC161 /* CoreTelephony.framework in Frameworks */,
@@ -747,6 +763,8 @@
 		B429D7FD1DD06FEB00096E6D /* MQTT */ = {
 			isa = PBXGroup;
 			children = (
+				B4888EF01DFF979B0022D791 /* libMQTTKit.a */,
+				B4888EF11DFF979B0022D791 /* MQTTKit.h */,
 				B429D7FE1DD0702100096E6D /* MQTTConfig.h */,
 				B429D7FF1DD0702100096E6D /* MQTTConfig.m */,
 				B429D8011DD0712E00096E6D /* MQTT.h */,
@@ -820,6 +838,19 @@
 				B442284D1DB8C53800C3E5E4 /* logo.png */,
 			);
 			path = png;
+			sourceTree = "<group>";
+		};
+		B45799F11E00E4ED008C0AF5 /* MessageCenter */ = {
+			isa = PBXGroup;
+			children = (
+				B45799F21E00E51C008C0AF5 /* BaseProtocol.h */,
+				B45799F31E00E51C008C0AF5 /* BaseProtocol.m */,
+				B45799F51E00E52F008C0AF5 /* SystemProtocol.h */,
+				B45799F61E00E52F008C0AF5 /* SystemProtocol.m */,
+				B45799F81E00E540008C0AF5 /* ChatProtocol.h */,
+				B45799F91E00E540008C0AF5 /* ChatProtocol.m */,
+			);
+			path = MessageCenter;
 			sourceTree = "<group>";
 		};
 		B46364F51DCB397E001DCAFD /* CustomerView */ = {
@@ -1152,6 +1183,7 @@
 		B4A6BE021DCC6A380064EEB4 /* SYSTEM */ = {
 			isa = PBXGroup;
 			children = (
+				B45799F11E00E4ED008C0AF5 /* MessageCenter */,
 				B46D35B31DCC8EC100532EEA /* HTPPServer */,
 				B4A6BE031DCC6A520064EEB4 /* UserInfo.h */,
 				B4A6BE041DCC6A520064EEB4 /* UserInfo.m */,
@@ -1163,6 +1195,8 @@
 				B47BF36C1DD1B3BD00BAC161 /* STCommon.m */,
 				B488ED801DF6947C00AC64C3 /* Emj.h */,
 				B488ED811DF6947C00AC64C3 /* Emj.m */,
+				B45799FB1E00E56F008C0AF5 /* MessageControll.h */,
+				B45799FC1E00E56F008C0AF5 /* MessageControll.m */,
 			);
 			path = SYSTEM;
 			sourceTree = "<group>";
@@ -1472,6 +1506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4CF48D11DC8990300EBC0D9 /* BaseTableViewCell.m in Sources */,
+				B45799FA1E00E540008C0AF5 /* ChatProtocol.m in Sources */,
 				B42D2E801DF939B20001D0CB /* ChatTableDelegate.m in Sources */,
 				B4E72AEF1DED270F00052676 /* T_DEPT+CoreDataClass.m in Sources */,
 				B47BF3651DD1778600BAC161 /* T_friendlist+CoreDataClass.m in Sources */,
@@ -1481,6 +1516,7 @@
 				B4CF48A21DC8431000EBC0D9 /* LoginViewController.m in Sources */,
 				B476F7DF1DF5572400544C01 /* ChatBarView.m in Sources */,
 				B4808AF21DD418690089228B /* SystemRequest.m in Sources */,
+				B45799F71E00E52F008C0AF5 /* SystemProtocol.m in Sources */,
 				B4FB01331DE53F5D0050AE71 /* MessageViewController.m in Sources */,
 				B46C12C61DD45DB900E851FF /* WebViewRequest.m in Sources */,
 				B46D35B61DCC8F1300532EEA /* BaseHttp.m in Sources */,
@@ -1526,6 +1562,7 @@
 				B46364FB1DCB3AA4001DCAFD /* UserInfoNickImgCell.m in Sources */,
 				B46CB4551DC9E4E1001C2FCF /* CommonCellNoImg.m in Sources */,
 				B4E72AF21DED270F00052676 /* T_Member+CoreDataProperties.m in Sources */,
+				B45799F41E00E51C008C0AF5 /* BaseProtocol.m in Sources */,
 				B488ED791DF64D4100AC64C3 /* MoreView.m in Sources */,
 				B47959631DD95660008902D7 /* ScanRequest.m in Sources */,
 				B47807C21D2B96E6004B0392 /* AppDelegate.m in Sources */,
@@ -1556,6 +1593,7 @@
 				B4F46E7E1DFA50BA00A97A40 /* ChatMessage.m in Sources */,
 				B4F46E831DFA51F700A97A40 /* T_ChatMessage+CoreDataClass.m in Sources */,
 				B429D8031DD0712E00096E6D /* MQTT.m in Sources */,
+				B45799FD1E00E56F008C0AF5 /* MessageControll.m in Sources */,
 				B46E26CF1DDBF645002B87B7 /* CommentsRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1683,6 +1721,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SuEhome/lib/HttpLib",
 					"$(PROJECT_DIR)/SuEhome/lib/Cordova",
+					"$(PROJECT_DIR)/SuEhome/lib/MQTT",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.suypower.suehome;
@@ -1713,6 +1752,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SuEhome/lib/HttpLib",
 					"$(PROJECT_DIR)/SuEhome/lib/Cordova",
+					"$(PROJECT_DIR)/SuEhome/lib/MQTT",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.suypower.suehome;

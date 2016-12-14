@@ -191,20 +191,20 @@
             {
                 
                 _commoninputvc.delegate=self;
-                _commoninputvc.inputEnum = TEXT;
+                _commoninputvc.inputEnum = INPUT_TEXT;
                 _commoninputvc.value = [[AppInfo getInstance] getUserInfo].addr;
                 [self.navigationController pushViewController:_commoninputvc animated:YES];
             }else if (indexPath.row == 3)
             {
                 _commoninputvc.delegate=self;
-                _commoninputvc.inputEnum = PHONE;
+                _commoninputvc.inputEnum = INPUT_PHONE;
                 _commoninputvc.value = [[AppInfo getInstance] getUserInfo].mobile;
                 [self.navigationController pushViewController:_commoninputvc animated:YES];
             }else if (indexPath.row == 4)
             {
                 
                 _commoninputvc.delegate=self;
-                _commoninputvc.inputEnum = EMAIL;
+                _commoninputvc.inputEnum = INPUT_EMAIL;
                 _commoninputvc.value = [[AppInfo getInstance] getUserInfo].email;
                 [self.navigationController pushViewController:_commoninputvc animated:YES];
             
@@ -231,13 +231,13 @@
         
             HttpUserInfo *httpuserinfo = [[HttpUserInfo alloc] init];
             switch (inputtype) {
-                case TEXT:
+                case INPUT_TEXT:
                     [httpuserinfo setPoseData:value Key:@"detailAddr"];
                     break;
-                case PHONE:
+                case INPUT_PHONE:
                     [httpuserinfo setPoseData:value Key:@"phone"];
                     break;
-                case EMAIL:
+                case INPUT_EMAIL:
                     [httpuserinfo setPoseData:value Key:@"email"];
                     break;
                     
@@ -263,13 +263,13 @@
                     
                     
                     switch (inputtype) {
-                        case TEXT:
+                        case INPUT_TEXT:
                             [[AppInfo getInstance] getUserInfo].addr = value;
                             break;
-                        case PHONE:
+                        case INPUT_PHONE:
                             [[AppInfo getInstance] getUserInfo].mobile = value;
                             break;
-                        case EMAIL:
+                        case INPUT_EMAIL:
                             [[AppInfo getInstance] getUserInfo].email = value;
                             break;
                             

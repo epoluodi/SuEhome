@@ -216,7 +216,7 @@
                 dict = [NSDictionary dictionaryWithObjectsAndKeys:function,@"function", nil];
             }
             
-            [center postNotificationName:@"closeViewController" object:nil userInfo:dict];
+            [center postNotificationName:Notification_CLOSEVIEWCONTROLLER object:nil userInfo:dict];
             
             [self.navigationController popViewControllerAnimated:YES];
         });
@@ -227,7 +227,7 @@
             return;
         arg = [command.arguments objectAtIndex:0];
         NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-        [center postNotificationName:@"closeViewControllerNotification" object:nil userInfo:arg];
+        [center postNotificationName:Notification_CLOSEVIEWCONTROLLEREVENT object:nil userInfo:arg];
         
     }else if ( [Action isEqualToString:SETBARRIGHT] )
     {

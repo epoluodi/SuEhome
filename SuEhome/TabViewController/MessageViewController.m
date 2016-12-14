@@ -32,17 +32,40 @@
 //    searchbar.inputAccessoryView =[PublicCommon getInputToolbar:self sel:@selector(closeInputborad)];
     searchbar.delegate=self;
     
-    
+    titledesc = @"消息";
     cancelButton = [searchbar valueForKey:@"_cancelButton"];
 
     IsSearchMode = NO;
     [self initSearchBackView];
     
     [self InitRightBtn];
+    
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(changeMqttState:) name:Notification_MQTTCONNECT object:nil];
+    [center addObserver:self selector:@selector(changeMqttState:) name:Notification_MQTTRECEVEING object:nil];
+    [center addObserver:self selector:@selector(changeMqttState:) name:Notification_MQTTDISCONNECT object:nil];
     // Do any additional setup after loading the view.
 }
 
-
+//MQTT状态改变通知
+-(void)changeMqttState:(NSNotification *)notification
+{
+    if ([notification.name isEqualToString:Notification_MQTTCONNECT])
+    {
+         titledesc = @"消息";
+    }else if([notification.name isEqualToString:Notification_MQTTDISCONNECT])
+    {
+         titledesc = @"消息(未连接)";
+    }else if([notification.name isEqualToString:Notification_MQTTRECEVEING])
+    {
+        titledesc = @"消息(收取中)";
+    }
+    
+    if (IsActive)
+    {
+        [self setNavTitle:titledesc];
+    }
+}
 //关闭键盘恢复ui
 -(void)closeInputborad
 {
@@ -114,9 +137,10 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    IsActive=YES;
     [super viewWillAppear:animated];
     [self setNavTitleHide:NO];
-    [self setNavTitle:@"消息"];
+    [self setNavTitle:titledesc];
     if (rightbtn1)
         rightbtn1.hidden=NO;
     if (rightbtn2)
@@ -126,6 +150,7 @@
 
 -(void)viewDidDisappear:(BOOL)animated
 {
+    IsActive=NO;
     if (rightbtn1)
         rightbtn1.hidden=YES;
     if (rightbtn2)

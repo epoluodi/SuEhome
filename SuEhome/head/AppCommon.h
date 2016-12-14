@@ -58,7 +58,12 @@
 #import "STCommon.h"
 
 
+//系统定义通知
+#define Notification_CLOSEVIEWCONTROLLEREVENT @"closeViewControllerNotification"
+#define Notification_CLOSEVIEWCONTROLLER @"closeViewController"
 
 
-
+#define Notification_MQTTDISCONNECT @"MQTTDISCONNECT"
+#define Notification_MQTTCONNECT @"MQTTCONNECT"
+#define Notification_MQTTRECEVEING @"MQTTRECEVEING"
 

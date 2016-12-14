@@ -410,6 +410,13 @@ static DBmanger *_db;
 
 
 
+
+#pragma mark 聊天数据操作
+
+
+
+#pragma mark -
+
 //
 //
 //

@@ -10,9 +10,9 @@
 #import "BaseTabViewController.h"
 
 typedef enum : NSUInteger {
-    TEXT,
-    PHONE,
-    EMAIL,
+    INPUT_TEXT,
+    INPUT_PHONE,
+    INPUT_EMAIL,
 } InputEnum;
 
 @protocol CommonInputDelgate

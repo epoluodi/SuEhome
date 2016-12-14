@@ -8,16 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "AppCommon.h"
+#import "MQTT.h"
+#import "MessageControll.h"
 
 
-
-@interface MainRootViewController : UINavigationController<UINavigationControllerDelegate>
+@interface MainRootViewController : UINavigationController<UINavigationControllerDelegate,MQTTDelegate>
 {
     BOOL isCloseEvent;
     NSString *_callJS ,* _jsArg;
     UIViewController * _oldVC;
     
     UIStatusBarStyle statusbarstyle;
+    
+    MQTT *_mqtt;
+    __block MessageControll *messagecontroll;
+    
 }
 
 @property (strong,nonatomic) UILabel *labtitle;

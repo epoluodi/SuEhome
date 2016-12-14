@@ -27,15 +27,15 @@
 
     
     switch (inputEnum) {
-        case TEXT:
+        case INPUT_TEXT:
             inputtext.keyboardType =UIKeyboardTypeDefault;
             navtitle.title = @"详细地址";
             break;
-        case PHONE:
+        case INPUT_PHONE:
             inputtext.keyboardType =UIKeyboardTypePhonePad;
             navtitle.title = @"手机号";
             break;
-        case EMAIL:
+        case INPUT_EMAIL:
             inputtext.keyboardType =UIKeyboardTypeEmailAddress;
             navtitle.title = @"邮箱";
             break;
