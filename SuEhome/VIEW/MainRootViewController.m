@@ -61,7 +61,7 @@
     _mqtt.delegate=self;
     [_mqtt ConnectMQTT];
     
-    messagecontroll = [[MessageControll alloc] init];
+    
 }
 
 
@@ -149,6 +149,9 @@
 //注销
 -(void)LogOut
 {
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center postNotificationName:Notification_USER_LOGOUT object:nil userInfo:nil];
+    
     [[MQTT getInstance] DisConnectMQTT];
     [[AppInfo getInstance] ClearInfo];
     [USER_DEFAULT setObject:@"" forKey:@"userpwd"];
@@ -180,7 +183,7 @@
     NSLog(@"收到的信息MQTT\n:%@\n--->%@\n",topic,msg);
     ChatProtocol *chatprotocol;
     SystemProtocol *systemprotocol;
-    if ([topic isEqualToString:[MQTT getInstance] .getMQTTConfig.ChatNoice])
+    if ([topic isEqualToString:[MQTT getInstance] .getMQTTConfig.ChatNoice])//处理聊天信息数据
     {
          chatprotocol = [[ChatProtocol alloc] init:msg];
         
@@ -191,9 +194,12 @@
         BACK(^{
                 [[MQTT getInstance] sendMessage:receipMsgTopic content:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];//回执
         });
+        MessageControll *messageControll = [[MessageControll alloc] init];
+        [messageControll ChatMessageController:chatprotocol];
         
+        return;
     }
-   else if([topic isEqualToString:[MQTT getInstance] .getMQTTConfig.SystemNoice])
+   else if([topic isEqualToString:[MQTT getInstance] .getMQTTConfig.SystemNoice])//处理系统通知消息
    {
        systemprotocol = [[SystemProtocol alloc] init:msg];
        

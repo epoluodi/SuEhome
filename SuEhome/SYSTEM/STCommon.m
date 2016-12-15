@@ -43,14 +43,19 @@
     return [NSString stringWithFormat:@"%ld", (long)([[NSDate date] timeIntervalSince1970])];
 }
 
-+(NSString *)getDateTimeForLongDT:(NSString*)longdt
++(NSString *)getStringDateTimeForLongDT:(NSString*)longdt
 {
-    NSDate *dt =  [NSDate dateWithTimeIntervalSince1970:[longdt longLongValue]];
+    NSDate *dt =  [NSDate dateWithTimeIntervalSince1970:[longdt doubleValue]];
     NSDateFormatter *dtformat = [[NSDateFormatter alloc] init];
-    dtformat.dateFormat = @"YYYY-MM-dd HH:mm:ss";
+    dtformat.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     return [dtformat stringFromDate:dt];
 }
 
++(NSDate *)getDateTimeForLongDT:(NSTimeInterval)longdt
+{
+    NSDate *dt =  [NSDate dateWithTimeIntervalSince1970:longdt /1000];
+    return dt;
+}
 
 
 

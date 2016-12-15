@@ -13,7 +13,7 @@
 @interface SystemProtocol : BaseProtocol
 
 
-@property (weak,nonatomic)NSString * sendtime;          //发送时间
+@property (weak,nonatomic)NSNumber * sendtime;          //发送时间
 @property (weak,nonatomic)NSString * noticeId;          //通知id
 
 

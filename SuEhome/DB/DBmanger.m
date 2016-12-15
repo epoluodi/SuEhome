@@ -192,6 +192,18 @@ static DBmanger *_db;
     return arr;
 }
 
+
+-(T_friendlist *)getFriendInfo:(NSString *)friendid
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_friendlist"];
+    fetch.predicate=[NSPredicate predicateWithFormat:@"userid=%@",friendid];
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    if (arr)
+    {
+        return (T_friendlist *)arr[0];
+    }
+    return nil;
+}
 #pragma mark -
 
 
@@ -292,7 +304,11 @@ static DBmanger *_db;
          [_tmember setValue:@1 forKey:@"gender"];
     [_tmember setValue:[memberdict objectForKey:@"name"] forKey:@"nick_name"];
     [_tmember setValue:[memberdict objectForKey:@"userName"] forKey:@"user_name"];
-    [_tmember setValue:[memberdict objectForKey:@"phone"] forKey:@"phone"];
+    
+    if ([memberdict objectForKey:@"phone"] == [NSNull null])
+        [_tmember setValue:@"" forKey:@"phone"];
+    else
+        [_tmember setValue:[memberdict objectForKey:@"phone"] forKey:@"phone"];
     [_tmember setValue:[memberdict objectForKey:@"orgId"] forKey:@"org_id"];
     [_tmember setValue:[memberdict objectForKey:@"userId"] forKey:@"user_id"];
     [_tmember setValue:[STCommon PingYingTran:[memberdict objectForKey:@"deptName"]] forKey:@"py"];
@@ -405,10 +421,38 @@ static DBmanger *_db;
     return arr;
 }
 
-
+-(T_Member *)getPhoneBookUserInfo:(NSString *)userid
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_Member"];
+    fetch.predicate=[NSPredicate predicateWithFormat:@"user_id=%@",userid];
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    if (arr)
+    {
+        return (T_Member *)arr[0];
+    }
+    return nil;
+}
 #pragma mark -
 
+#pragma mark 会话数据操作
 
+
+
+-(NSArray *)getMessageList
+{
+    NSFetchRequest *fetch=[NSFetchRequest fetchRequestWithEntityName:@"T_MesaageList"];
+    NSSortDescriptor *sort=[NSSortDescriptor sortDescriptorWithKey:@"msgdate" ascending:YES];
+    fetch.sortDescriptors=@[sort];
+    NSArray *arr=[mangedcontext executeFetchRequest:fetch error:nil];
+    return arr;
+}
+
+-(void)addMessageList:(T_MesaageList*)messagelist
+{
+    
+}
+
+#pragma mark -
 
 
 #pragma mark 聊天数据操作

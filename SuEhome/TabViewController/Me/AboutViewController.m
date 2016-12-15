@@ -121,8 +121,6 @@
         case 1:
             [self performSegueWithIdentifier:@"shwoshareview" sender:self];
             break;
-            
-    
     }
 }
 

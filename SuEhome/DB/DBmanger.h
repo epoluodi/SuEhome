@@ -14,6 +14,7 @@
 #import "T_Member+CoreDataClass.h"
 #import "T_ChatMessage+CoreDataClass.h"
 #import "AppCommon.h"
+#import "T_MesaageList+CoreDataClass.h"
 
 
 
@@ -38,7 +39,7 @@
 -(NSArray *)getFiendlistGroupCoountForPingYing;//获得好友拼音分组
 -(NSArray *)getFiendListAllForPY:(NSString *)fpy;//获得好友用户根据拼音
 -(NSArray *)searchFriendForKey:(NSString *)key;//根据关键字获取用户信息
-
+-(T_friendlist *)getFriendInfo:(NSString *)friendid;//根据用户id 获得用户信息
 
 //企业通讯录
 -(void)deletAllOrg;//删除所有组织记录
@@ -60,5 +61,11 @@
 -(NSArray *)getDeptForOrg:(NSString *)orgid;//根据id 获取 部门信息 
 -(NSArray *)getDeptForDept:(NSString *)deptid;//根据id 获取部门信息
 -(NSArray *)searchMemberForKey:(NSString *)key;//根据关键字查询
+-(T_Member *)getPhoneBookUserInfo:(NSString *)userid;
 
+
+
+//会话
+-(NSArray *)getMessageList;//获得会话列表
+-(void)addMessageList:(T_MesaageList*)messagelist; //添加会话列表
 @end

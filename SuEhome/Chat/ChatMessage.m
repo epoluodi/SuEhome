@@ -11,8 +11,8 @@
 @implementation ChatMessage
 @synthesize chatEnum,msgstateEnum,messageEnum;
 @synthesize groupid,msgcontent,msgLongDT,msgdate;
-@synthesize createmsgdate,createmsgLongDT,isSelf,sender,senderid,msgid;
-
+@synthesize createmsgdate,createmsgLongDT,isSelf,sender,senderid,msgid,nickimg;
+@synthesize noDisturb,istop;
 
 
 @end

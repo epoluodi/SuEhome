@@ -84,6 +84,11 @@
 		B411DEB01DE81F6F0046ECED /* personcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B411DEAF1DE81F6F0046ECED /* personcell.xib */; };
 		B411DEB31DE81F8F0046ECED /* PersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B411DEB21DE81F8F0046ECED /* PersonCell.m */; };
 		B411DEB61DE8361C0046ECED /* UserInfoSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B411DEB51DE8361C0046ECED /* UserInfoSampleViewController.m */; };
+		B4129FBF1E027F3200E97EFF /* T_MesaageList+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B4129FBC1E027F3200E97EFF /* T_MesaageList+CoreDataClass.m */; };
+		B4129FC01E027F3200E97EFF /* T_MesaageList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B4129FBE1E027F3200E97EFF /* T_MesaageList+CoreDataProperties.m */; };
+		B4129FC21E02836B00E97EFF /* messagecell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4129FC11E02836B00E97EFF /* messagecell.xib */; };
+		B4129FC51E02860100E97EFF /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4129FC41E02860100E97EFF /* MessageCell.m */; };
+		B4129FC71E028D7500E97EFF /* m3.png in Resources */ = {isa = PBXBuildFile; fileRef = B4129FC61E028D7500E97EFF /* m3.png */; };
 		B429D7FC1DD0646400096E6D /* HttpLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = B429D7FB1DD0646400096E6D /* HttpLogin.m */; };
 		B429D8001DD0702100096E6D /* MQTTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B429D7FF1DD0702100096E6D /* MQTTConfig.m */; };
 		B429D8031DD0712E00096E6D /* MQTT.m in Sources */ = {isa = PBXBuildFile; fileRef = B429D8021DD0712E00096E6D /* MQTT.m */; };
@@ -348,6 +353,14 @@
 		B411DEB21DE81F8F0046ECED /* PersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCell.m; sourceTree = "<group>"; };
 		B411DEB41DE8361C0046ECED /* UserInfoSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoSampleViewController.h; sourceTree = "<group>"; };
 		B411DEB51DE8361C0046ECED /* UserInfoSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoSampleViewController.m; sourceTree = "<group>"; };
+		B4129FBB1E027F3200E97EFF /* T_MesaageList+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T_MesaageList+CoreDataClass.h"; sourceTree = "<group>"; };
+		B4129FBC1E027F3200E97EFF /* T_MesaageList+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "T_MesaageList+CoreDataClass.m"; sourceTree = "<group>"; };
+		B4129FBD1E027F3200E97EFF /* T_MesaageList+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T_MesaageList+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B4129FBE1E027F3200E97EFF /* T_MesaageList+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "T_MesaageList+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B4129FC11E02836B00E97EFF /* messagecell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = messagecell.xib; sourceTree = "<group>"; };
+		B4129FC31E02860100E97EFF /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		B4129FC41E02860100E97EFF /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		B4129FC61E028D7500E97EFF /* m3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m3.png; sourceTree = "<group>"; };
 		B429D7FA1DD0646400096E6D /* HttpLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpLogin.h; sourceTree = "<group>"; };
 		B429D7FB1DD0646400096E6D /* HttpLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpLogin.m; sourceTree = "<group>"; };
 		B429D7FE1DD0702100096E6D /* MQTTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTConfig.h; sourceTree = "<group>"; };
@@ -749,6 +762,9 @@
 				B4D2CF9E1DEC222F00A376FE /* userinfoheadcell.xib */,
 				B4D2CFA01DEC238E00A376FE /* UserInfoHeadCell.h */,
 				B4D2CFA11DEC238E00A376FE /* UserInfoHeadCell.m */,
+				B4129FC11E02836B00E97EFF /* messagecell.xib */,
+				B4129FC31E02860100E97EFF /* MessageCell.h */,
+				B4129FC41E02860100E97EFF /* MessageCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -795,6 +811,7 @@
 		B442284C1DB8C53800C3E5E4 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				B4129FC61E028D7500E97EFF /* m3.png */,
 				B42D2E8D1DF948020001D0CB /* chat_left.png */,
 				B42D2E8E1DF948020001D0CB /* chat_right.png */,
 				B42D2E7B1DF934E40001D0CB /* t5.png */,
@@ -1213,6 +1230,10 @@
 		B4AFF69E1DC8375D0025D1D9 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				B4129FBB1E027F3200E97EFF /* T_MesaageList+CoreDataClass.h */,
+				B4129FBC1E027F3200E97EFF /* T_MesaageList+CoreDataClass.m */,
+				B4129FBD1E027F3200E97EFF /* T_MesaageList+CoreDataProperties.h */,
+				B4129FBE1E027F3200E97EFF /* T_MesaageList+CoreDataProperties.m */,
 				B4F46E7F1DFA51F700A97A40 /* T_ChatMessage+CoreDataClass.h */,
 				B4F46E801DFA51F700A97A40 /* T_ChatMessage+CoreDataClass.m */,
 				B4F46E811DFA51F700A97A40 /* T_ChatMessage+CoreDataProperties.h */,
@@ -1421,6 +1442,7 @@
 				5C2C365E1DF5A709000F0C2E /* confounded.png in Resources */,
 				B497E36E1DEFCCE90057C6A0 /* company.png in Resources */,
 				5C2C36581DF5A709000F0C2E /* anguished.png in Resources */,
+				B4129FC71E028D7500E97EFF /* m3.png in Resources */,
 				B46E26E41DDC4C0D002B87B7 /* icon_like2.png in Resources */,
 				B4D2CFA51DEC296900A376FE /* s1.png in Resources */,
 				5C2C36821DF5A709000F0C2E /* sleepy.png in Resources */,
@@ -1463,6 +1485,7 @@
 				B46E26E21DDC4C0D002B87B7 /* icon_fav2.png in Resources */,
 				5C2C36711DF5A709000F0C2E /* kissing_closed_eyes.png in Resources */,
 				5C2C368D1DF5A709000F0C2E /* stuck_out_tongue_winking_eye.png in Resources */,
+				B4129FC21E02836B00E97EFF /* messagecell.xib in Resources */,
 				5C2C36941DF5A709000F0C2E /* triumph.png in Resources */,
 				5C2C36911DF5A709000F0C2E /* thumbsdown.png in Resources */,
 				5C2C369A1DF5A709000F0C2E /* womens.png in Resources */,
@@ -1517,6 +1540,7 @@
 				B476F7DF1DF5572400544C01 /* ChatBarView.m in Sources */,
 				B4808AF21DD418690089228B /* SystemRequest.m in Sources */,
 				B45799F71E00E52F008C0AF5 /* SystemProtocol.m in Sources */,
+				B4129FC51E02860100E97EFF /* MessageCell.m in Sources */,
 				B4FB01331DE53F5D0050AE71 /* MessageViewController.m in Sources */,
 				B46C12C61DD45DB900E851FF /* WebViewRequest.m in Sources */,
 				B46D35B61DCC8F1300532EEA /* BaseHttp.m in Sources */,
@@ -1539,6 +1563,7 @@
 				B46450C11DE693500043DA6B /* SearchView.m in Sources */,
 				B46E26D91DDBFFEF002B87B7 /* CommentsBarView.m in Sources */,
 				B4A6BE051DCC6A520064EEB4 /* UserInfo.m in Sources */,
+				B4129FBF1E027F3200E97EFF /* T_MesaageList+CoreDataClass.m in Sources */,
 				B488ED821DF6947C00AC64C3 /* Emj.m in Sources */,
 				B43F43EE1DEECBD000DB64EA /* CompanyPhoneBookViewController.m in Sources */,
 				B476F7E41DF5686700544C01 /* EmjView.m in Sources */,
@@ -1586,6 +1611,7 @@
 				B485E0A11DE29E9C0096F4C6 /* AMAnimatedNumber.m in Sources */,
 				B47807BF1D2B96E6004B0392 /* main.m in Sources */,
 				B4AFF69D1DC836050025D1D9 /* SplashViewController.m in Sources */,
+				B4129FC01E027F3200E97EFF /* T_MesaageList+CoreDataProperties.m in Sources */,
 				B47BF3661DD1778600BAC161 /* T_friendlist+CoreDataProperties.m in Sources */,
 				B4B3C3601DD5A94F008363D6 /* AjaxRequest.m in Sources */,
 				B4A6412A1DD32159002BF258 /* BaseWebViewController.m in Sources */,

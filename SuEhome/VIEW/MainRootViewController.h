@@ -21,7 +21,7 @@
     UIStatusBarStyle statusbarstyle;
     
     MQTT *_mqtt;
-    __block MessageControll *messagecontroll;
+   
     
 }
 

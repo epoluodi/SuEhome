@@ -14,7 +14,7 @@
 @interface MessageViewController : BaseTabViewController<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 {
     UISearchBar *searchbar;
-    NSArray* _messagelist;
+    NSMutableArray* _messagelist;
     NSString *titledesc;
     SearchView *searchview;
     UIVisualEffectView *_backview;

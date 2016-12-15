@@ -37,16 +37,17 @@ typedef enum : NSUInteger {
 @property (assign)MessageEnum messageEnum;//消息类型
 @property (copy,nonatomic)NSString *groupid;                        //聊天标识
 @property (copy,nonatomic)NSString *msgcontent;                 //内容
-@property (copy,nonatomic)NSString *msgLongDT;                  //消息时间 long
+@property (copy,nonatomic)NSNumber *msgLongDT;                  //消息时间 long
 @property (copy,nonatomic)NSDate *msgdate;
-@property (copy,nonatomic)NSString *createmsgLongDT;                  //消息创建时间 long
+@property (copy,nonatomic)NSNumber *createmsgLongDT;                  //消息创建时间 long
 @property (copy,nonatomic)NSDate *createmsgdate;
 @property (assign)BOOL isSelf;                                              //发送消息是否是自己
 @property (copy,nonatomic)NSString *senderid;                     //发送者id
 @property (copy,nonatomic)NSString *sender;                     //发送人
+@property (copy,nonatomic)NSString * nickimg;
 @property (copy,nonatomic)NSString *msgid;                      //消息id
-
-
+@property (assign) BOOL noDisturb;                              //是否免打扰
+@property (assign) BOOL istop;                                 //是否置顶
 
 
 

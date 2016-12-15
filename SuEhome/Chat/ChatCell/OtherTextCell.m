@@ -62,7 +62,7 @@
         viewdt.hidden=YES;
     }else
     {
-        NSString *trandt =[PublicCommon getDateStringWithDT:[STCommon getDateTimeForLongDT:newdt]];
+        NSString *trandt =[PublicCommon getDateStringWithDT:[STCommon getStringDateTimeForLongDT:newdt]];
         CGSize size = [trandt sizeWithAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:12]}];
         labdt.text = trandt;
         labdt.frame = CGRectMake([PublicCommon GetALLScreen].size.width /2 -(size.width+8)/2 , 2, size.width+8, size.height+3);

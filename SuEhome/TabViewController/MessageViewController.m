@@ -8,6 +8,7 @@
 
 #import "MessageViewController.h"
 #import <Common/PublicCommon.h>
+#import "MessageCell.h"
 
 
 @interface MessageViewController ()
@@ -22,9 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    table.backgroundColor = [UIColor clearColor];
-    table.delegate=self;
-    table.dataSource= self;
+    
+    
+
     searchbar= [[UISearchBar alloc] init];
     searchbar.placeholder=@"搜索";
     searchbar.showsCancelButton=NO;
@@ -40,12 +41,40 @@
     
     [self InitRightBtn];
     
+    
+    
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center addObserver:self selector:@selector(changeMqttState:) name:Notification_MQTTCONNECT object:nil];
     [center addObserver:self selector:@selector(changeMqttState:) name:Notification_MQTTRECEVEING object:nil];
     [center addObserver:self selector:@selector(changeMqttState:) name:Notification_MQTTDISCONNECT object:nil];
+    [center addObserver:self selector:@selector(removeNotification:) name:Notification_USER_LOGOUT object:nil];
+    
+    
+    
+    _messagelist = [[NSMutableArray alloc] init];
+    
+    table.backgroundColor = [UIColor clearColor];
+    table.delegate=self;
+    table.dataSource= self;
+    
+    
+    
     // Do any additional setup after loading the view.
 }
+
+
+
+-(void)removeNotification:(NSNotification *)notification
+{
+    NSLog(@"释放消息");
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center removeObserver:self name:Notification_MQTTCONNECT object:nil];
+    [center removeObserver:self name:Notification_MQTTRECEVEING object:nil];
+    [center removeObserver:self name:Notification_MQTTDISCONNECT object:nil];
+
+}
+
+
 
 //MQTT状态改变通知
 -(void)changeMqttState:(NSNotification *)notification
@@ -126,7 +155,7 @@
 
 -(void)ClickPhoneBook
 {
-      [self performSegueWithIdentifier:@"PhoneBookViewController" sender:self];
+    [self performSegueWithIdentifier:@"PhoneBookViewController" sender:self];
 }
 
 -(void)ClickContract
@@ -145,7 +174,6 @@
         rightbtn1.hidden=NO;
     if (rightbtn2)
         rightbtn2.hidden=NO;
-    
 }
 
 -(void)viewDidDisappear:(BOOL)animated
@@ -166,20 +194,16 @@
     __weak __typeof(self) weakself = self;
     [UIView animateWithDuration:0.5 animations:^{
          table.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
-        
         //1.
         weakself.navigationController.navigationBar.transform = CGAffineTransformMakeTranslation(0, -viewOffset);
-        
 //        searchBar.transform = CGAffineTransformMakeTranslation(0, -viewOffset);
         _backview.alpha=0.9;
- 
         [mainviewcontroller setStatusbarMode:UIStatusBarStyleDefault];
         [weakself setNeedsStatusBarAppearanceUpdate];
         searchBar.showsCancelButton = YES;
         cancelButton.enabled=YES;
         IsSearchMode = YES;
 //        //1.执行动画
-
     }];
 }
 
@@ -203,10 +227,7 @@
         [_backview removeFromSuperview];
         [mainviewcontroller setStatusbarMode:UIStatusBarStyleLightContent];
         [weakself setNeedsStatusBarAppearanceUpdate];
-        
     }];
-
-
 }
 
 
@@ -231,7 +252,7 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return _messagelist.count;
 }
 
 
@@ -241,6 +262,12 @@
     cell.textLabel.text=@"123";
     return cell;
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
 
 #pragma mark -
 

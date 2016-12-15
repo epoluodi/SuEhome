@@ -59,11 +59,11 @@
 
 
 //系统定义通知
-#define Notification_CLOSEVIEWCONTROLLEREVENT @"closeViewControllerNotification"
-#define Notification_CLOSEVIEWCONTROLLER @"closeViewController"
+#define Notification_CLOSEVIEWCONTROLLEREVENT @"closeViewControllerNotification"  //关闭webcontroller 事件
+#define Notification_CLOSEVIEWCONTROLLER @"closeViewController"      //关闭webcontroller
 
-
-#define Notification_MQTTDISCONNECT @"MQTTDISCONNECT"
-#define Notification_MQTTCONNECT @"MQTTCONNECT"
-#define Notification_MQTTRECEVEING @"MQTTRECEVEING"
+#define Notification_USER_LOGOUT @"USERLOGOUT"                  //当前用户注销
+#define Notification_MQTTDISCONNECT @"MQTTDISCONNECT"    //mqtt 连接断开
+#define Notification_MQTTCONNECT @"MQTTCONNECT"                 //mqtt 连接
+#define Notification_MQTTRECEVEING @"MQTTRECEVEING"         //mqtt 接收
 
